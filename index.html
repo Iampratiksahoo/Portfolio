@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        <title>Pratik Sahoo</title>
+    </head>
+    <body>
+        <div class="container" id="intro">
+            <div class="intro-text-container">
+                <div class="intro-hi">
+                    <h2>Hello!</h2>
+                </div>
+                <div class="intro-main-text">
+                    I am <strong>Pratik Sahoo</strong>, a passionate gameplay and tools programmer. I love to play and make games.
+                </div>
+                <div class="resume-button-container">
+                    <a href="https://drive.google.com/file/d/11BMWePt2xpwiR526wStP6bHckQ8vZoav/view?usp=sharing" target="_blank" title="Resume">
+                        <button class="resume-button">
+                            RESUME
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="intro-image-container">
+                <img src="images/avatar.png" alt="" class="intro-image">
+            </div>
+        </div>
+        <div class="container" id="background">
+            <div class="container-name">
+                Background
+            </div>
+            <div class="background-text">
+                "Greetings! I'm a passionate Game Programmer on a quest to contribute to extraordinary PC game projects, driven by the thrill of gaining expertise and crafting remarkable experiences. My heart beats for FPS, RPG and Story-Rich Games, propelling me to create immersive virtual realms. Beyond coding, I excel in optimizing performance and weaving intricate design patterns. Proficient in Unity Engine(2D, 3D and UI Implementations) and C#, I've sculpted my skills through hands-on creation . While I'm diving into Unreal Engine and C++, my hunger for learning knows no bounds. Armed with SFML and ImGUI, my toolkit evolves to meet new challenges."
+
+                <br><br>"Alongside this coding odyssey, I channel my artistry as a part-time singer and musician, sharing my musical journey on Instagram and Youtube."
+            </div>
+        </div>
+        <div class="container" id="projects">
+            <div class="container-name">
+                Projects
+            </div>
+            <div class="project-card-row" style="margin-top: 5rem;">
+                <div class="project-card" id="project-recondite">
+                    <div class="popup" id="popup-box-recondite">
+                        <div class="popup-container">
+                            <a class="close" href="#project-recondite">&times;</a>
+                            <div class="popup-entry">
+                                <video src="./images/games/Operation-Recondite/Recondite.mkv" controls autoplay muted class="entry-video"></video>
+                                <div class="detail">
+                                    This a video demo of <b style="color: brown;">Operation Recondite - Prototype</b> showcasing the current progress with basic <b style="color: brown;">Weapon System</b>,  <b style="color: brown;">Interaction System</b> and <b style="color: brown;">Movement System</b>, these systems are now being expanded to Advance stage with proper research and testing. The overall quality and optimization is kept in mind. Placeholder assets are used at the moment to ensure the proper demonstration of the project design and goals.
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <div class="entry-image-container">
+                                    <img src="./images/games/Operation-Recondite/PlayerStateManager.png" alt="" class="entry-image" style="height:100%">
+                                    <img src="./images/games/Operation-Recondite/PlayerDataInspector.png" alt="" class="entry-image" style="height:100%">
+                                </div>
+                                <div class="detail">
+                                    The First Person Character Controller developed using a Finite State Machine (FSM), the first image shows the <b style="color: brown;">PlayerStateManager</b> class that handles all the state changes and holds the reference to  all the States that the player has as well as the <b style="color: brown;">PlayerData</b>(second image) class which is a ScriptableObject that holds all the player data for each respective states. 
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <div class="entry-image-container">
+                                    <img src="./images/games/Operation-Recondite/BaseState.png" alt="" class="entry-image" style="height:80%">
+                                    <img src="./images/games/Operation-Recondite/WalkState.png" alt="" class="entry-image" style="height:80%">
+                                </div>
+                                <div class="detail">
+                                    Each player state inherits from the <b style="color: brown;">BaseState</b> which is an Abstract class that holds all the common members and methods like Move, Look etc., which is required by the child state classes. The <b style="color: brown;">WalkState</b> is one of many player states that inherits from the <b style="color: brown;">BaseState</b>. 
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <div class="entry-image-container">
+                                    <img src="./images/games/Operation-Recondite/WeaponData.png" alt="" class="entry-image" style="height:100%">
+                                    <img src="./images/games/Operation-Recondite/WeaponDataInspector.png" alt="" class="entry-image" style="height:100%">
+                                </div>
+                                <div class="detail">
+                                    All the weapons are treated as Data Objects similar to the PlayerData. Each Weapon has a <b style="color: brown;">Weapon</b> script attached to it and the respective <b style="color: brown;">WeaponData</b> is attached to the Weapon Script. The <b style="color: brown;">Weapon Data</b> holds all the information about the Weapon like the Firerate, BulletsPerTap etc, this <b style="color: brown;">WeaponData</b> is unfinished and more things would be included in it in the future.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#popup-box-recondite">
+                        <div class="project-card-image-container">
+                            <img src="./images/games/Operation-Recondite/cover.png" class="project-card-image">
+                            <div class="project-name-container">
+                                <div class="project-name-bg"></div>
+                                <div class="project-name">Operation Recondite</div>
+                            </div>
+                        </div>
+                    </a>
+                        <div class="project-card-description-container">
+                            <div class="project-technology">
+                                <ul>
+                                    <li>Unity</li>
+                                    <li>C#</li>
+                                    <li>FPS</li>
+                                    <li>Simulation</li>
+                                </ul>
+                            </div>
+                            <div class="project-card-description">
+                                <b style="color: brown;">Operation Recondite</b> is a Personal Prototype Project which is inspired from games like Project I.G.I and Delta Force franchise showcasing Mission based game structure with realistic First Person Character Controller and Weapon System. 
+                            </div>
+                        </div>
+                    </div>
+                <div class="project-card" id="saving-astral">
+                    <div class="popup" id="popup-box-saving-astral">
+                        <div class="popup-container">
+                            <a class="close" href="#saving-astral">&times;</a>
+                            <div class="popup-entry">
+                                <video src="./images/games/Saving astral/saving-astral.mkv" controls autoplay muted class="entry-video"></video>
+                                <div class="detail">
+                                    Here is a prototype engine footage of <b style="color: brown;">Saving Astral</b>.
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <div class="entry-image-container">
+                                    <img src="./images/games/Saving astral/saving astral.png" alt="" class="entry-image" style="height:100%">
+                                </div>
+                                <div class="detail">
+                                    I am currently working on the <b style="color: brown;">Asteroid Pattern</b> Creation over the City. These Asteroids can be Harvested and starts falling on the city once a certain phenomena is triggered. Hence, are required to be destroyed by the player. These Asteroid Patters are Optimized and Procedurally generated in the runtime. 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#popup-box-saving-astral">
+                        <div class="project-card-image-container">
+                            <img src="./images/games/Saving astral/cover.png" class="project-card-image">
+                            <div class="project-name-container">
+                                <div class="project-name-bg"></div>
+                                <div class="project-name">Saving Astral</div>
+                            </div>
+                        </div>
+                    </a>
+                        <div class="project-card-description-container">
+                            <div class="project-technology">
+                                <ul>
+                                    <li>Unity</li>
+                                    <li>C#</li>
+                                    <li>Rougelike</li>
+                                    <li>Indie</li>
+                                </ul>
+                            </div>
+                            <div class="project-card-description">
+                                <b style="color: brown;">Saving Astral</b> is a freelance project undertakn by <b style="color: brown;">Mena Creative</b>. I am working on more than one mechanics with 10+ Developers currently active in the Project. 
+                            </div>
+                        </div>
+                    </div>
+                <div class="project-card" id="project-spyroll">
+                    <div class="popup" id="popup-box-spyroll">
+                        <div class="popup-container">
+                            <a class="close" href="#project-spyroll">&times;</a>
+                            <div class="popup-entry">
+                                <video src="./images/games/SpyRoll/SpyRoll.mkv" controls autoplay muted class="entry-video"></video>
+                                <div class="detail">
+                                    This is a video demo of <b style="color: brown;">SpyRoll</b>. Current version <b style="color: brown;">v3.0</b> is a playable prototype which can be installed in Android. The current version contains 11 playable level, a main menu, settings and placeholder sounds. We have also implemented Pinch to Zoom-In and Zoom-Out functionality for the good User Experience. We have also added tutorial level for the new players. 
+                                    <br><br>Wish to try out? Click on the below links: 
+                                    <br><a style="text-decoration: underline; color: brown;" href="https://drive.google.com/file/d/1DTY5j_nSyaozTuhmOlO7fTVHUE4wPxxu/view?usp=sharing" class="highlight-link">Android Build</a>
+                                    <br><a style="text-decoration: underline; color: brown;" href="https://gitlab.com/underdogs6962425/SpyRoll.git" class="highlight-link">Git Repository</a>
+
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <div class="entry-image-container">
+                                    <img src="./images/games/SpyRoll/Observer.png" alt="" class="entry-image" style="height:100%">
+                                </div>
+                                <div class="detail">
+                                    We are using Mediator Pattern to guide this project to success as we wanted to reduce direct dependencies between classes. We have the <b style="color: brown;">GameEventHandler</b> static class which acts as a Mediator and keeps track of all the GameEvents in the game. All the Colleague Classes can subscribe to the Events as per the requirement. This ensures decoupling of the GameObjects and various systems  throughtout the Game. 
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <div class="entry-image-container">
+                                    <img src="./images/games/SpyRoll/Pawn.png" alt="" class="entry-image" style="height:100%">
+                                </div>
+                                <div class="detail">
+                                    Both the <b style="color: brown;">Player</b> and <b style="color: brown;">Enemy</b> inherits from the pawn class. We are also using the <b style="color: brown;">Command Pattern</b> to keep track of all the actions taken by any Pawn, it might be Player or Enemy. This enables us with a feature to provide some powerups to the player like the undo turn should the Game Design demands that in the future.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#popup-box-spyroll">
+                        <div class="project-card-image-container">
+                            <img src="./images/games/SpyRoll/cover.png" class="project-card-image">
+                            <div class="project-name-container">
+                                <div class="project-name-bg"></div>
+                                <div class="project-name">SpyRoll</div>
+                            </div>
+                        </div>
+                    </a>
+                        <div class="project-card-description-container">
+                            <div class="project-technology">
+                                <ul>
+                                    <li>Unity</li>
+                                    <li>C#</li>
+                                    <li>Android</li>
+                                    <li>Turn Based</li>
+                                </ul>
+                            </div>
+                            <div class="project-card-description">
+                                <b style="color: brown;">SpyRoll</b> is my final year college project. <b style="color: brown;">SpyRoll</b> is built as a two man team taking inspiration from games like <b style="color: brown;">Hitman-GO</b> and <b style="color: brown;">Lara Croft-GO</b>.
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="project-card-row">
+                <div class="project-card" id="project-boom-busters">
+                    <div class="popup" id="popup-box-boom-busters">
+                        <div class="popup-container">
+                            <a class="close" href="#project-boom-busters">&times;</a>
+                            <div class="popup-entry">
+                                <video src="./images/games/BoomBusters/video.mp4" controls autoplay muted class="entry-video"></video>
+                                <div class="detail">
+                                    <br>This is trailer of <b style="color: brown;">Boom Busters</b> created in Unity along with PUN2 networking framework to implemement multiplayer functionality. 
+                                    <br><br>Download the game from <a href="https://play.google.com/store/apps/details?id=com.hashbytestudio.minesweeper&hl=en_US" class="highlight-link" target="_blank" style="color: brown;">PLAY STORE</a> or <a href="https://apps.apple.com/gb/app/boom-busters/id6449463196" target="_blank" class="highlight-link" style="color: brown;">APPLE STORE</a>
+
+                                    <br><br><br><br><br><div style="font-size: small;">
+                                        Copyright © 2023 Hashbyte Studio. All Rights Reserved.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#popup-box-boom-busters">
+                        <div class="project-card-image-container">
+                            <img src="./images/games/BoomBusters/cover.png"  class="project-card-image" style="width: 40%; height: auto;">
+                            <div class="project-name-container">
+                                <div class="project-name-bg"></div>
+                                <div class="project-name">Boom Busters</div>
+                            </div>
+                        </div>
+                    </a>
+                        <div class="project-card-description-container">
+                            <div class="project-technology">
+                                <ul>
+                                    <li>Unity</li>
+                                    <li>C#</li>
+                                    <li>Puzzle</li>
+                                    <li>Multiplayer</li>
+                                </ul>
+                            </div>
+                            <div class="project-card-description">
+                                <b style="color: brown;">Boom Busters</b> is classic <b style="color: brown;">Minesweeper</b> meets the twist of multiplayer. I developed  Boom Busters for <b style="color: brown;">Hashbyte Studios</b> accompanied by Senior Developers, Designers and Artists.
+                            </div>
+                        </div>
+                    </div>
+                <div class="project-card" id="project-component-pilot">
+                    <div class="popup" id="popup-box-component-pilot">
+                        <div class="popup-container">
+                            <a class="close" href="#project-component-pilot">&times;</a>
+                            <div class="popup-entry">
+                                <video src="./images/games/Component Pilot/ComponentPilot - Window.mkv" controls autoplay muted class="entry-video"></video>
+                                <div class="detail">
+                                    This is the Video Demo of <b style="color: brown;">ComponentPilot - Window</b>. Here one can choose the <b style="color: brown;">Source</b> GameObject and the list of <b style="color: brown;">Destination</b> GameObjects. This tools also enables the user to choose the components that are needed to be copied from the source to destination GameObject.
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <video src="./images/games/Component Pilot/ComponentPilot - MenuItem.mkv" controls autoplay muted class="entry-video"></video>
+                                <div class="detail">
+                                    This is the Video Demo of the second utility tool of Component Pilot, <b style="color: brown;">ComponentPilot - MenuItem</b>. Similar to the Window Tool, this utility enables the user to copy all the components of a GameObject and Paste them in any number of GameObjects. This tool is a quick fix to the tiring work of copy and paste components one by one manually.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#popup-box-component-pilot">
+                        <div class="project-card-image-container">
+                            <img src="./images/games/Component Pilot/cover.png" class="project-card-image">
+                            <div class="project-name-container">
+                                <div class="project-name-bg"></div>
+                                <div class="project-name">Component Pilot</div>
+                            </div>
+                        </div>
+                    </a>
+                        <div class="project-card-description-container">
+                            <div class="project-technology">
+                                <ul>
+                                    <li>Unity</li>
+                                    <li>C#</li>
+                                    <li>Custom Tool</li>
+                                    <li>Utility</li>
+                                </ul>
+                            </div>
+                            <div class="project-card-description">
+                                <b style="color: brown;">Component Pilot</b> is a Custom Tool built for a purpose to copy two or more components from one GameObject to more than one GameObjects with or without the values.
+                            </div>
+                        </div>
+                    </div>
+                <div class="project-card" id="project-project-a">
+                    <div class="popup" id="popup-box-project-a">
+                        <div class="popup-container">
+                            <a class="close" href="#project-project-a">&times;</a>
+                            <div class="popup-entry">
+                                <video src="./images/games/project-a/Project-A.mkv" controls autoplay muted class="entry-video"></video>
+                                <div class="detail">
+                                    This is a video demo of unnamed project, <b style="color: brown;">Project-A</b>. The above demostration consists of <b style="color: brown;">Player Movement</b>, <b style="color: brown;">Object Pickup</b>, <b style="color: brown;">Object Push/Pull</b>, Object Interaction and Basic enemy AI to react according to Player's Actions. 
+                                    <br><br><b style="color: brown;">NOTE:</b> This project is very early in devlopment.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#popup-box-project-a">
+                        <div class="project-card-image-container">
+                            <img src="./images/games/project-a/Project-A-cover.png" class="project-card-image">
+                            <div class="project-name-container">
+                                <div class="project-name-bg"></div>
+                                <div class="project-name">Project-A</div>
+                            </div>
+                        </div>
+                    </a>
+                        <div class="project-card-description-container">
+                            <div class="project-technology">
+                                <ul>
+                                    <li>Unity</li>
+                                    <li>C#</li>
+                                    <li>2.5D</li>
+                                    <li>Platformer</li>
+                                </ul>
+                            </div>
+                            <div class="project-card-description">
+                                <b style="color: brown;">Project-A</b> is an unnamed project which I have been working with the sole purpose to learn more about the world between the 2D and 3D that is the 2.5D. With a very simple Player Controller and lots of Puzzles, we aim to make this prototype into a full-fledged 2.5D Puzzle Platformer game.
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="project-card-row">
+                <div class="project-card" id="project-crypt-raider">
+                    <div class="popup" id="popup-box-crypt-raider">
+                        <div class="popup-container">
+                            <a class="close" href="#project-crypt-raider">&times;</a>
+                            <div class="popup-entry">
+                                <video src="./images/games/CryptRaider/CryptRaider.mkv" controls autoplay muted class="entry-video"></video>
+                                <div class="detail">
+                                    
+                                    <br><br>This is a video Demo of <b style="color: brown;">Crypt Raider</b> created in Unreal Engine with C++.
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <div class="entry-image-container">
+                                    <img src="./images/games/CryptRaider/Mover.png" alt="" class="entry-image" style="height:100%">
+                                </div>
+                                <div class="detail">
+                                    <b style="color: brown;">Mover</b> is a custom component which can be attached to any Actor to move it in any direction by any units when the <b style="color: brown;">ShouldMove</b> boolean property is set to true. This component is used in the dungeon door and the Iron door in the dungeon. The <b style="color: brown;">ShouldMove</b> can be set to true or false as per the need.
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <div class="entry-image-container">
+                                    <img src="./images/games/CryptRaider/TriggerComponent.png" alt="" class="entry-image" style="height:100%">
+                                </div>
+                                <div class="detail">
+                                    This is the <b style="color: brown;">Trigger</b> Component which checks if a specific type of Actor has entered the trigger, if yes then it move down by certain distance by setting the <b style="color: brown;">ShouldMove</b> boolean property of the <b style="color: brown;">Mover</b> to true. This component is used in the hallway door, which opens the door when the golem statue is placed inside it.
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <div class="entry-image-container">
+                                    <img src="./images/games/CryptRaider/Grabber.png" alt="" class="entry-image" style="height:100%">
+                                </div>
+                                <div class="detail">
+                                    The <b style="color: brown;">Grabber</b> component can be attached to any component that we intend to grab and move using Physics Raycast. In this demo we have attached the <b style="color: brown;">Grabber</b> component to the Golem Statue and the Gold Statue. Also these Actors acts as the acceptable Actor for the <b style="color: brown;">Tigger</b> Component.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#popup-box-crypt-raider">
+                        <div class="project-card-image-container">
+                            <img src="./images/games/CryptRaider/cover.png" class="project-card-image">
+                            <div class="project-name-container">
+                                <div class="project-name-bg"></div>
+                                <div class="project-name">Crypt Raider</div>
+                            </div>
+                        </div>
+                    </a>
+                        <div class="project-card-description-container">
+                            <div class="project-technology">
+                                <ul>
+                                    <li>Unreal Engine</li>
+                                    <li>C++</li>
+                                    <li>Adventure</li>
+                                </ul>
+                            </div>
+                            <div class="project-card-description">
+                                <b style="color: brown;">Crypt Raider</b> is a Practice Project that was created for the purpose of learning Unreal Engine C++. This project has helped me gain proficiency in Unreal Engine's game development by crafting from scratch using C++.
+                            </div>
+                        </div>
+                    </div>
+                <div class="project-card" id="project-toon-tanks">
+                    <div class="popup" id="popup-box-toon-tanks">
+                        <div class="popup-container">
+                            <a class="close" href="#project-toon-tanks">&times;</a>
+                            <div class="popup-entry">
+                                <video src="./images/games/ToonTanks/ToonTanks.mkv" controls autoplay muted class="entry-video"></video>
+                                <div class="detail">
+                                    <br><br>This is a video Demo of <b style="color: brown;">Toon Tanks</b> created in Unreal Engine with C++.
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <div class="entry-image-container">
+                                    <img src="./images/games/ToonTanks/PawnBase.png" alt="" class="entry-image" style="height:85%">
+                                    <img src="./images/games/ToonTanks/PawnTank.png" alt="" class="entry-image" style="height:85%">
+                                </div>
+                                <div class="detail">
+                                    The <b style="color: brown;">PawnBase</b> class is the Base Class for both the Player(<b style="color: brown;">PawnTank</b>) and Enemy(<b style="color: brown;">PawnTurret</b>) class. It contains some common members and methods like <b style="color: brown;">RotateTurret()</b>  and <b style="color: brown;">Fire()</b> etc. 
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <div class="entry-image-container">
+                                    <img src="./images/games/ToonTanks/PawnTurret.png" alt="" class="entry-image" style="height:110%">
+                                </div>
+                                <div class="detail">
+                                    <br><br><b style="color: brown;">PawnTurret</b> is the Parent Class of the Enemy turrets which inherits from the <b style="color: brown;">PawnBase</b> class. 
+                                </div>
+                            </div>
+                            <div class="popup-entry">
+                                <div class="entry-image-container">
+                                    <img src="./images/games/ToonTanks/ProjectileBase.png" alt="" class="entry-image" style="height:110%">
+                                </div>
+                                <div class="detail">
+                                    <b style="color: brown;">ProjectileBase</b> is the base class for all the projectiles that are fired by the Player Or Enemies. Any other projectiles can inherit from this class and as soon as any <b style="color: brown;">SubClass</b> of type <b style="color: brown;">ProjectileBase</b> is spawned in the world, it moves towards a specific <b style="color: brown;">SubClass of PawnBase</b>. In this case we use it to Spawn at Player Turret and move towards the enemy and vice-versa.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#popup-box-toon-tanks">
+                        <div class="project-card-image-container">
+                            <img src="./images/games/ToonTanks/cover.png"  class="project-card-image">
+                            <div class="project-name-container">
+                                <div class="project-name-bg"></div>
+                                <div class="project-name">Toon Tanks</div>
+                            </div>
+                        </div>
+                    </a>
+                        <div class="project-card-description-container">
+                            <div class="project-technology">
+                                <ul>
+                                    <li>Unreal Engine</li>
+                                    <li>C++</li>
+                                    <li>Arcade</li>
+                                </ul>
+                            </div>
+                            <div class="project-card-description">
+                                <b style="color: brown;">Toon Tanks</b> is another Practice Project that was created for the purpose of learning Unreal Engine C++. This project as well has helped me gain proficiency in Unreal Engine's game development by crafting from scratch using C++ along with static AI behaviour.
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="container" id="contact">
+            <div class="container-name">
+                Contact Me
+            </div>
+            <div class="contact-contents" style="margin-top: 5rem;">
+                <div class="contact-mail">
+                    I'm always excited to collaborate on new projects and opportunities. Whether you want to discuss a potential collaboration, have a creative idea to share, or simply want to say hi, I'd love to hear from you. Feel free to reach out through the form below or connect with me on social media. Let's bring ideas to life together!
+                    <br><br> Let's talk over a cup of tea <i class="ri-cup-fill"></i>, contact me at
+                    <a href="mailto:iampratiksahoo@gmail.com" target="_blank" class="highlight-link">iampratiksahoo@gmail.com</a>
+                </div>
+                <div class="social-media-icons">
+                    <a href="https://www.linkedin.com/in/i-am-pratik-sahoo" target="_blank" title="Linkedin">
+                        <div class="social-icon">
+                            <img src="images/social-icons/linkedin.png" alt="linkedin">
+                        </div>
+                    </a>
+                    <a href="https://www.upwork.com/freelancers/~016a2a7c8445736ff8" target="_blank" title="Upwork">
+                        <div class="social-icon">
+                            <img src="images/social-icons/upwork.png" alt="upwork">
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/iampratiksahoo/" target="_blank" title="Instagram">
+                        <div class="social-icon">
+                            <img src="images/social-icons/instagram.png" alt="instagram">
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com/@pratiksahoo8191" target="_blank" title="YouTube">
+                        <div class="social-icon">
+                            <img src="images/social-icons/youtube.png" alt="youtube">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <footer>
+        <div class="footer-parent">
+            <div class="footer-separator"></div>
+            <div class="footer-text">
+                Copyright <b>©</b> 2023 by <b>Pratik Sahoo</b> | All images, icons, and resources featured on this website belong to their respective rightful owners.
+            </div>
+        </div>
+    </footer>
+</html>
