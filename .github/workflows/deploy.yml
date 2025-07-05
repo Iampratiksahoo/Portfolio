@@ -1,3 +1,8 @@
+permissions:
+  contents: write    # allow pushing to gh-pages
+  pages: write       # allow updating GitHub Pages
+  id-token: write    # (required by some Actions; harmless otherwise)
+
 name: Build & Deploy
 
 # Trigger on push to your chosen branch
