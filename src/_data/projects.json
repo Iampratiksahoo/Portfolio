@@ -1,0 +1,24 @@
+[
+  {
+    "id": "operation-recondite",
+    "title": "Operation Recondite",
+    "image": "/assets/images/games/Operation-Recondite/cover.png",
+    "technologies": ["Unity", "C#", "FPS", "Simulation"],
+    "description": "A personal prototype showcasing mission‑based gameplay with placeholder assets."
+  },
+  {
+    "id": "saving-astral",
+    "title": "Saving Astral",
+    "image": "/assets/images/games/Saving astral/cover.png",
+    "technologies": ["Unity", "C#", "Roguelike", "Indie"],
+    "description": "Freelance project at Mena Creative: optimized, procedurally‑generated asteroid patterns."
+  },
+  {
+    "id": "spyroll",
+    "title": "SpyRoll",
+    "image": "/assets/images/games/SpyRoll/cover.png",
+    "technologies": ["Unity", "C#", "Android", "Turn Based"],
+    "description": "College project inspired by Hitman‑GO; includes pinch‑to‑zoom and tutorial levels."
+  }
+]
+
