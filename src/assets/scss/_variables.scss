@@ -10,3 +10,7 @@ $font-body:    'Source Code Pro', monospace !default;
 $font-heading: 'Oswald', sans-serif !default;
 $bg-light: #f9f9f9; // light background for contact section
     
+// Intro section sizing
+$intro-img-size:   500px !default;  // base avatar diameter
+$intro-text-basis: 400px !default;  // min width for text column
+$intro-gap:        3rem  !default;  // gap between text & image
