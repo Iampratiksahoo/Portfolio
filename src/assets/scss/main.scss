@@ -131,3 +131,15 @@ a {
 .thumb-nav a:hover {
   opacity: 1;
 }
+
+.site-main > .site-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; // content starts at top
+  height: 100vh;
+  padding: 2rem;
+}
+
+.site-section > *:first-child {
+  flex: 1; // main content takes available space
+}
