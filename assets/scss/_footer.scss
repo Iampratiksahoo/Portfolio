@@ -1,0 +1,9 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+.footer-parent {
+  text-align: center;          // center text
+  display: flex;
+  justify-content: center;     // center any child elements
+  padding: 2rem 0;
+}
