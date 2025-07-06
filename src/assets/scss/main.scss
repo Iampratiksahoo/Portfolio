@@ -6,6 +6,7 @@
 @use 'experience';
 @use 'projects';
 @use 'contact';
+@use 'footer';
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 
@@ -21,9 +22,24 @@ html {
   scroll-behavior: smooth;
 }
 
-body {  
+// Enable scroll snapping
+html, body, main {
+  height: 100%;
   margin: 0;
-  line-height: 1.6;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+section {
+  scroll-snap-align: start;
+  height: 100vh;            // full viewport per section
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  // centers content vertically
+  padding: 2rem;
 }
 
 // Container

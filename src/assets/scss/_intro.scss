@@ -8,7 +8,8 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin: 10vh auto;
+  margin: 5vh auto;      // was 10vh; now tighter
+  padding: 2rem 0;       // optional padding adjustment
   text-align: center;
 }
 
