@@ -1,24 +1,34 @@
 [
   {
-    "id": "operation-recondite",
-    "title": "Operation Recondite",
-    "image": "/assets/images/games/Operation-Recondite/cover.png",
-    "technologies": ["Unity", "C#", "FPS", "Simulation"],
-    "description": "A personal prototype showcasing mission‑based gameplay with placeholder assets."
+    "id": "time-telescope",
+    "title": "Defragmented Time Telescope",
+    "year": "2024",
+    "skills": ["C++", "Unreal Engine", "Multithreading"],
+    "description": "A custom engine feature that simulates localized time loops within a scene, preserving player state across paradoxical events.",
+    "links": {
+      "github": "https://github.com/Iampratiksahoo/Portfolio",
+      "demo": "https://your-demo-link.com"
+    },
+    "images": [
+      "/assets/images/projects/telescope-1.jpg",
+      "/assets/images/projects/telescope-2.gif"
+    ]
   },
   {
-    "id": "saving-astral",
-    "title": "Saving Astral",
-    "image": "/assets/images/games/Saving astral/cover.png",
-    "technologies": ["Unity", "C#", "Roguelike", "Indie"],
-    "description": "Freelance project at Mena Creative: optimized, procedurally‑generated asteroid patterns."
-  },
-  {
-    "id": "spyroll",
-    "title": "SpyRoll",
-    "image": "/assets/images/games/SpyRoll/cover.png",
-    "technologies": ["Unity", "C#", "Android", "Turn Based"],
-    "description": "College project inspired by Hitman‑GO; includes pinch‑to‑zoom and tutorial levels."
+    "id": "gold-mine",
+    "title": "Mystery of the Gold Mine",
+    "year": "2023",
+    "skills": ["Unity", "C#", "Shader Graph"],
+    "description": "A first‑person puzzle thriller set in an abandoned wild‑west gold mine, featuring procedural lighting and interactive clues.",
+    "links": {
+      "video": "https://youtu.be/your-video",
+      "live": "https://your-live-link.com"
+    },
+    "images": [
+      "/assets/images/projects/mine-1.jpg",
+      "/assets/images/projects/mine-2.jpg",
+      "/assets/images/projects/mine-3.mp4"
+    ]
   }
 ]
 

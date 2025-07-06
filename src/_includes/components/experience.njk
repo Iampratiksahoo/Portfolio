@@ -1,0 +1,12 @@
+<h2>Professional Experience</h2>
+<div class="experience-bar">
+  {% for item in experience %}
+    <div class="exp-item">
+      <div class="exp-company">{{ item.company }}</div>
+      <div class="exp-role">{{ item.role }}</div>
+      <div class="exp-dates">{{ item.start }} – {{ item.end }}</div>
+      <div class="exp-details">{{ item.details }}</div>
+    </div>
+  {% endfor %}
+</div>
+
