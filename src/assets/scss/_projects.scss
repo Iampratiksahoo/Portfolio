@@ -1,109 +1,128 @@
-@use 'sass:color';
 @use 'variables' as *;
+@use 'sass:color';
 
-// Section heading
-h2 {
+// Section wrapper
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  height: 100%; // fill 100vh of its parent
+}
+
+// Heading at top
+.projects-section > h2 {
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-// Grid layout
+// Grid takes remaining space, centers its content
 .projects-grid {
+  flex: 1;
   display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(
+    var(--proj-cols),
+    minmax(var(--proj-card-w), 1fr)
+  );
   gap: 2rem;
-  justify-items: center;   // centers each card in its cell
+  justify-items: center;     // center cards within their cells
+  align-content: center;     // center rows vertically
+  justify-content: center;   // ➡️ center entire grid horizontally
 }
 
-
-// Poster card
+// Individual card
 .proj-card {
-  cursor: pointer;
-  .proj-poster {
-    position: relative;
-    padding: 1rem;
-    background: rgba($accent, 0.05);      // very light accent
-    border: 2px solid $accent;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba($accent, 0.4);
-    }
-    // Frame element can be removed if unused
-    .poster-frame { display: none; }
-  }
-} 
-
-// Modal overlay
-.proj-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
+  width: var(--proj-card-w);
+  height: var(--proj-card-h);
+  background: rgba($accent, 0.05);
+  border: 2px solid $accent;
+  border-radius: 8px;
+  display: flex;
   align-items: center;
-  padding: 2rem;
-  z-index: 200;
-  .modal-inner {
-    background: $bg;
-    border: 2px solid $accent;
-    border-radius: 0.5rem;
-    max-width: 800px;
-    width: 100%;
-    padding: 1.5rem;
-    position: relative;
-    overflow-y: auto;
-    max-height: 90vh;
-    color: $text;
-    h3 { margin-top: 0; }
-    .modal-close {
-      position: absolute;
-      top: 0.5rem; right: 1rem;
-      background: none; border: none;
-      font-size: 1.5rem; cursor: pointer; color: $accent;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba($accent, 0.4);
+  }
+
+  .proj-poster {
+    h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: $accent;
     }
-    .modal-media {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      margin: 1rem 0;
-      img, video {
-        max-height: 200px;
-        border: 1px solid $accent;
-        border-radius: 0.25rem;
-      }
-    }
-    .modal-desc { margin: 1rem 0; }
-    .modal-skills {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      li {
-        background: color.adjust($accent, $alpha: calc(-50% / 1%));
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.25rem;
-        font-size: 0.85rem;
-      }
-    }
-    .modal-links {
-      margin-top: 1rem;
-      a {
-        display: inline-block;
-        margin-right: 1rem;
-        padding: 0.5rem 1rem;
-        border: 1px solid $accent;
-        border-radius: 0.25rem;
-        &:hover {
-          background: color.adjust($accent, $alpha: calc(-70% / 1%));
-        }
-      }
+    .proj-year {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: color.adjust($text, $lightness: -40%);
     }
   }
 }
 
+.projects-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .arrow {
+    background: none;
+    border: 2px solid $accent;
+    border-radius: 10px;
+    padding: 0.25rem 0.75rem;
+    font-size: 2rem;
+    color: $accent;
+    opacity: 0;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    z-index: 10;
+
+    &.disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+  }
+
+  &:hover .arrow {
+    opacity: 1;
+  }
+
+  .arrow-left {
+    margin-right: 0.5rem; // Increase to match visual balance
+  }
+
+  .arrow-right {
+    margin-left: 0.5rem;
+  }
+
+
+  .projects-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 10rem;
+    padding: 1rem 5vw; // ➡️ Equal horizontal padding for centering
+    flex: 1;
+    scrollbar-width: none;  // Firefox
+    -ms-overflow-style: none; // IE 10+
+    justify-content: center;
+  }
+
+  .projects-track::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Opera
+  }
+
+
+  .projects-group {
+    scroll-snap-align: start;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(var(--proj-card-w), 1fr));
+    grid-auto-rows: var(--proj-card-h);
+    gap: 2rem;
+    flex: none;
+    // remove margin auto since padding handles centering
+  }
+}

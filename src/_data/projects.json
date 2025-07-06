@@ -1,34 +1,250 @@
-[
-  {
-    "id": "time-telescope",
-    "title": "Defragmented Time Telescope",
-    "year": "2024",
-    "skills": ["C++", "Unreal Engine", "Multithreading"],
-    "description": "A custom engine feature that simulates localized time loops within a scene, preserving player state across paradoxical events.",
-    "links": {
-      "github": "https://github.com/Iampratiksahoo/Portfolio",
-      "demo": "https://your-demo-link.com"
+{
+  "cardWidth": "300px",
+  "cardHeight": "300px",
+  "columns": 3,
+  "items": [
+    {
+      "id": "time-telescope",
+      "title": "Time Telescope",
+      "year": "2024",
+      "skills": ["C++", "Unreal Engine"],
+      "description": "Localized time loops simulator.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/telescope-1.jpg"]
     },
-    "images": [
-      "/assets/images/projects/telescope-1.jpg",
-      "/assets/images/projects/telescope-2.gif"
-    ]
-  },
-  {
-    "id": "gold-mine",
-    "title": "Mystery of the Gold Mine",
-    "year": "2023",
-    "skills": ["Unity", "C#", "Shader Graph"],
-    "description": "A first‑person puzzle thriller set in an abandoned wild‑west gold mine, featuring procedural lighting and interactive clues.",
-    "links": {
-      "video": "https://youtu.be/your-video",
-      "live": "https://your-live-link.com"
+    {
+      "id": "gold-mine",
+      "title": "Gold Mine",
+      "year": "2023",
+      "skills": ["Unity", "C#"],
+      "description": "First‑person puzzle thriller.",
+      "links": { "video": "#", "live": "#" },
+      "images": ["/assets/images/projects/mine-1.jpg"]
     },
-    "images": [
-      "/assets/images/projects/mine-1.jpg",
-      "/assets/images/projects/mine-2.jpg",
-      "/assets/images/projects/mine-3.mp4"
-    ]
-  }
-]
-
+    {
+      "id": "rift-battle",
+      "title": "Rift Battle",
+      "year": "2022",
+      "skills": ["Godot", "GDScript"],
+      "description": "2D arena shooter with portals.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/rift-1.jpg"]
+    },
+    {
+      "id": "time-telescope",
+      "title": "Time Telescope",
+      "year": "2024",
+      "skills": ["C++", "Unreal Engine"],
+      "description": "Localized time loops simulator.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/telescope-1.jpg"]
+    },
+    {
+      "id": "gold-mine",
+      "title": "Gold Mine",
+      "year": "2023",
+      "skills": ["Unity", "C#"],
+      "description": "First‑person puzzle thriller.",
+      "links": { "video": "#", "live": "#" },
+      "images": ["/assets/images/projects/mine-1.jpg"]
+    },
+    {
+      "id": "rift-battle",
+      "title": "Rift Battle",
+      "year": "2022",
+      "skills": ["Godot", "GDScript"],
+      "description": "2D arena shooter with portals.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/rift-1.jpg"]
+    },
+    {
+      "id": "time-telescope",
+      "title": "Time Telescope",
+      "year": "2024",
+      "skills": ["C++", "Unreal Engine"],
+      "description": "Localized time loops simulator.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/telescope-1.jpg"]
+    },
+    {
+      "id": "gold-mine",
+      "title": "Gold Mine",
+      "year": "2023",
+      "skills": ["Unity", "C#"],
+      "description": "First‑person puzzle thriller.",
+      "links": { "video": "#", "live": "#" },
+      "images": ["/assets/images/projects/mine-1.jpg"]
+    },
+    {
+      "id": "rift-battle",
+      "title": "Rift Battle",
+      "year": "2022",
+      "skills": ["Godot", "GDScript"],
+      "description": "2D arena shooter with portals.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/rift-1.jpg"]
+    },
+    {
+      "id": "time-telescope",
+      "title": "Time Telescope",
+      "year": "2024",
+      "skills": ["C++", "Unreal Engine"],
+      "description": "Localized time loops simulator.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/telescope-1.jpg"]
+    },
+    {
+      "id": "gold-mine",
+      "title": "Gold Mine",
+      "year": "2023",
+      "skills": ["Unity", "C#"],
+      "description": "First‑person puzzle thriller.",
+      "links": { "video": "#", "live": "#" },
+      "images": ["/assets/images/projects/mine-1.jpg"]
+    },
+    {
+      "id": "rift-battle",
+      "title": "Rift Battle",
+      "year": "2022",
+      "skills": ["Godot", "GDScript"],
+      "description": "2D arena shooter with portals.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/rift-1.jpg"]
+    },
+    {
+      "id": "time-telescope",
+      "title": "Time Telescope",
+      "year": "2024",
+      "skills": ["C++", "Unreal Engine"],
+      "description": "Localized time loops simulator.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/telescope-1.jpg"]
+    },
+    {
+      "id": "gold-mine",
+      "title": "Gold Mine",
+      "year": "2023",
+      "skills": ["Unity", "C#"],
+      "description": "First‑person puzzle thriller.",
+      "links": { "video": "#", "live": "#" },
+      "images": ["/assets/images/projects/mine-1.jpg"]
+    },
+    {
+      "id": "rift-battle",
+      "title": "Rift Battle",
+      "year": "2022",
+      "skills": ["Godot", "GDScript"],
+      "description": "2D arena shooter with portals.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/rift-1.jpg"]
+    },
+    {
+      "id": "time-telescope",
+      "title": "Time Telescope",
+      "year": "2024",
+      "skills": ["C++", "Unreal Engine"],
+      "description": "Localized time loops simulator.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/telescope-1.jpg"]
+    },
+    {
+      "id": "gold-mine",
+      "title": "Gold Mine",
+      "year": "2023",
+      "skills": ["Unity", "C#"],
+      "description": "First‑person puzzle thriller.",
+      "links": { "video": "#", "live": "#" },
+      "images": ["/assets/images/projects/mine-1.jpg"]
+    },
+    {
+      "id": "rift-battle",
+      "title": "Rift Battle",
+      "year": "2022",
+      "skills": ["Godot", "GDScript"],
+      "description": "2D arena shooter with portals.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/rift-1.jpg"]
+    },
+    {
+      "id": "time-telescope",
+      "title": "Time Telescope",
+      "year": "2024",
+      "skills": ["C++", "Unreal Engine"],
+      "description": "Localized time loops simulator.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/telescope-1.jpg"]
+    },
+    {
+      "id": "gold-mine",
+      "title": "Gold Mine",
+      "year": "2023",
+      "skills": ["Unity", "C#"],
+      "description": "First‑person puzzle thriller.",
+      "links": { "video": "#", "live": "#" },
+      "images": ["/assets/images/projects/mine-1.jpg"]
+    },
+    {
+      "id": "rift-battle",
+      "title": "Rift Battle",
+      "year": "2022",
+      "skills": ["Godot", "GDScript"],
+      "description": "2D arena shooter with portals.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/rift-1.jpg"]
+    },
+    {
+      "id": "time-telescope",
+      "title": "Time Telescope",
+      "year": "2024",
+      "skills": ["C++", "Unreal Engine"],
+      "description": "Localized time loops simulator.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/telescope-1.jpg"]
+    },
+    {
+      "id": "gold-mine",
+      "title": "Gold Mine",
+      "year": "2023",
+      "skills": ["Unity", "C#"],
+      "description": "First‑person puzzle thriller.",
+      "links": { "video": "#", "live": "#" },
+      "images": ["/assets/images/projects/mine-1.jpg"]
+    },
+    {
+      "id": "rift-battle",
+      "title": "Rift Battle",
+      "year": "2022",
+      "skills": ["Godot", "GDScript"],
+      "description": "2D arena shooter with portals.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/rift-1.jpg"]
+    },
+    {
+      "id": "time-telescope",
+      "title": "Time Telescope",
+      "year": "2024",
+      "skills": ["C++", "Unreal Engine"],
+      "description": "Localized time loops simulator.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/telescope-1.jpg"]
+    },
+    {
+      "id": "gold-mine",
+      "title": "Gold Mine",
+      "year": "2023",
+      "skills": ["Unity", "C#"],
+      "description": "First‑person puzzle thriller.",
+      "links": { "video": "#", "live": "#" },
+      "images": ["/assets/images/projects/mine-1.jpg"]
+    },
+    {
+      "id": "rift-battle",
+      "title": "Rift Battle",
+      "year": "2022",
+      "skills": ["Godot", "GDScript"],
+      "description": "2D arena shooter with portals.",
+      "links": { "github": "#", "demo": "#" },
+      "images": ["/assets/images/projects/rift-1.jpg"]
+    }
+  ]
+}

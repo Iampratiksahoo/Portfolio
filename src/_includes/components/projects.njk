@@ -1,42 +1,52 @@
-<h2>Projects</h2>
-<div class="projects-grid">
-  {% for proj in projects %}
-    <div class="proj-card" data-id="{{ proj.id }}">
-      <div class="proj-poster">
-        <div class="poster-frame"></div>
-        <div class="poster-content">
-          <h3>{{ proj.title }}</h3>
-          <span class="proj-year">{{ proj.year }}</span>
-        </div>
-      </div>
-    </div>
-    {# Modal for each project #}
-    <div class="proj-modal" id="modal-{{ proj.id }}">
-      <div class="modal-inner">
-        <button class="modal-close" data-id="{{ proj.id }}">✕</button>
-        <h3>{{ proj.title }} <small>({{ proj.year }})</small></h3>
-        <div class="modal-media">
-          {% for img in proj.images %}
-            {% if img | endsWith('.mp4') %}
-              <video src="{{ img }}" controls></video>
-            {% else %}
-              <img src="{{ img }}" alt="{{ proj.title }} screenshot">
-            {% endif %}
-          {% endfor %}
-        </div>
-        <p class="modal-desc">{{ proj.description }}</p>
-        <ul class="modal-skills">
-          {% for skill in proj.skills %}
-            <li>{{ skill }}</li>
-          {% endfor %}
-        </ul>
-        <div class="modal-links">
-          {% for name, url in proj.links %}
-            <a href="{{ url }}" target="_blank">{{ name | capitalize }}</a>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-</div>
+{% set cfg = projects %}
+<div class="projects-section">
+  <h2>Projects</h2>
 
+  {% if cfg.items | length <= 6 %}
+    <div
+      class="projects-grid"
+      style="
+        --proj-card-w: {{ cfg.cardWidth }};
+        --proj-card-h: {{ cfg.cardHeight }};
+        --proj-cols: {{ cfg.columns }};
+      "
+    >
+      {% for proj in cfg.items %}
+        <div class="proj-card">
+          <div class="proj-poster">
+            <h3>{{ proj.title }}</h3>
+            <span class="proj-year">{{ proj.year }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  {% else %}
+    <div class="projects-carousel">
+      {% if cfg.items | length > 6 %}
+        <button class="arrow arrow-left" disabled>&lt;</button>
+      {% endif %}
+      <div class="projects-track"
+        style="
+          --proj-card-w: {{ cfg.cardWidth }};
+          --proj-card-h: {{ cfg.cardHeight }};
+        ">
+        {% for group in cfg.items | chunks(6) %}
+          <div class="projects-group">
+            {% for proj in group %}
+              <div class="proj-card">
+                <div class="proj-poster">
+                  <h3>{{ proj.title }}</h3>
+                  <span class="proj-year">{{ proj.year }}</span>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+      {% if cfg.items | length > 6 %}
+        <button class="arrow arrow-right">&gt;</button>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
