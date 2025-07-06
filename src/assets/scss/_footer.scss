@@ -2,16 +2,35 @@
 @use 'variables' as *;
 
 .footer-parent {
-  text-align: center;          // center text
+  text-align: center;
   display: flex;
-  justify-content: center;     // center any child elements
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: auto;
-  padding: 2rem 0;
+  padding: 1rem 0;    // reduced padding for smaller footer
 }
 
 footer {
-  scroll-snap-align: none;    /* explicitly opt-out */
-  position: relative;         /* static at end */
+  scroll-snap-align: none;
+  position: relative;
   text-align: center;
-  padding: 2rem 0;
+  padding: 1rem 0;    // reduced padding
+  width: 100%;
+  font-family: $font-body; // use your theme's body font variable
+  font-size: 0.8rem;       // smaller font size
+  color: color.scale($text, $lightness: -20%); // slightly darker tone for subtlety
+  // background-color: color.scale($bg, $lightness: 5%); // slightly lighter background if needed
+}
+
+.footer-separator {
+  width: 60%;               // slightly shorter line
+  height: 1px;
+  background-color: color.scale($text, $lightness: -40%);
+  margin-bottom: 0.5rem;    // reduced margin
+}
+
+.footer-text {
+  max-width: 90%;
+  line-height: 1.4;
 }
