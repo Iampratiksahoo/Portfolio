@@ -1,17 +1,24 @@
-[
-  {
-    "company": "Acme Games",
-    "role": "Gameplay Programmer",
-    "start": "Jan 2022",
-    "end": "Present",
-    "details": "Working on core gameplay systems and tools."
-  },
-  {
-    "company": "Beta Interactive",
-    "role": "Junior Programmer",
-    "start": "Jun 2020",
-    "end": "Dec 2021",
-    "details": "Built UI widgets and assisted in level scripting."
-  }
-]
-
+{
+  "cardWidth": "300px",
+  "cardHeight": "200px",
+  "items": [
+    {
+      "company": "Ubisoft",
+      "designation": "Gameplay Programmer",
+      "start": "Jan 2022",
+      "end": "Present"
+    },
+    {
+      "company": "Electronic Arts",
+      "designation": "Software Engineer Intern",
+      "start": "Jun 2021",
+      "end": "Dec 2021"
+    },
+    {
+      "company": "Freelance",
+      "designation": "Indie Game Developer",
+      "start": "2018",
+      "end": "2021"
+    }
+  ]
+}

@@ -1,12 +1,17 @@
-<h2>Professional Experience</h2>
-<div class="experience-bar">
-  {% for item in experience %}
-    <div class="exp-item">
-      <div class="exp-company">{{ item.company }}</div>
-      <div class="exp-role">{{ item.role }}</div>
-      <div class="exp-dates">{{ item.start }} – {{ item.end }}</div>
-      <div class="exp-details">{{ item.details }}</div>
-    </div>
-  {% endfor %}
-</div>
+{% set cfg = experience %}
+<div class="experience-section">
+  <h2>Professional Experience</h2>
 
+  <div 
+    class="experience-cards"
+    style="--exp-card-width: {{ cfg.cardWidth }}; --exp-card-height: {{ cfg.cardHeight }};"
+  >
+    {% for exp in cfg.items %}
+      <div class="exp-card">
+        <h3>{{ exp.company }}</h3>
+        <p class="exp-role">{{ exp.designation }}</p>
+        <span class="exp-duration">{{ exp.start }} – {{ exp.end }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</div>
