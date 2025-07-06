@@ -2,10 +2,12 @@
 
 @use 'sass:color';         // load the built‑in color module
 @use 'variables' as *;     // bring in your custom variables
+@use 'intro';
 @use 'experience';
 @use 'projects';
 @use 'contact';
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 
 // Global resets & base
 * {
@@ -32,11 +34,24 @@ body {
 }
 
 // Headings
-h1,
-h2 {
+h1{
   font-family: $font-heading;
   color: $accent;
   margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: 'Fira Code', monospace;
+  position: relative;
+  margin-bottom: 1.5rem;
+  color: $accent;
+
+  &::before {
+    content: ">> ";
+    position: absolute;
+    left: -2.5rem;
+    color: color.adjust($accent, $alpha: calc(50% / 1%));
+  }
 }
 
 // Links

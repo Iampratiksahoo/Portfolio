@@ -21,29 +21,20 @@ h2 {
   .proj-poster {
     position: relative;
     padding: 1rem;
-    background: $bg;
+    background: rgba($accent, 0.05);      // very light accent
     border: 2px solid $accent;
-    border-radius: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 10px rgba($accent, 0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba($accent, 0.4);
     }
-    .poster-content {
-      position: relative;
-      z-index: 2;
-      h3 { margin: 0; font-size: 1.1rem; }
-      .proj-year { display: block; font-size: 0.85rem; opacity: 0.7; }
-    }
-    .poster-frame {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      border: 4px dashed $accent;
-      border-radius: 0.5rem;
-      pointer-events: none;
-    }
+    // Frame element can be removed if unused
+    .poster-frame { display: none; }
   }
-}
+} 
 
 // Modal overlay
 .proj-modal {

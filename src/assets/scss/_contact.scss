@@ -2,21 +2,24 @@
 @use 'variables' as *;  // bring in $accent, $text, etc.
 
 .contact-container {
-  background: $bg-light;
-  padding: 2rem;
+  background: rgba(255,255,255, 0.05);  // very subtle light
+  border: 1px solid $accent;
   border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin-top: 4rem;
-}
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 4rem 0;
 
-.contact-container p {
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
-}
+  p, a {
+    font-family: $font-body;
+    color: $text;
+  }
 
-.contact-container a {
-  color: $accent;
-  text-decoration: underline;
-}
+  a {
+    text-decoration: underline;
+    &:hover { color: $accent; }
+  }
 
+  strong { color: $accent; }
+}
