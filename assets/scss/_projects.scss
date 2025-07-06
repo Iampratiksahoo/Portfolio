@@ -1,0 +1,116 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+// Section heading
+h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+// Grid layout
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  position: relative;
+}
+
+// Poster card
+.proj-card {
+  cursor: pointer;
+  .proj-poster {
+    position: relative;
+    padding: 1rem;
+    background: $bg;
+    border: 2px solid $accent;
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px rgba($accent, 0.5);
+    }
+    .poster-content {
+      position: relative;
+      z-index: 2;
+      h3 { margin: 0; font-size: 1.1rem; }
+      .proj-year { display: block; font-size: 0.85rem; opacity: 0.7; }
+    }
+    .poster-frame {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border: 4px dashed $accent;
+      border-radius: 0.5rem;
+      pointer-events: none;
+    }
+  }
+}
+
+// Modal overlay
+.proj-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  z-index: 200;
+  .modal-inner {
+    background: $bg;
+    border: 2px solid $accent;
+    border-radius: 0.5rem;
+    max-width: 800px;
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
+    color: $text;
+    h3 { margin-top: 0; }
+    .modal-close {
+      position: absolute;
+      top: 0.5rem; right: 1rem;
+      background: none; border: none;
+      font-size: 1.5rem; cursor: pointer; color: $accent;
+    }
+    .modal-media {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      img, video {
+        max-height: 200px;
+        border: 1px solid $accent;
+        border-radius: 0.25rem;
+      }
+    }
+    .modal-desc { margin: 1rem 0; }
+    .modal-skills {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      li {
+        background: color.adjust($accent, $alpha: calc(-50% / 1%));
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.85rem;
+      }
+    }
+    .modal-links {
+      margin-top: 1rem;
+      a {
+        display: inline-block;
+        margin-right: 1rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid $accent;
+        border-radius: 0.25rem;
+        &:hover {
+          background: color.adjust($accent, $alpha: calc(-70% / 1%));
+        }
+      }
+    }
+  }
+}
+
