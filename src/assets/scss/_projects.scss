@@ -37,6 +37,7 @@
   background: rgba($accent, 0.05);
   border: 2px solid $accent;
   border-radius: 8px;
+  cursor: pointer; // change pointer to hand on hover
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,3 +127,4 @@
     // remove margin auto since padding handles centering
   }
 }
+
