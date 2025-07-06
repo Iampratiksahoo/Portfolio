@@ -1,41 +1,39 @@
-permissions:
-  contents: write    # allow pushing to gh-pages
-  pages: write       # allow updating GitHub Pages
-  id-token: write    # (required by some Actions; harmless otherwise)
+name: Build Eleventy and Deploy to GitHub Pages
 
-name: Build & Deploy
-
-# Trigger on push to your chosen branch
 on:
   push:
     branches:
-      - eleventy-migration   # or 'main'
+      - main
+
+permissions:
+  contents: write    # allow pushing to gh-pages
+  pages:    write    # allow updating GitHub Pages
+  id-token: write    # required by some Actions
 
 jobs:
   build-and-deploy:
-    name: Build Eleventy and Deploy to GitHub Pages
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0               # <<-- important for gh-pages to work properly
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'    # matches your local version
+          node-version: '22'
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Eleventy site
-        run: npm run build    # this runs 'eleventy' by your script
+      - name: Build CSS & Eleventy
+        run: npm run build            # assumes your "build" script runs both CSS and Eleventy
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site         # Eleventy output folder
-          # If you want to publish from a separate branch:
-          # publish_branch: gh-pages
-
+          github_token:   ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages   # <<-- ensures it updates gh-pages
+          publish_dir:    ./_site     # your Eleventy output
