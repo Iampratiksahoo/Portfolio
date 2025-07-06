@@ -2,51 +2,88 @@
 <div class="projects-section">
   <h2>Projects</h2>
 
-  {% if cfg.items | length <= 6 %}
-    <div
-      class="projects-grid"
-      style="
-        --proj-card-w: {{ cfg.cardWidth }};
-        --proj-card-h: {{ cfg.cardHeight }};
-        --proj-cols: {{ cfg.columns }};
-      "
-    >
-      {% for proj in cfg.items %}
-        <div class="proj-card">
-          <div class="proj-poster">
-            <h3>{{ proj.title }}</h3>
-            <span class="proj-year">{{ proj.year }}</span>
+  <div class="projects-grid"
+    style="
+      --proj-card-w: {{ cfg.cardWidth }};
+      --proj-card-h: {{ cfg.cardHeight }};
+      --proj-cols: {{ cfg.columns }};
+    "
+  >
+    {% for proj in cfg.items %}
+      <div class="proj-card" data-id="{{ proj.id }}">
+        <div class="proj-poster">
+          <h3>{{ proj.title }}</h3>
+          <span class="proj-year">{{ proj.year }}</span>
+        </div>
+      </div>
+
+      <div class="project-modal" id="modal-{{ proj.id }}">
+        <!-- Moved nav buttons OUTSIDE modal-content -->
+        <button class="modal-nav modal-prev" data-id="{{ proj.id }}">‹</button>
+        <div class="modal-content">
+          <button class="modal-close" data-id="{{ proj.id }}">X</button>
+
+          <div class="modal-body">
+            <div class="modal-left">
+              <div class="media-viewer">
+                {% set mainMedia = proj.media[0] %}
+                {% if mainMedia.type == "video" %}
+                  <video src="{{ mainMedia.src }}" controls></video>
+                {% else %}
+                  <img src="{{ mainMedia.src }}" alt="Main Media" />
+                {% endif %}
+              </div>
+
+              <div class="media-thumbnails-container">
+                {% if proj.media | length > 3 %}
+                  <button class="arrow left">&lt;</button>
+                {% endif %}
+
+                <div class="media-thumbnails">
+                  {% for media in proj.media %}
+                    <div class="thumb" data-media="{{ media.src }}" data-type="{{ media.type }}">
+                      {% if media.type == "video" %}
+                        <video src="{{ media.src }}"></video>
+                      {% else %}
+                        <img src="{{ media.src }}" alt="Thumbnail" />
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+
+                {% if proj.media | length > 3 %}
+                  <button class="arrow right">&gt;</button>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="modal-right">
+              <div class="proj-tech">
+                <h4>Technologies Used</h4>
+                <p>{{ proj.skills | default([]) | join(', ') }}</p>
+              </div>
+
+              <div class="proj-date">
+                <h4>Date</h4>
+                <p>{{ proj.date }}</p>
+              </div>
+
+              <div class="proj-links">
+                <h4>Links</h4>
+                {% for key, url in proj.links %}
+                  <p><a href="{{ url }}" target="_blank">{{ key | capitalize }}</a></p>
+                {% endfor %}
+              </div>
+
+              <div class="proj-description">
+                <h4>Description</h4>
+                <p>{{ proj.description }}</p>
+              </div>
+            </div>
           </div>
         </div>
-      {% endfor %}
-    </div>
-
-  {% else %}
-    <div class="projects-carousel">
-      {% if cfg.items | length > 6 %}
-        <button class="arrow arrow-left" disabled>&lt;</button>
-      {% endif %}
-      <div class="projects-track"
-        style="
-          --proj-card-w: {{ cfg.cardWidth }};
-          --proj-card-h: {{ cfg.cardHeight }};
-        ">
-        {% for group in cfg.items | chunks(6) %}
-          <div class="projects-group">
-            {% for proj in group %}
-              <div class="proj-card">
-                <div class="proj-poster">
-                  <h3>{{ proj.title }}</h3>
-                  <span class="proj-year">{{ proj.year }}</span>
-                </div>
-              </div>
-            {% endfor %}
-          </div>
-        {% endfor %}
+        <button class="modal-nav modal-next" data-id="{{ proj.id }}">›</button>
       </div>
-      {% if cfg.items | length > 6 %}
-        <button class="arrow arrow-right">&gt;</button>
-      {% endif %}
-    </div>
-  {% endif %}
+    {% endfor %}
+  </div>
 </div>
