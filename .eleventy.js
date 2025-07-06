@@ -9,6 +9,11 @@ module.exports = function(eleventyConfig) {
     return str.endsWith(suffix);
   });
 
+  // Add global data for current year
+  eleventyConfig.addGlobalData("currentYear", () => {
+    return new Date().getFullYear();
+  });
+
   // Batch an array into subarrays of length N
   eleventyConfig.addFilter("chunks", function(array, size) {
     let result = [];

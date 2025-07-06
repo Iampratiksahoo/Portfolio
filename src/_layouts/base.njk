@@ -27,6 +27,7 @@
     <main>
       {{ content | safe }}
     </main>
+    {% include "footer.njk" %}
     <script>
       window.projectIds = [
         {% for proj in projects.items %}
