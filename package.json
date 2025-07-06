@@ -15,11 +15,14 @@
   "homepage": "https://github.com/Iampratiksahoo/Portfolio#readme",
   "description": "",
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "build:css": "sass --load-path=src/assets/scss src/assets/scss/main.scss _site/css/main.css --no-source-map --style=compressed",
+    "build:eleventy": "eleventy",
+    "build": "npm run build:css && npm run build:eleventy",
+    "start": "npm run build:css && eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "sass": "^1.89.2"
   }
 }

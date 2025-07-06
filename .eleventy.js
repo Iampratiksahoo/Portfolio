@@ -3,6 +3,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/CNAME");
 
+  // Add endsWith filter
+  eleventyConfig.addFilter("endsWith", function(str, suffix) {
+    return str.endsWith(suffix);
+  });
+
   return {
     dir: {
       input: "src",
@@ -14,4 +19,3 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk"
   };
 };
-

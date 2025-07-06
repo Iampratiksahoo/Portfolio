@@ -1,0 +1,17 @@
+[
+  {
+    "company": "Acme Games",
+    "role": "Gameplay Programmer",
+    "start": "Jan 2022",
+    "end": "Present",
+    "details": "Working on core gameplay systems and tools."
+  },
+  {
+    "company": "Beta Interactive",
+    "role": "Junior Programmer",
+    "start": "Jun 2020",
+    "end": "Dec 2021",
+    "details": "Built UI widgets and assisted in level scripting."
+  }
+]
+

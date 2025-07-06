@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <title>Home · Pratik Sahoo</title>
+    <title>Pratik Sahoo</title>
     <link
       rel="shortcut icon"
       type="image/jpg"
@@ -55,189 +55,175 @@
 
     <main>
       
-<div class="container" id="background">
-  <div class="container-name">
-    Background
-  </div>
-  <div class="background-text">
-    "Greetings! I'm a passionate Game Programmer … my toolkit evolves to meet new challenges."
-
-    <br /><br />
-
-    "Alongside this coding odyssey … my musical journey on Instagram and YouTube."
-  </div>
+<section id="intro" class="container intro">
+  <div class="intro">
+  <h1 class="typing"></h1>
+  <p></p>
 </div>
 
-<div class="container" id="projects">
-  <div class="container-name">Projects</div>
+<style>
+.intro {
+  text-align: center;
+  margin-top: 20vh;
+}
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid $accent;
+  width: 0;
+  animation: typing 2s steps(30, end) forwards, 
+             blink-caret .5s step-end infinite;
+}
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+.intro p {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: lighten($text, 20%);
+}
+</style>
 
-  <div class="project-card-row">
-    
-    <div class="project-card" id="project-operation-recondite">
-      <a href="/assets/images/games/Operation-Recondite/cover.png" target="_blank">
-        <div class="project-card-image-container">
-          <img
-            src="/assets/images/games/Operation-Recondite/cover.png"
-            alt="Operation Recondite cover"
-            class="project-card-image"
-          />
-          <div class="project-name-container">
-            <div class="project-name-bg"></div>
-            <div class="project-name">Operation Recondite</div>
-          </div>
-        </div>
-      </a>
 
-      <div class="project-card-description-container">
-        <div class="project-technology">
-          <ul>
-            
-            <li>Unity</li>
-            
-            <li>C#</li>
-            
-            <li>FPS</li>
-            
-            <li>Simulation</li>
-            
-          </ul>
-        </div>
-        <div class="project-card-description">
-          A personal prototype showcasing mission‑based gameplay with placeholder assets.
+</section>
+
+<section id="experience" class="container">
+  <h2>Professional Experience</h2>
+<div class="experience-bar">
+  
+    <div class="exp-item">
+      <div class="exp-company">Acme Games</div>
+      <div class="exp-role">Gameplay Programmer</div>
+      <div class="exp-dates">Jan 2022 – Present</div>
+      <div class="exp-details">Working on core gameplay systems and tools.</div>
+    </div>
+  
+    <div class="exp-item">
+      <div class="exp-company">Beta Interactive</div>
+      <div class="exp-role">Junior Programmer</div>
+      <div class="exp-dates">Jun 2020 – Dec 2021</div>
+      <div class="exp-details">Built UI widgets and assisted in level scripting.</div>
+    </div>
+  
+</div>
+
+
+</section>
+
+<section id="projects" class="container">
+  <h2>Projects</h2>
+<div class="projects-grid">
+  
+    <div class="proj-card" data-id="time-telescope">
+      <div class="proj-poster">
+        <div class="poster-frame"></div>
+        <div class="poster-content">
+          <h3>Defragmented Time Telescope</h3>
+          <span class="proj-year">2024</span>
         </div>
       </div>
     </div>
     
-    <div class="project-card" id="project-saving-astral">
-      <a href="/assets/images/games/Saving astral/cover.png" target="_blank">
-        <div class="project-card-image-container">
-          <img
-            src="/assets/images/games/Saving astral/cover.png"
-            alt="Saving Astral cover"
-            class="project-card-image"
-          />
-          <div class="project-name-container">
-            <div class="project-name-bg"></div>
-            <div class="project-name">Saving Astral</div>
-          </div>
+    <div class="proj-modal" id="modal-time-telescope">
+      <div class="modal-inner">
+        <button class="modal-close" data-id="time-telescope">✕</button>
+        <h3>Defragmented Time Telescope <small>(2024)</small></h3>
+        <div class="modal-media">
+          
+            
+              <img src="/assets/images/projects/telescope-1.jpg" alt="Defragmented Time Telescope screenshot">
+            
+          
+            
+              <img src="/assets/images/projects/telescope-2.gif" alt="Defragmented Time Telescope screenshot">
+            
+          
         </div>
-      </a>
-
-      <div class="project-card-description-container">
-        <div class="project-technology">
-          <ul>
-            
-            <li>Unity</li>
-            
-            <li>C#</li>
-            
-            <li>Roguelike</li>
-            
-            <li>Indie</li>
-            
-          </ul>
+        <p class="modal-desc">A custom engine feature that simulates localized time loops within a scene, preserving player state across paradoxical events.</p>
+        <ul class="modal-skills">
+          
+            <li>C++</li>
+          
+            <li>Unreal Engine</li>
+          
+            <li>Multithreading</li>
+          
+        </ul>
+        <div class="modal-links">
+          
+            <a href="https://github.com/Iampratiksahoo/Portfolio" target="_blank">Github</a>
+          
+            <a href="https://your-demo-link.com" target="_blank">Demo</a>
+          
         </div>
-        <div class="project-card-description">
-          Freelance project at Mena Creative: optimized, procedurally‑generated asteroid patterns.
+      </div>
+    </div>
+  
+    <div class="proj-card" data-id="gold-mine">
+      <div class="proj-poster">
+        <div class="poster-frame"></div>
+        <div class="poster-content">
+          <h3>Mystery of the Gold Mine</h3>
+          <span class="proj-year">2023</span>
         </div>
       </div>
     </div>
     
-    <div class="project-card" id="project-spyroll">
-      <a href="/assets/images/games/SpyRoll/cover.png" target="_blank">
-        <div class="project-card-image-container">
-          <img
-            src="/assets/images/games/SpyRoll/cover.png"
-            alt="SpyRoll cover"
-            class="project-card-image"
-          />
-          <div class="project-name-container">
-            <div class="project-name-bg"></div>
-            <div class="project-name">SpyRoll</div>
-          </div>
-        </div>
-      </a>
-
-      <div class="project-card-description-container">
-        <div class="project-technology">
-          <ul>
+    <div class="proj-modal" id="modal-gold-mine">
+      <div class="modal-inner">
+        <button class="modal-close" data-id="gold-mine">✕</button>
+        <h3>Mystery of the Gold Mine <small>(2023)</small></h3>
+        <div class="modal-media">
+          
             
+              <img src="/assets/images/projects/mine-1.jpg" alt="Mystery of the Gold Mine screenshot">
+            
+          
+            
+              <img src="/assets/images/projects/mine-2.jpg" alt="Mystery of the Gold Mine screenshot">
+            
+          
+            
+              <video src="/assets/images/projects/mine-3.mp4" controls></video>
+            
+          
+        </div>
+        <p class="modal-desc">A first‑person puzzle thriller set in an abandoned wild‑west gold mine, featuring procedural lighting and interactive clues.</p>
+        <ul class="modal-skills">
+          
             <li>Unity</li>
-            
+          
             <li>C#</li>
-            
-            <li>Android</li>
-            
-            <li>Turn Based</li>
-            
-          </ul>
-        </div>
-        <div class="project-card-description">
-          College project inspired by Hitman‑GO; includes pinch‑to‑zoom and tutorial levels.
+          
+            <li>Shader Graph</li>
+          
+        </ul>
+        <div class="modal-links">
+          
+            <a href="https://youtu.be/your-video" target="_blank">Video</a>
+          
+            <a href="https://your-live-link.com" target="_blank">Live</a>
+          
         </div>
       </div>
     </div>
-    
-  </div>
+  
 </div>
 
 
-<div class="container" id="contact">
-  <div class="container-name">
-    Contact Me
-  </div>
-  <div class="contact-contents" style="margin-top: 5rem;">
-    <div class="contact-mail">
-      I'm always excited to collaborate on new projects … at
-      <a
-        href="mailto:iampratiksahoo@gmail.com"
-        target="_blank"
-        class="highlight-link"
-        >iampratiksahoo@gmail.com</a
-      >
-    </div>
-    <div class="social-media-icons">
-      <a
-        href="https://www.linkedin.com/in/i-am-pratik-sahoo"
-        target="_blank"
-        title="Linkedin"
-      >
-        <div class="social-icon">
-          <img src="/assets/images/social-icons/linkedin.png" alt="linkedin" />
-        </div>
-      </a>
-      <a
-        href="https://www.upwork.com/freelancers/~016a2a7c8445736ff8"
-        target="_blank"
-        title="Upwork"
-      >
-        <div class="social-icon">
-          <img src="/assets/images/social-icons/upwork.png" alt="upwork" />
-        </div>
-      </a>
-      <a
-        href="https://www.instagram.com/iampratiksahoo/"
-        target="_blank"
-        title="Instagram"
-      >
-        <div class="social-icon">
-          <img src="/assets/images/social-icons/instagram.png" alt="instagram" />
-        </div>
-      </a>
-      <a
-        href="https://www.youtube.com/@pratiksahoo8191"
-        target="_blank"
-        title="YouTube"
-      >
-        <div class="social-icon">
-          <img src="/assets/images/social-icons/youtube.png" alt="youtube" />
-        </div>
-      </a>
-    </div>
-  </div>
+</section>
+
+<section id="contact" class="container">
+  <h2>Contact</h2>
+<div class="contact-container">
+  <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+  <p><strong>Email:</strong> <a href="mailto:pratik@example.com">pratik@example.com</a></p>
+  <p><strong>Address:</strong> Bengaluru, India</p>
 </div>
 
 
+</section>
     </main>
     <footer>
   <div class="footer-parent">
