@@ -7,3 +7,10 @@
   justify-content: center;     // center any child elements
   padding: 2rem 0;
 }
+
+footer {
+  scroll-snap-align: none;    /* explicitly opt-out */
+  position: relative;         /* static at end */
+  text-align: center;
+  padding: 2rem 0;
+}
