@@ -1,25 +1,41 @@
+@use 'variables' as *;
 @use 'sass:color';
-@use 'variables' as *;  // bring in $accent, $text, etc.
 
-.contact-container {
-  background: rgba(255,255,255, 0.05);  // very subtle light
-  border: 1px solid $accent;
-  border-radius: 8px;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin: 4rem 0;
+// Section wrapper
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  height: 100%; // fill remaining viewport if needed
+}
 
-  p, a {
-    font-family: $font-body;
-    color: $text;
+// Heading at top
+.contact-section > h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: $accent;
+}
+
+// Contact details container
+.contact-details {
+  flex: 1;                    // take up remaining vertical space
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    // center vertically
+  align-items: center;        // center horizontally
+  font-size: 1.5rem;
+
+  p {
+    margin: 1rem 0;
+
+    a {
+      color: $accent;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
-
-  a {
-    text-decoration: underline;
-    &:hover { color: $accent; }
-  }
-
-  strong { color: $accent; }
 }
