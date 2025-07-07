@@ -1,10 +1,13 @@
+{% set cfg = contact %}
 <div class="contact-section">
   <h2>Contact Me</h2>
 
   <div class="contact-details">
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>Phone: +91 98765 43210</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
+    <p><b>Phone:</b> {{cfg.phone}}</p>
+    <p><b>Home Address:</b> {{cfg.home_address}}</p>
+    <p><b>Current Address:</b> {{cfg.current_address}}</p>
+    <p><b>Email:</b> <a href="mailto:{{cfg.email}}">{{cfg.email}}</a></p>
+    <p><b>LinkedIn:</b> <a href="{{cfg.linkedin}}" target="_blank">{{cfg.linkedin}}</a></p>
+    <p><b>GitHub:</b> <a href="{{cfg.github}}" target="_blank">{{cfg.github}}</a></p>
   </div>
 </div>
