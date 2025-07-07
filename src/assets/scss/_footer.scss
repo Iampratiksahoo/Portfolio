@@ -34,3 +34,16 @@ footer {
   max-width: 90%;
   line-height: 1.4;
 }
+
+.footer-build-number {
+  position: fixed;
+  bottom: 0.5rem;   // adjust spacing from bottom edge
+  right: 0.5rem;     // adjust spacing from left edge
+  font-size: 2rem;
+  opacity: .035;
+  color: $text;   // or any color you prefer
+  background: rgba($bg, 0.8);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  z-index: 9999;    // ensure it stays on top of other elements
+}
