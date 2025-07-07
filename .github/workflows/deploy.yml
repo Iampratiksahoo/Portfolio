@@ -28,6 +28,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Increment build number in footer.json
+        run: |
+          mkdir -p src/_data
+
+          # If footer.json does not exist, initialize it with build_number 1
+          if [ ! -f src/_data/footer.json ]; then
+            echo '{ "build_number": 1 }' > src/_data/footer.json
+          else
+            # Read current build_number, increment by 1
+            current=$(jq '.build_number' src/_data/footer.json)
+            next=$((current + 1))
+            jq --argjson next "$next" '.build_number = $next' src/_data/footer.json > tmp.json && mv tmp.json src/_data/footer.json
+          fi
+
+          cat src/_data/footer.json
+
+
       - name: Build CSS & Eleventy
         run: npm run build            # assumes your "build" script runs both CSS and Eleventy
 

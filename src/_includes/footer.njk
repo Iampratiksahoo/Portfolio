@@ -1,10 +1,14 @@
+{% set cfg = footer %}
 <footer>
   <div class="footer-parent">
     <div class="footer-separator"></div>
     <div class="footer-text">
       Copyright <b>©</b> {{ currentYear }} by <b>Pratik Sahoo</b> |
       All images, icons and resources featured on this website belong to
-      their respective rightful owners.
+      their respective rightful owners. 
+    </div>
+    <div class="footer-build-number">
+        b{{cfg.build_number}}
     </div>
   </div>
 </footer>
