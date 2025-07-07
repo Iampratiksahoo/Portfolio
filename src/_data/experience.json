@@ -3,22 +3,22 @@
   "cardHeight": "200px",
   "items": [
     {
-      "company": "Ubisoft",
-      "designation": "Gameplay Programmer",
-      "start": "Jan 2022",
+      "company": "Longbow Games Pvt. Ltd.",
+      "designation": "Software Engineer",
+      "start": "October 2023",
       "end": "Present"
     },
     {
-      "company": "Electronic Arts",
-      "designation": "Software Engineer Intern",
-      "start": "Jun 2021",
-      "end": "Dec 2021"
+      "company": "Hashbyte Studio Pvt. Ltd.",
+      "designation": "Junior Game Developer",
+      "start": "March 2023",
+      "end": "October 2023"
     },
     {
-      "company": "Freelance",
-      "designation": "Indie Game Developer",
-      "start": "2018",
-      "end": "2021"
+      "company": "Infosys",
+      "designation": "Operation Executive",
+      "start": "August 2021",
+      "end": "February 2023"
     }
   ]
 }
