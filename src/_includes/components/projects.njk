@@ -2,88 +2,102 @@
 <div class="projects-section">
   <h2>Projects</h2>
 
-  <div class="projects-grid"
-    style="
-      --proj-card-w: {{ cfg.cardWidth }};
-      --proj-card-h: {{ cfg.cardHeight }};
-      --proj-cols: {{ cfg.columns }};
-    "
-  >
-    {% for proj in cfg.items %}
-      <div class="proj-card" data-id="{{ proj.id }}">
-        <div class="proj-poster">
-          <h3>{{ proj.title }}</h3>
-          <span class="proj-year">{{ proj.year }}</span>
-        </div>
-      </div>
-
-      <div class="project-modal" id="modal-{{ proj.id }}">
-        <!-- Moved nav buttons OUTSIDE modal-content -->
-        <button class="modal-nav modal-prev" data-id="{{ proj.id }}">‹</button>
-        <div class="modal-content">
-          <button class="modal-close" data-id="{{ proj.id }}">X</button>
-
-          <div class="modal-body">
-            <div class="modal-left">
-              <div class="media-viewer">
-                {% set mainMedia = proj.media[0] %}
-                {% if mainMedia.type == "video" %}
-                  <video src="{{ mainMedia.src }}" controls></video>
-                {% else %}
-                  <img src="{{ mainMedia.src }}" alt="Main Media" />
-                {% endif %}
-              </div>
-
-              <div class="media-thumbnails-container">
-                {% if proj.media | length > 3 %}
-                  <button class="arrow left">&lt;</button>
-                {% endif %}
-
-                <div class="media-thumbnails">
-                  {% for media in proj.media %}
-                    <div class="thumb" data-media="{{ media.src }}" data-type="{{ media.type }}">
-                      {% if media.type == "video" %}
-                        <video src="{{ media.src }}"></video>
-                      {% else %}
-                        <img src="{{ media.src }}" alt="Thumbnail" />
-                      {% endif %}
-                    </div>
-                  {% endfor %}
+  <div class="projects-carousel">
+    <button class="arrow arrow-left">&lt;</button>
+    <div class="projects-track">
+      {% for group in cfg.items | batch(6, '&nbsp;') %}
+        <div class="projects-group"
+          style="
+            --proj-card-w: {{ cfg.cardWidth }};
+            --proj-card-h: {{ cfg.cardHeight }};
+            --proj-cols: {{ cfg.columns }};
+          "
+        >
+          {% for proj in group %}
+            {% if proj != '&nbsp;' %}
+              <div class="proj-card" data-id="{{ proj.id }}">
+                <div class="proj-poster">
+                  <h3>{{ proj.title }}</h3>
+                  <span class="proj-year">{{ proj.start_date }} - {{ proj.end_date }}</span>
                 </div>
-
-                {% if proj.media | length > 3 %}
-                  <button class="arrow right">&gt;</button>
-                {% endif %}
-              </div>
-            </div>
-
-            <div class="modal-right">
-              <div class="proj-tech">
-                <h4>Technologies Used</h4>
-                <p>{{ proj.skills | default([]) | join(', ') }}</p>
               </div>
 
-              <div class="proj-date">
-                <h4>Date</h4>
-                <p>{{ proj.date }}</p>
-              </div>
+              <div class="project-modal" id="modal-{{ proj.id }}">
+                <button class="modal-nav modal-prev" data-id="{{ proj.id }}">‹</button>
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="modal-left">
+                      <div class="media-viewer">
+                        {% set mainMedia = proj.media[0] %}
+                        {% if mainMedia.type == "video" %}
+                          <video src="{{ mainMedia.src }}" controls></video>
+                        {% else %}
+                          <img src="{{ mainMedia.src }}" alt="Main Media" />
+                        {% endif %}
+                      </div>
 
-              <div class="proj-links">
-                <h4>Links</h4>
-                {% for key, url in proj.links %}
-                  <p><a href="{{ url }}" target="_blank">{{ key | capitalize }}</a></p>
-                {% endfor %}
-              </div>
+                      <div class="media-thumbnails-container">
+                        {% if proj.media | length > 3 %}
+                          <button class="arrow left">&lt;</button>
+                        {% endif %}
 
-              <div class="proj-description">
-                <h4>Description</h4>
-                <p>{{ proj.description }}</p>
+                        <div class="media-thumbnails">
+                          {% for media in proj.media %}
+                            <div class="thumb" data-media="{{ media.src }}" data-type="{{ media.type }}">
+                              {% if media.type == "video" %}
+                                <video src="{{ media.src }}"></video>
+                              {% else %}
+                                <img src="{{ media.src }}" alt="Thumbnail" />
+                              {% endif %}
+                            </div>
+                          {% endfor %}
+                        </div>
+
+                        {% if proj.media | length > 3 %}
+                          <button class="arrow right">&gt;</button>
+                        {% endif %}
+                      </div>
+                    </div>
+
+                    <div class="modal-right">
+                      <button class="modal-close" data-id="{{ proj.id }}">X</button>
+
+                      <div class="proj-tech">
+                        <h4>Name</h4>
+                        <p>{{ proj.title | capitalize }}</p>
+                      </div>
+
+                      <div class="proj-tech">
+                        <h4>Technologies Used</h4>
+                        <p>{{ proj.skills | default([]) | join(', ') }}</p>
+                      </div>
+
+                      <div class="proj-date">
+                        <h4>Duration</h4>
+                        <p>{{ proj.start_date }} - {{ proj.end_date }}</p>
+                      </div>
+
+                      <div class="proj-links">
+                        <h4>Links</h4>
+                        {% for key, url in proj.links %}
+                          <p><a href="{{ url }}" target="_blank">{{ key | capitalize }}</a></p>
+                        {% endfor %}
+                      </div>
+
+                      <div class="proj-description">
+                        <h4>Description</h4>
+                        <p>{{ proj.description }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="modal-nav modal-next" data-id="{{ proj.id }}">›</button>
               </div>
-            </div>
-          </div>
+            {% endif %}
+          {% endfor %}
         </div>
-        <button class="modal-nav modal-next" data-id="{{ proj.id }}">›</button>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
+    <button class="arrow arrow-right">&gt;</button>
   </div>
 </div>

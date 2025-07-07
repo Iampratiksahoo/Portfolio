@@ -6,28 +6,59 @@
   display: flex;
   flex-direction: column;
   padding: 2rem 1rem;
-  height: 100%; // fill 100vh of its parent
+  height: 100%;
 }
 
-// Heading at top
+// Heading
 .projects-section > h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-// Grid takes remaining space, centers its content
-.projects-grid {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(
-    var(--proj-cols),
-    minmax(var(--proj-card-w), 1fr)
-  );
-  gap: 2rem;
-  justify-items: center;     // center cards within their cells
-  align-content: center;     // center rows vertically
-  justify-content: center;   // ➡️ center entire grid horizontally
+// Carousel container
+.projects-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .arrow {
+    background: none;
+    border: 2px solid $accent;
+    border-radius: 10px;
+    padding: 0.25rem 0.75rem;
+    font-size: 2rem;
+    color: $accent;
+    cursor: pointer;
+    z-index: 10;
+
+    &.arrow-left { margin-right: 0.5rem; }
+    &.arrow-right { margin-left: 0.5rem; }
+    &.hidden { display: none; }
+    &.disabled {
+      opacity: 0.3;
+      cursor: default;
+      pointer-events: none; // optional if you want to prevent clicking completely
+    }
+  }
+
+  .projects-track {
+    overflow: hidden;
+    display: flex;
+    flex: 1;
+  }
+
+  .projects-group {
+    flex: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(var(--proj-card-w), 1fr));
+    grid-auto-rows: var(--proj-card-h);
+    gap: 2rem;
+    justify-items: center;
+    justify-content: center;
+    padding-top: 4px;
+  }
 }
 
 // Individual card
@@ -37,7 +68,7 @@
   background: rgba($accent, 0.05);
   border: 2px solid $accent;
   border-radius: 8px;
-  cursor: pointer; // change pointer to hand on hover
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,68 +94,3 @@
     }
   }
 }
-
-.projects-carousel {
-  position: relative;
-  display: flex;
-  align-items: center;
-
-  .arrow {
-    background: none;
-    border: 2px solid $accent;
-    border-radius: 10px;
-    padding: 0.25rem 0.75rem;
-    font-size: 2rem;
-    color: $accent;
-    opacity: 0;
-    transition: opacity 0.3s;
-    cursor: pointer;
-    z-index: 10;
-
-    &.disabled {
-      opacity: 0.3;
-      cursor: default;
-    }
-  }
-
-  &:hover .arrow {
-    opacity: 1;
-  }
-
-  .arrow-left {
-    margin-right: 0.5rem; // Increase to match visual balance
-  }
-
-  .arrow-right {
-    margin-left: 0.5rem;
-  }
-
-
-  .projects-track {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    display: flex;
-    gap: 10rem;
-    padding: 1rem 5vw; // ➡️ Equal horizontal padding for centering
-    flex: 1;
-    scrollbar-width: none;  // Firefox
-    -ms-overflow-style: none; // IE 10+
-    justify-content: center;
-  }
-
-  .projects-track::-webkit-scrollbar {
-    display: none; // Chrome, Safari, Opera
-  }
-
-
-  .projects-group {
-    scroll-snap-align: start;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(var(--proj-card-w), 1fr));
-    grid-auto-rows: var(--proj-card-h);
-    gap: 2rem;
-    flex: none;
-    // remove margin auto since padding handles centering
-  }
-}
-

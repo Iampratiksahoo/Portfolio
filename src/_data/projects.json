@@ -4,60 +4,144 @@
   "columns": 3,
   "items": [
     {
-      "id": "time-telescope",
-      "title": "Time Telescope",
-      "year": "2024",
-      "description": "Localized time loops simulator.",
-      "skills": ["C++", "Unreal Engine", "Gameplay Systems", "Tools"],
+      "id": "longbow.yogaquest",
+      "title": "Yoga Quest",
+      "start_date": "September 2024",
+      "end_date": "Present",
+      "description": "Contributed to the company’s in-house project as a core developer, focusing primarily on client-side development while also supporting server-side tasks and maintaining the CI/CD pipeline. Integrated various analytics tools and utilized the Zenject plugin to structure the project using the MVC pattern for improved maintainability. Developed REST APIs, implemented numerous new features and refactored legacy features to align with updated design specifications. Overall focus was to move towards a more maintainable and scalable codebase.",
+      "skills": ["Unity Engine", "C#", "Node.js", "Playfab", "Firebase", "Unity Analytics", "Game Analytics", "Jenkins", "Amazon EC2", "Unity IAP"],
       "links": {
-        "github": "https://github.com/example/time-telescope",
-        "demo": "https://example.com/time-telescope-demo"
+        "Google Play": "https://play.google.com/store/apps/details?id=com.lb.m3.yoga&hl=en"
       },
       "media": [
-        { "type": "image", "src": "/assets/images/games/CryptRaider/cover.png" },
-        { "type": "video", "src": "/assets/images/games/BoomBusters/video.mp4" },
-        { "type": "image", "src": "/assets/images/games/CryptRaider/Mover.png" },
-        { "type": "image", "src": "/assets/images/games/CryptRaider/cover.png" },
-        { "type": "video", "src": "/assets/images/games/BoomBusters/video.mp4" },
-        { "type": "image", "src": "/assets/images/games/CryptRaider/Mover.png" },
-        { "type": "image", "src": "/assets/images/games/CryptRaider/cover.png" },
-        { "type": "video", "src": "/assets/images/games/BoomBusters/video.mp4" },
-        { "type": "image", "src": "/assets/images/games/CryptRaider/Mover.png" }
-      ],
-      "date": "July 2024"
+        { "type": "image", "src": "/assets/images/games/YogaQuest/yq2.png" },
+        { "type": "image", "src": "/assets/images/games/YogaQuest/yq1.png" },
+        { "type": "video", "src": "/assets/images/games/YogaQuest/yq3.mp4" }
+      ]
     },
     {
-      "id": "gold-mine",
-      "title": "Gold Mine",
-      "year": "2023",
-      "description": "First‑person puzzle thriller.",
-      "skills": ["Unity", "C#", "AI Programming"],
+      "id": "longbow.battlebay",
+      "title": "Battle Bay",
+      "start_date": "March 2024",
+      "end_date": "Present",
+      "description": "Collaborated with Rovio Entertainment as Lead Engineer, overseeing both client and server-side development of the game. Led a team of four, coordinating with game designers, 3D artists, concept artists, QA and Data Analysts to deliver timely releases. Managed release processes, implemented and maintained a CI/CD pipeline for efficient build delivery, and administered AWS EC2 instances. Providing support through bug fixes and the development of new features, ensuring high-quality updates and smooth user experiences. Collaborated with Rovio Entertainment as Lead Engineer, overseeing both client and server-side development of the game. Led a team of four, coordinating with game designers, 3D artists, concept artists, QA and Data Analysts to deliver timely releases. Managed release processes, implemented and maintained a CI/CD pipeline for efficient build delivery, and administered AWS EC2 instances. Providing support through bug fixes and the development of new features, ensuring high-quality updates and smooth user experiences.",
+      "skills": ["Unity Engine", "C#", "Web sockets", "C++", "PHP", "Ubuntu", "Docker", "Jenkins", "Amazon EC2"],
       "links": {
-        "github": "https://github.com/example/gold-mine",
-        "live": "https://example.com/gold-mine"
+        "Google Play": "https://play.google.com/store/apps/details?id=com.rovio.battlebay&hl=en",
+        "Apple Store": "https://apps.apple.com/nz/app/battle-bay/id1046450453"
       },
       "media": [
-        { "type": "image", "src": "/assets/images/games/CryptRaider/Mover.png" },
-        { "type": "image", "src": "/assets/images/games/CryptRaider/cover.png" },
-        { "type": "video", "src": "/assets/images/games/BoomBusters/video.mp4" }
-      ],
-      "date": "December 2023"
+        { "type": "image", "src": "/assets/images/games/BattleBay/bb1.png" },
+        { "type": "image", "src": "/assets/images/games/BattleBay/bb2.png" }
+      ]
     },
     {
-      "id": "rift-battle",
-      "title": "Rift Battle",
-      "year": "2022",
-      "description": "2D arena shooter with portals.",
-      "skills": ["Godot", "GDScript", "Physics"],
+      "id": "longbow.minerescue",
+      "title": "Mine Rescue",
+      "start_date": "October 2023",
+      "end_date": "October 2023",
+      "description": "Collaborated with Carry1st as a client, focusing on the client-side development of the project. Worked on a new game mode for the game called Miner's Escape.",
+      "skills": ["Unity Engine", "C#", "Shader Graphs", "PHP"],
       "links": {
-        "github": "https://github.com/example/rift-battle",
-        "demo": "https://example.com/rift-battle-demo"
+        "Google Play": "https://play.google.com/store/apps/details?id=com.carry1st.minerescue&hl=en",
+        "Apple Store": "https://apps.apple.com/us/app/mine-rescue-miner-tycoon-game/id1557234141"
       },
       "media": [
-        { "type": "image", "src": "/assets/images/games/CryptRaider/cover.png" },
-        { "type": "image", "src": "/assets/images/games/CryptRaider/Grabber.png" }
-      ],
-      "date": "August 2022"
+        { "type": "image", "src": "/assets/images/games/MineRescue/mr1.png" },
+        { "type": "image", "src": "/assets/images/games/MineRescue/mr2.png" },
+        { "type": "image", "src": "/assets/images/games/MineRescue/mr3.png" },
+        { "type": "image", "src": "/assets/images/games/MineRescue/mr4.png" }
+      ]
+    },
+    {
+      "id": "hashbyte.boombusters",
+      "title": "Boom Busters",
+      "start_date": "August 2023",
+      "end_date": "August 2023",
+      "description": "Designed and implemented both server-side and client-side components for Boom Busters. Used Photon for the multiplayer part of the game. One of the projects that exposed me to a lot of technologies, pushing me to learn more about the same. Designed and implemented both server-side and client-side components for Boom Busters. Used Photon for the multiplayer part of the game. One of the projects that exposed me to a lot of technologies, pushing me to learn more about the same.",
+      "skills": ["Unity Engine", "C#", "Playfab", "Photon"],
+      "links": {
+        "Google Play": "https://play.google.com/store/apps/details?id=com.hashbytestudio.minesweeper&hl=en_IN",
+        "Apple Store": "https://play.google.com/store/apps/details?id=com.hashbytestudio.minesweeper&hl=en_IN"
+      },
+      "media": [
+        { "type": "video", "src": "/assets/images/games/BoomBusters/video.mp4" },
+        { "type": "image", "src": "/assets/images/games/BoomBusters/cover.png" }
+      ]
+    },
+    {
+      "id": "personal.bloodylawman",
+      "title": "Bloody Lawman",
+      "start_date": "July 19, 2024",
+      "end_date": "July 22, 2024",
+      "description": "Myself and 2 of my friends created this game over a weekend, it was first game jam and what a game jam it was. We learnt a lot in this one. In BLOODY LAWMAN You can infect other humans who will infect other humans to spread the infection among peoples of the city. But beware !! The cops have arrived to protect the last of humanity. You will have to be sneaky around them.",
+      "skills": ["Unity Engine", "C#"],
+      "links": {
+        "Itch.io": "https://iampratiksahoo.itch.io/bloody-lawman"
+      },
+      "media": [
+        { "type": "image", "src": "/assets/images/games/BloodyLawman/bl0.png" },
+        { "type": "image", "src": "/assets/images/games/BloodyLawman/bl1.png" },
+        { "type": "image", "src": "/assets/images/games/BloodyLawman/bl2.png" },
+        { "type": "image", "src": "/assets/images/games/BloodyLawman/bl3.png" },
+        { "type": "image", "src": "/assets/images/games/BloodyLawman/bl4.png" }
+      ]
+    },
+    {
+      "id": "personal.spyroll",
+      "title": "Spy Roll",
+      "start_date": "June 19, 2023",
+      "end_date": "August 18, 2023",
+      "description": "This game is inspired from Hitman GO. Myself and one of my batch mate created this game as a Final Year project. This was a fun to create game.",
+      "skills": ["Unity Engine", "C#", "Playfab", "Photon"],
+      "links": {
+        "Gitlab": "https://gitlab.com/underdogs6962425/SpyRoll"
+      },
+      "media": [
+        { "type": "video", "src": "/assets/images/games/SpyRoll/sr4.mp4" },
+        { "type": "image", "src": "/assets/images/games/SpyRoll/sr1.png" },
+        { "type": "image", "src": "/assets/images/games/SpyRoll/sr2.png" },
+        { "type": "image", "src": "/assets/images/games/SpyRoll/sr3.png" }
+      ]
+    },
+    {
+      "id": "filmon.savingastral",
+      "title": "Saving Astral",
+      "start_date": "June, 2022",
+      "end_date": "July, 2023",
+      "description": "As a freelancer, I worked on this project for few months. As a lead, my job was to work on complex systems like Localization and Procedural Asteroid generation, keeping track on the engineering coordinating with designers to bring the ideas to life. Eventually the owner decided to close the project, so this never got released!",
+      "skills": ["Unity", "C#", "Wwise"],
+      "links": {
+        "Itch.io": "https://iampratiksahoo.itch.io/saving-astral"
+      },
+      "media": [
+        { "type": "video", "src": "/assets/images/games/SavingAstral/sa3.mp4" },
+        { "type": "image", "src": "/assets/images/games/SavingAstral/sa1.png" },
+        { "type": "image", "src": "/assets/images/games/SavingAstral/sa2.png" }
+      ]
+    },
+    {
+      "id": "personal.urealpractice",
+      "title": "Unreal Engine Practice",
+      "start_date": "March, 2022",
+      "end_date": "July, 2022",
+      "description": "I keep tinkering around in various engines. These are few projects I worked on as I was completing a Udemy course. These were created for fun and learning purpose",
+      "skills": ["Unreal Engine", "C++"],
+      "links": {
+      },
+      "media": [
+        { "type": "image", "src": "/assets/images/games/UnrealPractice/ToonTanks/tt1.png" },
+        { "type": "image", "src": "/assets/images/games/UnrealPractice/CryptRaider/cr1.png" },
+        { "type": "video", "src": "/assets/images/games/UnrealPractice/CryptRaider/cr2.mp4" },
+        { "type": "image", "src": "/assets/images/games/UnrealPractice/CryptRaider/cr3.png" },
+        { "type": "image", "src": "/assets/images/games/UnrealPractice/CryptRaider/cr4.png" },
+        { "type": "image", "src": "/assets/images/games/UnrealPractice/CryptRaider/cr5.png" },
+        { "type": "image", "src": "/assets/images/games/UnrealPractice/ToonTanks/tt2.png" },
+        { "type": "image", "src": "/assets/images/games/UnrealPractice/ToonTanks/tt3.png" },
+        { "type": "image", "src": "/assets/images/games/UnrealPractice/ToonTanks/tt4.png" },
+        { "type": "image", "src": "/assets/images/games/UnrealPractice/ToonTanks/tt5.png" },
+        { "type": "image", "src": "/assets/images/games/UnrealPractice/ToonTanks/tt6.png" }
+      ]
     }
   ]
 }
