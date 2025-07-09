@@ -1,4 +1,11 @@
+const yaml = require("js-yaml");
+
 module.exports = function(eleventyConfig) {
+  
+  // Parse YAML files in _data
+  eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
+  eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
+
   // Copy static assets to the output folder
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/CNAME");
