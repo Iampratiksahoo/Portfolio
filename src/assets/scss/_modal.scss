@@ -1,6 +1,14 @@
 @use 'variables' as *;
 @use 'sass:color';
 
+.proj-description pre {
+  white-space: pre-wrap; // wraps long lines
+  word-wrap: break-word;
+  font-family: inherit; // uses normal text font
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
 .project-modal {
   display: none;
   position: fixed;

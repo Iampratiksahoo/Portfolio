@@ -69,7 +69,11 @@
 
                       <div class="proj-tech">
                         <h4>Technologies Used</h4>
-                        <p>{{ proj.skills | default([]) | join(', ') }}</p>
+                        <ul>
+                          {% for skill in proj.skills | default([]) %}
+                            <li>{{ skill }}</li>
+                          {% endfor %}
+                        </ul>
                       </div>
 
                       <div class="proj-date">
@@ -86,7 +90,7 @@
 
                       <div class="proj-description">
                         <h4>Description</h4>
-                        <p>{{ proj.description }}</p>
+                        <pre>{{ proj.description }}</pre>
                       </div>
                     </div>
                   </div>

@@ -1,0 +1,260 @@
+cardWidth: "300px"
+cardHeight: "300px"
+columns: 3
+items:
+  - id: longbow.yogaquest
+    title: Yoga Quest
+    start_date: September 2024
+    end_date: Present
+    description: |
+      ‣ Developed and deployed multiple high-quality game projects using Unreal Engine, Unity, and custom C++ engines.
+
+      ‣ Designed and implemented complex AI behaviors, decision-making systems, and navigation solutions for gameplay.
+
+      ‣ Engineered robust gameplay mechanics, character controllers, and animation systems to ensure smooth player experiences.
+
+      ‣ Built efficient tools and pipelines to support designers and artists in faster iteration cycles.
+
+      ‣ Optimized rendering, physics, and AI subsystems to achieve maximum performance across target platforms.
+
+      ‣ Collaborated with cross-functional teams to integrate art, design, and audio seamlessly into gameplay features.
+
+      ‣ Led technical design discussions, code reviews, and mentoring sessions to maintain code quality and team growth.
+
+      ‣ Researched and integrated cutting-edge technologies including advanced shaders, procedural generation, and ECS patterns.
+
+      ‣ Delivered scalable solutions for both single-player and multiplayer systems.
+
+      ‣ Contributed to shipped titles and internal tools that enhanced productivity and improved gameplay quality.
+    skills:
+      - Unity Engine
+      - C#
+      - Node.js
+      - Playfab
+      - Firebase
+      - Unity Analytics
+      - Game Analytics
+      - Jenkins
+      - Amazon EC2
+      - Unity IAP
+    links:
+      Google Play: 'https://play.google.com/store/apps/details?id=com.lb.m3.yoga&hl=en'
+    media:
+      - type: image
+        src: /assets/images/games/YogaQuest/yq2.png
+      - type: image
+        src: /assets/images/games/YogaQuest/yq1.png
+      - type: video
+        src: /assets/images/games/YogaQuest/yq3.mp4
+  - id: longbow.battlebay
+    title: Battle Bay
+    start_date: March 2024
+    end_date: Present
+    description: |
+      ‣ Collaborated with Rovio Entertainment as Lead Engineer for both client and server-side game development.
+
+      ‣ Led a team of four, ensuring timely and high-quality deliverables.
+
+      ‣ Coordinated effectively with game designers, 3D artists, concept artists, QA and Data Analysts to align on features and goals.
+
+      ‣ Managed release processes, ensuring smooth and predictable production deployments.
+
+      ‣ Implemented and maintained a robust CI/CD pipeline to accelerate build delivery cycles.
+
+      ‣ Administered and managed AWS EC2 instances for scalable backend infrastructure.
+
+      ‣ Provided continuous support through efficient bug fixes and development of new features.
+
+      ‣ Ensured high-quality updates to deliver seamless user experiences.
+    skills:
+      - Unity Engine
+      - C#
+      - Web sockets
+      - C++
+      - PHP
+      - Ubuntu
+      - Docker
+      - Jenkins
+      - Amazon EC2
+    links:
+      Google Play: 'https://play.google.com/store/apps/details?id=com.rovio.battlebay&hl=en'
+      Apple Store: 'https://apps.apple.com/nz/app/battle-bay/id1046450453'
+    media:
+      - type: image
+        src: /assets/images/games/BattleBay/bb1.png
+      - type: image
+        src: /assets/images/games/BattleBay/bb2.png
+  - id: longbow.minerescue
+    title: Mine Rescue
+    start_date: October 2023
+    end_date: October 2023
+    description: |
+      ‣ Collaborated with Carry1st as a client, focusing on client-side development.
+
+      ‣ Designed and implemented a new game mode titled "Miner's Escape".
+
+      ‣ Ensured seamless integration of features within the existing gameplay systems.
+
+      ‣ Delivered clean and maintainable code aligning with project standards.
+    skills:
+      - Unity Engine
+      - C#
+      - Shader Graphs
+      - PHP
+    links:
+      Google Play: 'https://play.google.com/store/apps/details?id=com.carry1st.minerescue&hl=en'
+      Apple Store: 'https://apps.apple.com/us/app/mine-rescue-miner-tycoon-game/id1557234141'
+    media:
+      - type: image
+        src: /assets/images/games/MineRescue/mr1.png
+      - type: image
+        src: /assets/images/games/MineRescue/mr2.png
+      - type: image
+        src: /assets/images/games/MineRescue/mr3.png
+      - type: image
+        src: /assets/images/games/MineRescue/mr4.png
+  - id: hashbyte.boombusters
+    title: Boom Busters
+    start_date: August 2023
+    end_date: August 2023
+    description: |
+      ‣ Designed and implemented both server-side and client-side components for Boom Busters.
+
+      ‣ Integrated Photon to develop and manage multiplayer gameplay systems.
+
+      ‣ Gained extensive exposure to multiple technologies and enhancing overall technical expertise.
+
+      ‣ Delivered scalable and maintainable features supporting seamless multiplayer experiences.
+    skills:
+      - Unity Engine
+      - C#
+      - Playfab
+      - Photon
+    links:
+      Google Play: https://play.google.com/store/apps/details?id=com.hashbytestudio.minesweeper&hl=en_IN
+      Apple Store: https://apps.apple.com/pl/app/boom-busters/id6449463196
+    media:
+      - type: video
+        src: /assets/images/games/BoomBusters/video.mp4
+      - type: image
+        src: /assets/images/games/BoomBusters/cover.png
+  - id: personal.bloodylawman
+    title: Bloody Lawman
+    start_date: 'July 19, 2024'
+    end_date: 'July 22, 2024'
+    description: |
+      ‣ Developed a game jam project over a weekend with two friends.
+
+      ‣ Designed gameplay where players infect humans to spread infection across the city.
+
+      ‣ Integrated mechanics where infected humans continue spreading the infection.
+
+      ‣ Gained significant learning experience in rapid prototyping and collaborative design.
+    skills:
+      - Unity Engine
+      - C#
+    links:
+      Itch.io: 'https://iampratiksahoo.itch.io/bloody-lawman'
+    media:
+      - type: image
+        src: /assets/images/games/BloodyLawman/bl0.png
+      - type: image
+        src: /assets/images/games/BloodyLawman/bl1.png
+      - type: image
+        src: /assets/images/games/BloodyLawman/bl2.png
+      - type: image
+        src: /assets/images/games/BloodyLawman/bl3.png
+      - type: image
+        src: /assets/images/games/BloodyLawman/bl4.png
+  - id: personal.spyroll
+    title: Spy Roll
+    start_date: 'June 19, 2023'
+    end_date: 'August 18, 2023'
+    description: |
+      ‣ Developed a turn-based stealth puzzle game inspired by Hitman GO as a final year project.
+
+      ‣ Collaborated with a batchmate to design and implement core gameplay mechanics.
+
+      ‣ Researched turn-based game systems and integrated game design principles into the project.
+
+      ‣ Enhanced understanding of level design, stealth mechanics, and player feedback loops.
+    skills:
+      - Unity Engine
+      - C#
+      - Playfab
+      - Photon
+    links:
+      Gitlab: 'https://gitlab.com/underdogs6962425/SpyRoll'
+    media:
+      - type: video
+        src: /assets/images/games/SpyRoll/sr4.mp4
+      - type: image
+        src: /assets/images/games/SpyRoll/sr1.png
+      - type: image
+        src: /assets/images/games/SpyRoll/sr2.png
+      - type: image
+        src: /assets/images/games/SpyRoll/sr3.png
+  - id: filmon.savingastral
+    title: Saving Astral
+    start_date: 'June, 2022'
+    end_date: 'July, 2023'
+    description: |
+      ‣ Worked as a freelancer and lead developer on the project for a few months.
+
+      ‣ Engineered complex systems including Localization and Procedural Asteroid Generation.
+
+      ‣ Coordinated closely with designers to translate ideas into technical implementations.
+
+      ‣ Oversaw engineering workflows to maintain consistency and progress.
+
+      ‣ Project was discontinued before release due to owner’s decision.
+    skills:
+      - Unity
+      - C#
+      - Wwise
+    links:
+      Itch.io: 'https://iampratiksahoo.itch.io/saving-astral'
+    media:
+      - type: video
+        src: /assets/images/games/SavingAstral/sa3.mp4
+      - type: image
+        src: /assets/images/games/SavingAstral/sa1.png
+      - type: image
+        src: /assets/images/games/SavingAstral/sa2.png
+  - id: personal.urealpractice
+    title: Unreal Engine Practice
+    start_date: 'March, 2022'
+    end_date: 'July, 2022'
+    description: |
+      ‣ Explored Unreal Engine to expand technical versatility.
+
+      ‣ Developed multiple small projects while completing a Udemy course.
+
+      ‣ Created these projects for fun, learning and practical implementation of concepts.
+
+      ‣ Enhanced skills in Unreal Engine, C++ and overall game development workflows.
+    skills:
+      - Unreal Engine
+      - C++
+    links: 
+    media:
+      - type: image
+        src: /assets/images/games/UnrealPractice/ToonTanks/tt1.png
+      - type: image
+        src: /assets/images/games/UnrealPractice/CryptRaider/cr1.png
+      - type: image
+        src: /assets/images/games/UnrealPractice/CryptRaider/cr3.png
+      - type: image
+        src: /assets/images/games/UnrealPractice/CryptRaider/cr4.png
+      - type: image
+        src: /assets/images/games/UnrealPractice/CryptRaider/cr5.png
+      - type: image
+        src: /assets/images/games/UnrealPractice/ToonTanks/tt2.png
+      - type: image
+        src: /assets/images/games/UnrealPractice/ToonTanks/tt3.png
+      - type: image
+        src: /assets/images/games/UnrealPractice/ToonTanks/tt4.png
+      - type: image
+        src: /assets/images/games/UnrealPractice/ToonTanks/tt5.png
+      - type: image
+        src: /assets/images/games/UnrealPractice/ToonTanks/tt6.png
