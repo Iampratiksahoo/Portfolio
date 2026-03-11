@@ -1,10 +1,14 @@
 cardWidth: "300px"
 cardHeight: "200px"
 items:
+  - company: Appy Monkeys Pvt. Ltd.
+    designation: Software Engineer
+    start: October 2025
+    end: Present
   - company: Longbow Games Pvt. Ltd.
     designation: Software Engineer
     start: October 2023
-    end: Present
+    end: October 2025
   - company: Hashbyte Studio Pvt. Ltd.
     designation: Junior Game Developer
     start: March 2023

@@ -2,39 +2,51 @@ cardWidth: "300px"
 cardHeight: "300px"
 columns: 3
 items:
-  - id: longbow.yogaquest
-    title: Yoga Quest
-    start_date: September 2024
+  - id: appymonkeys.lokko
+    title: Lokko
+    start_date: November 2025
     end_date: Present
     description: |
-      ‣ Designed and implemented complex AI behaviors, decision-making systems, and navigation solutions for gameplay.
+      ‣ Building gameplay and backend features, basically making sure the game actually works.
 
-      ‣ Engineered robust gameplay mechanics, character controllers and animation systems to ensure smooth player experiences.
+      ‣ Shipped contests, achievements and other things that make players feel accomplished.
 
-      ‣ Built efficient tools and pipelines to support designers and artists in faster iteration cycles.
+      ‣ Wired up backend services and APIs so the game doesn't fall apart in production (fingers crossed).
 
-      ‣ Optimized rendering, physics, and AI subsystems to achieve maximum performance across target platforms.
+      ‣ Dabbled in shaders, mostly breaking them, occasionally making something pretty. This is still new for me.
 
-      ‣ Collaborated with cross-functional teams to integrate art, design and audio seamlessly into gameplay features.
+      ‣ Stepped into backend territory with LLM help and management's permission. A true team effort.
 
-      ‣ Led technical design discussions, code reviews, and mentoring sessions to maintain code quality and team growth.
-
-      ‣ Researched and integrated cutting-edge technologies including advanced shaders, procedural generation, and ECS patterns.
-
-      ‣ Delivered scalable solutions for both single-player and multiplayer systems.
-
-      ‣ Contributed to shipped titles and internal tools that enhanced productivity and improved gameplay quality.
+      ‣ Survived a live production environment and learned more in months than years of tutorials.
     skills:
       - Unity Engine
       - C#
-      - Node.js
-      - Express.js
+      - AWS
+      - Shaders
+      - Perforce
+    links:
+    media:
+
+  - id: longbow.yogaquest
+    title: Yoga Quest
+    start_date: September 2024
+    end_date: October 2025
+    description: |
+      ‣ Worked on gameplay mechanics and core features smooth enough that nobody complained.
+
+      ‣ Made designer-friendly tools so they could iterate fast and stop bugging engineering.
+
+      ‣ Led code reviews and mentoring — yes, even the painful ones.
+
+    skills:
+      - Unity Engine
+      - C#
       - Playfab
       - Firebase
       - Unity Analytics
       - Game Analytics
       - Jenkins
-      - Amazon EC2
+      - AWS
       - Unity IAP
     links:
       Google Play: 'https://play.google.com/store/apps/details?id=com.lb.m3.yoga&hl=en'
@@ -45,36 +57,32 @@ items:
         src: /assets/images/games/YogaQuest/yq1.png
       - type: video
         src: /assets/images/games/YogaQuest/yq3.mp4
+
   - id: longbow.battlebay
     title: Battle Bay
     start_date: March 2024
-    end_date: Present
+    end_date: October 2025
     description: |
-      ‣ Collaborated with Rovio Entertainment as Lead Engineer for both client and server-side game development.
+      ‣ Worked as a Lead Engineer for Rovio's Battle Bay. 
 
-      ‣ Led a team of four, ensuring timely and high-quality deliverables.
+      ‣ Managed a team of four. We shipped things. On time, mostly.
 
-      ‣ Coordinated effectively with game designers, 3D artists, concept artists, QA and Data Analysts to align on features and goals.
+      ‣ Juggled designers, artists, QA and data folks without losing my mind (mostly).
 
-      ‣ Managed release processes, ensuring smooth and predictable production deployments.
+      ‣ Built a CI/CD pipeline so builds stopped being everyone's least favorite ritual.
 
-      ‣ Implemented and maintained a robust CI/CD pipeline to accelerate build delivery cycles.
+      ‣ Kept AWS instances alive and behaving. It's more exciting than it sounds.
 
-      ‣ Administered and managed AWS EC2 instances for scalable backend infrastructure.
-
-      ‣ Provided continuous support through efficient bug fixes and development of new features.
-
-      ‣ Ensured high-quality updates to deliver seamless user experiences.
+      ‣ Fixed bugs, shipped features and kept the lights on.
     skills:
-      - Unity Engine
+      - Unity
       - C#
       - Web sockets
       - C++
-      - PHP
       - Ubuntu
       - Docker
       - Jenkins
-      - Amazon EC2
+      - AWS (Deployments and Snapshot managements)
     links:
       Google Play: 'https://play.google.com/store/apps/details?id=com.rovio.battlebay&hl=en'
       Apple Store: 'https://apps.apple.com/nz/app/battle-bay/id1046450453'
@@ -83,23 +91,21 @@ items:
         src: /assets/images/games/BattleBay/bb1.png
       - type: image
         src: /assets/images/games/BattleBay/bb2.png
+
   - id: longbow.minerescue
     title: Mine Rescue
     start_date: October 2023
     end_date: October 2023
     description: |
-      ‣ Collaborated with Carry1st as a client, focusing on client-side development.
+      ‣ Client-side work for Carry1st, in and out like a professional.
 
-      ‣ Designed and implemented a new game mode titled "Miner's Escape".
+      ‣ Designed and built a new game mode called "Miner's Escape."
 
-      ‣ Ensured seamless integration of features within the existing gameplay systems.
-
-      ‣ Delivered clean and maintainable code aligning with project standards.
+      ‣ Integrated everything cleanly into the existing codebase. No duct tape.
     skills:
-      - Unity Engine
+      - Unity
       - C#
-      - Shader Graphs
-      - PHP
+      - Shaders
     links:
       Google Play: 'https://play.google.com/store/apps/details?id=com.carry1st.minerescue&hl=en'
       Apple Store: 'https://apps.apple.com/us/app/mine-rescue-miner-tycoon-game/id1557234141'
@@ -112,20 +118,19 @@ items:
         src: /assets/images/games/MineRescue/mr3.png
       - type: image
         src: /assets/images/games/MineRescue/mr4.png
+
   - id: hashbyte.boombusters
     title: Boom Busters
     start_date: August 2023
     end_date: August 2023
     description: |
-      ‣ Designed and implemented both server-side and client-side components for Boom Busters.
+      ‣ Built client and server for Boom Busters, full stack, full chaos. One of my first projects 
 
-      ‣ Integrated Photon to develop and manage multiplayer gameplay systems.
+      ‣ Integrated Photon to make multiplayer work without people rage-quitting (the lag, not the game).
 
-      ‣ Gained extensive exposure to multiple technologies and enhancing overall technical expertise.
-
-      ‣ Delivered scalable and maintainable features supporting seamless multiplayer experiences.
+      ‣ Came out the other side with way more experience than I went in with.
     skills:
-      - Unity Engine
+      - Unity
       - C#
       - Playfab
       - Photon
@@ -137,18 +142,19 @@ items:
         src: /assets/images/games/BoomBusters/video.mp4
       - type: image
         src: /assets/images/games/BoomBusters/cover.png
+
   - id: personal.bloodylawman
     title: Bloody Lawman
     start_date: 'July 19, 2024'
     end_date: 'July 22, 2024'
     description: |
-      ‣ Developed a game jam project over a weekend with two friends.
+      ‣ Built a game in a weekend with two friends. We survived each other.
 
-      ‣ Designed gameplay where players infect humans to spread infection across the city.
+      ‣ You play as an infection spreading through a city. Wholesome stuff.
 
-      ‣ Integrated mechanics where infected humans continue spreading the infection.
+      ‣ Infected humans keep the chain going — it's basically viral marketing, game edition.
 
-      ‣ Gained significant learning experience in rapid prototyping and collaborative design.
+      ‣ Learned a ton about rapid prototyping and what sleep deprivation does to code quality.
     skills:
       - Unity Engine
       - C#
@@ -156,27 +162,22 @@ items:
       Itch.io: 'https://iampratiksahoo.itch.io/bloody-lawman'
     media:
       - type: image
-        src: /assets/images/games/BloodyLawman/bl0.png
-      - type: image
         src: /assets/images/games/BloodyLawman/bl1.png
       - type: image
         src: /assets/images/games/BloodyLawman/bl2.png
-      - type: image
+      - type: video
         src: /assets/images/games/BloodyLawman/bl3.png
-      - type: image
-        src: /assets/images/games/BloodyLawman/bl4.png
+
   - id: personal.spyroll
     title: Spy Roll
     start_date: 'June 19, 2023'
     end_date: 'August 18, 2023'
     description: |
-      ‣ Developed a turn-based stealth puzzle game inspired by Hitman GO as a final year project.
+      ‣ Built a turn-based stealth puzzle game for my final year project. Hitman GO was the vibe.
 
-      ‣ Collaborated with a batchmate to design and implement core gameplay mechanics.
+      ‣ Teamed up with a batchmate, two devs, one repo, zero merge conflicts (a lie).
 
-      ‣ Researched turn-based game systems and integrated game design principles into the project.
-
-      ‣ Enhanced understanding of level design, stealth mechanics, and player feedback loops.
+      ‣ Dug deep into turn-based systems, stealth mechanics, and why players never read tutorials.
     skills:
       - Unity Engine
       - C#
@@ -193,20 +194,17 @@ items:
         src: /assets/images/games/SpyRoll/sr2.png
       - type: image
         src: /assets/images/games/SpyRoll/sr3.png
+
   - id: filmon.savingastral
     title: Saving Astral
     start_date: 'June, 2022'
     end_date: 'July, 2023'
     description: |
-      ‣ Worked as a freelancer and lead developer on the project for a few months.
+      ‣ Freelanced as dev, built localization and procedural asteroid generation from scratch.
 
-      ‣ Engineered complex systems including Localization and Procedural Asteroid Generation.
+      ‣ Translated designer dreams into code that actually ran (This line is AI Generated, and I want to keep it).
 
-      ‣ Coordinated closely with designers to translate ideas into technical implementations.
-
-      ‣ Oversaw engineering workflows to maintain consistency and progress.
-
-      ‣ Project was discontinued before release due to owner’s decision.
+      ‣ Project was cancelled before release. The asteroids live on in our hearts.
     skills:
       - Unity
       - C#
@@ -220,40 +218,105 @@ items:
         src: /assets/images/games/SavingAstral/sa1.png
       - type: image
         src: /assets/images/games/SavingAstral/sa2.png
-  - id: personal.urealpractice
-    title: Unreal Engine Practice
-    start_date: 'March, 2022'
-    end_date: 'July, 2022'
+
+  - id: personal.componentpilot
+    title: Component Pilot
+    start_date: '2021'
+    end_date: ''
     description: |
-      ‣ Explored Unreal Engine to expand technical versatility.
+      ‣ Built a Unity Editor tool to copy multiple components between GameObjects, because doing it manually is a crime.
 
-      ‣ Developed multiple small projects while completing a Udemy course.
+      ‣ Started as a fun side project, ended up being genuinely useful. Surprised me too.
+    skills:
+      - Unity
+      - C#
+    links:
+    media:
+      - type: image
+        src: /assets/images/games/ComponentPilot/cp1.png
+      - type: video
+        src: /assets/images/games/ComponentPilot/cp2.mp4
+      - type: video
+        src: /assets/images/games/ComponentPilot/cp3.mp4
 
-      ‣ Created these projects for fun, learning and practical implementation of concepts.
+  - id: personal.cryptraider
+    title: Crypt Raider
+    start_date: '2022'
+    end_date: ''
+    description: |
+      ‣ Unreal practice project, built for fun and to figure out what all the UEC++ fuss is about.
 
-      ‣ Enhanced skills in Unreal Engine, C++ and overall game development workflows.
+      ‣ Tried replicating Unity's component system in Unreal. It went okay. Mostly.
     skills:
       - Unreal Engine
       - C++
-    links: 
+    links:
     media:
       - type: image
-        src: /assets/images/games/UnrealPractice/ToonTanks/tt1.png
+        src: /assets/images/games/CryptRaider/cr1.png
+      - type: video
+        src: /assets/images/games/CryptRaider/cr2.mp4
+
+  - id: personal.toontanks
+    title: Toon Tanks
+    start_date: '2022'
+    end_date: ''
+    description: |
+      ‣ Another Unreal learning project, saw it in a tutorial, thought it looked fun, was right.
+
+      ‣ May expand it someday. (I won't. But I might.)
+    skills:
+      - Unreal Engine
+      - C++
+    links:
+    media:
       - type: image
-        src: /assets/images/games/UnrealPractice/CryptRaider/cr1.png
+        src: /assets/images/games/ToonTanks/tt1.png
+      - type: video
+        src: /assets/images/games/ToonTanks/tt2.mp4
+
+  - id: personal.simpleshooter
+    title: Simple Shooter
+    start_date: '2022'
+    end_date: ''
+    description: |
+      ‣ Udemy course project focused on animations, because making things move properly is harder than it looks.
+
+      ‣ Simple by name, humbling by nature.
+    skills:
+      - Unreal Engine
+      - C++
+    links:
+    media:
       - type: image
-        src: /assets/images/games/UnrealPractice/CryptRaider/cr3.png
+        src: /assets/images/games/SimpleShooter/ss1.png
+      - type: video
+        src: /assets/images/games/SimpleShooter/ss2.mp4
+
+  - id: personal.undisclosed
+    title: CONFIDENTIAL
+    start_date: '2026'
+    end_date: ''
+    description: |
+      ‣ A personal project I can't talk about. Yes, it's actually interesting. No, that's not just something people say.
+
+      ‣ World-building is in progress. Features are being built. Details are staying classified.
+    skills:
+      - Unreal Engine
+      - C++
+    links:
+    media:
       - type: image
-        src: /assets/images/games/UnrealPractice/CryptRaider/cr4.png
-      - type: image
-        src: /assets/images/games/UnrealPractice/CryptRaider/cr5.png
-      - type: image
-        src: /assets/images/games/UnrealPractice/ToonTanks/tt2.png
-      - type: image
-        src: /assets/images/games/UnrealPractice/ToonTanks/tt3.png
-      - type: image
-        src: /assets/images/games/UnrealPractice/ToonTanks/tt4.png
-      - type: image
-        src: /assets/images/games/UnrealPractice/ToonTanks/tt5.png
-      - type: image
-        src: /assets/images/games/UnrealPractice/ToonTanks/tt6.png
+        src: /assets/images/games/Confidential/c1.png
+      - type: video
+        src: /assets/images/games/Confidential/c2.mp4
+      - type: video
+        src: /assets/images/games/Confidential/c3.mp4
+      - type: video
+        src: /assets/images/games/Confidential/c4.mp4
+      - type: video
+        src: /assets/images/games/Confidential/c5.mp4
+      - type: video
+        src: /assets/images/games/Confidential/c6.mp4
+      - type: video
+        src: /assets/images/games/Confidential/c7.mp4
