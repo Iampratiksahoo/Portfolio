@@ -1,17 +1,27 @@
-{% set cfg = experience %}
 <div class="experience-section">
-  <h2>Professional Experience</h2>
+  <div class="experience-trigger thick-stroke" id="exp-trigger">
+    <i class="ri-folder-user-line"></i>
+    <span>PLAYER STATS / EXPERIENCE</span>
+  </div>
 
-  <div 
-    class="experience-cards"
-    style="--exp-card-width: {{ cfg.cardWidth }}; --exp-card-height: {{ cfg.cardHeight }};"
-  >
-    {% for exp in cfg.items %}
-      <div class="exp-card">
-        <h3>{{ exp.company }}</h3>
-        <p class="exp-role">{{ exp.designation }}</p>
-        <span class="exp-duration">{{ exp.start }} – {{ exp.end }}</span>
-      </div>
-    {% endfor %}
+  <div class="experience-drawer thick-stroke" id="exp-drawer">
+    <div class="drawer-header">
+      <h3>EXPERIENCE</h3>
+      <button id="exp-close">X</button>
+    </div>
+    
+    <div class="experience-list">
+      {% for item in experience.items %}
+        <div class="experience-item">
+          <div class="exp-role">
+            <h4>{{ item.designation }}</h4>
+            <span class="exp-company">{{ item.company }}</span>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">{{ item.start }} - {{ item.end }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>

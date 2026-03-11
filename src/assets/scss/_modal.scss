@@ -1,178 +1,249 @@
 @use 'variables' as *;
-@use 'sass:color';
-
-.proj-description pre {
-  white-space: pre-wrap; // wraps long lines
-  word-wrap: break-word;
-  font-family: inherit; // uses normal text font
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
 
 .project-modal {
-  display: none;
+  display: none; // hidden by default
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba($bg, 0.8);
-  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  padding: 1rem;
+}
 
-  .modal-content {
-    background: $bg;
-    border: 2px solid $accent;
-    border-radius: 8px;
-    width: 80vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
+.modal-content {
+  background: $bg; // Use warm paper background
+  color: $text;
+  max-width: 1200px;
+  width: min(95vw, 1200px);
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden; // Force hide horizontal scroll
+  position: relative;
+  border: $stroke-width solid $text;
+  box-shadow: 12px 12px 0 $text;
+  
+  &::-webkit-scrollbar { width: 8px; }
+  &::-webkit-scrollbar-thumb { background: $text; }
+}
+
+.modal-header-sticky {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  z-index: 110;
+  pointer-events: none;
+  
+  .modal-close {
+    pointer-events: auto;
+    background: $red;
+    color: $white;
+    border: $stroke-width solid $text;
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 6px 6px 0 $text;
+    
+    &:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 9px 9px 0 $text;
+    }
+  }
+}
+
+.modal-body {
+  padding: 0 3rem 4rem 3rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.modal-media-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  
+  .main-viewer {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: $stroke-width solid $text;
+    background: #000;
     position: relative;
     overflow: hidden;
-  }
-
-  .modal-nav {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: 2px solid $accent;
-    border-radius: 4px;
-    color: $accent;
-    font-size: 3rem;
-    cursor: pointer;
-    padding: 0.25rem 0.75rem;
-    z-index: 1001;
-    opacity: 0.6;
-
-    &:hover { opacity: 1; }
-
-    &.modal-prev { left: 1rem; }
-    &.modal-next { right: 1rem; }
-
-    &.disabled {
-      opacity: 0.3;
-      cursor: default;
-    }
-  }
-
-  .modal-close {
-    position: fixed; // moved outside modal to top right of screen
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: 2px solid $accent;
-    border-radius: 4px;
-    color: $accent;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 2000; // ensure on top of everything
-    margin: 0; // reset any margins
-  }
-
-
-  .modal-body {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-  }
-
-  .modal-left {
-    flex: 0 0 60%;
-    display: flex;
-    flex-direction: column;
-    border-right: 2px solid $accent;
-    overflow: hidden;
-
-    .media-viewer {
-      flex: 3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba($accent, 0.05);
-      border-bottom: 2px solid $accent;
-      overflow: hidden;
-
-      img, video {
-        max-width: 100%;
-        max-height: 100%;
-        height: auto;
-        cursor: pointer;
-      }
-    }
-
-    .media-thumbnails-container {
-      flex: 1;
-      display: flex !important; // always show thumbnails
-      align-items: center;
-      position: relative;
-
-      .arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: none;
-        border: 2px solid $accent;
-        border-radius: 4px;
-        color: $accent;
-        font-size: 1.2rem;
-        cursor: pointer;
-        z-index: 5;
-
-        &.left { left: 0.5rem; }
-        &.right { right: 0.5rem; }
-      }
-
-      .media-thumbnails {
-        display: flex;
-        overflow-x: auto;
-        gap: 0.5rem;
-        width: 100%;
-        padding: 0.5rem 2rem;
-
-        &::-webkit-scrollbar { display: none; }
-        scrollbar-width: none;
-
-        .thumb {
-          flex: 0 0 calc(33.33% - 1rem);
-          max-width: calc(33.33% - 1rem);
-          height: 80px;
-          border: 1px solid $accent;
-          border-radius: 4px;
-          overflow: hidden;
-          cursor: pointer;
-
-          img, video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-      }
-    }
-  }
-
-  .modal-right {
-    flex: 0 0 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    overflow-y: auto;
-    padding: 1rem;
-
-    > div {
-      border: 1px solid $accent;
-      border-radius: 4px;
-      padding: 0.75rem;
-    }
-
-    h4 { margin: 0 0 0.5rem; color: $accent; }
-    p, a { margin: 0.25rem 0; display: block; }
     
-    &::-webkit-scrollbar {
-      display: none;
+    img, video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
+    
+    .clickable-media {
+      cursor: zoom-in;
+    }
+    
+    .loader {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: $font-heading;
+      color: $yellow;
+      font-size: 2rem;
+      z-index: 5;
+      animation: wiggle 0.5s ease-in-out infinite;
+    }
+    
+    &.loading .loader { display: block; }
+  }
+  
+  .thumbnails {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    
+    .thumb {
+      width: 100px;
+      height: 70px;
+      flex-shrink: 0;
+      border: $stroke-width solid $text;
+      cursor: pointer;
+      overflow: hidden;
+      padding: 0;
+      background: #000;
+      
+      img, video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      &:hover { border-color: $accent; }
+    }
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: translate(-50%, -50%) rotate(-5deg); }
+  50% { transform: translate(-50%, -50%) rotate(5deg); }
+}
+
+.modal-details {
+  min-width: 0; // Prevent flex item from overflowing
+  
+  h3 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    color: $text;
+    word-wrap: break-word;
+  }
+  
+  .modal-duration {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    opacity: 0.8;
+  }
+  
+  .modal-tech {
+    margin-bottom: 2rem;
+    
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      list-style: none;
+      margin-top: 0.75rem;
+      
+      li {
+        background: $yellow;
+        color: $black;
+        padding: 0.25rem 1rem;
+        border: $stroke-width solid $text;
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  .modal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    
+    .btn-sticker {
+      background: $white;
+      color: $black;
+      padding: 0.75rem 1.5rem;
+      border: $stroke-width solid $text;
+      box-shadow: 6px 6px 0 $text;
+      font-family: $font-heading;
+      text-transform: uppercase;
+      font-weight: bold;
+      
+      &:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: 9px 9px 0 $text;
+        background: $accent;
+      }
+    }
+  }
+  
+  .modal-desc {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    padding-top: 2rem;
+    border-top: 2px dashed $text;
+    
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-x: hidden; // Fix horizontal scroll in pre
+      font-family: inherit;
+    }
+  }
+}
+
+// Fullscreen Media Overlay
+.fullscreen-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.95);
+  z-index: 3000;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  
+  img {
+    max-width: 98vw;
+    max-height: 98vh;
+    border: 5px solid $white;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  }
+  
+  &.active { display: flex; }
+}
+
+@media (max-width: 900px) {
+  .modal-body {
+    grid-template-columns: 1fr;
+    padding: 0 1.5rem 3rem 1.5rem;
+  }
+  
+  .modal-content {
+    width: 98vw;
   }
 }

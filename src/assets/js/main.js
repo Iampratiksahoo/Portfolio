@@ -1,184 +1,186 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const ids = window.projectIds;
+  initModals();
+  initExperienceDrawer();
+  initProjectGrid();
+  initEmailCopy();
+  initFullscreen();
+});
 
-  // Modal open/close logic
-  document.querySelectorAll(".proj-card").forEach(card => {
-    card.addEventListener("click", () => {
-      const id = card.dataset.id;
+/**
+ * MODAL SYSTEM
+ */
+function initModals() {
+  const modalTriggers = document.querySelectorAll(".proj-card");
+  const closeButtons = document.querySelectorAll(".modal-close");
+
+  modalTriggers.forEach(trigger => {
+    trigger.addEventListener("click", () => {
+      const id = trigger.dataset.id;
       const modal = document.getElementById(`modal-${id}`);
-      modal.style.display = "flex";
-      document.body.style.overflow = "hidden";
-      updateNavButtons(id);
+      if (modal) {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+        trapFocus(modal);
+      }
     });
   });
 
-  document.querySelectorAll(".modal-close").forEach(btn => {
-    btn.addEventListener("click", e => {
+  closeButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
       e.stopPropagation();
       const id = btn.dataset.id;
       const modal = document.getElementById(`modal-${id}`);
-      if (!modal) return;
-      modal.style.display = "none";
-      document.body.style.overflow = "";
+      if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+      }
     });
   });
 
-  // Modal prev/next
-  document.querySelectorAll(".modal-prev").forEach(btn => {
-    btn.addEventListener("click", e => {
-      e.stopPropagation();
-      const currentId = btn.dataset.id;
-      const idx = ids.indexOf(currentId);
-      if (idx > 0) switchModal(currentId, ids[idx - 1]);
-    });
-  });
-
-  document.querySelectorAll(".modal-next").forEach(btn => {
-    btn.addEventListener("click", e => {
-      e.stopPropagation();
-      const currentId = btn.dataset.id;
-      const idx = ids.indexOf(currentId);
-      if (idx < ids.length - 1) switchModal(currentId, ids[idx + 1]);
-    });
-  });
-
-  function switchModal(currentId, targetId) {
-    const currentModal = document.getElementById(`modal-${currentId}`);
-    const targetModal = document.getElementById(`modal-${targetId}`);
-    if (!currentModal || !targetModal) return;
-    currentModal.style.display = "none";
-    targetModal.style.display = "flex";
-    updateNavButtons(targetId);
-  }
-
-  function updateNavButtons(activeId) {
-    const idx = ids.indexOf(activeId);
-    const modal = document.getElementById(`modal-${activeId}`);
-    if (!modal) return;
-    modal.querySelector(".modal-prev").disabled = idx === 0;
-    modal.querySelector(".modal-next").disabled = idx === ids.length - 1;
-  }
-
-  // Projects carousel nav
-  document.querySelectorAll(".projects-carousel").forEach(carousel => {
-    const track  = carousel.querySelector(".projects-track");
-    const btnL   = carousel.querySelector(".arrow-left");
-    const btnR   = carousel.querySelector(".arrow-right");
-    const groups = track.querySelectorAll(".projects-group");
-    let currentIndex = 0;
-
-    function updateArrows() {
-      if (currentIndex === 0) {
-        btnL.classList.add("disabled");
-      } else {
-        btnL.classList.remove("disabled");
-      }
-
-      if (currentIndex === groups.length - 1) {
-        btnR.classList.add("disabled");
-      } else {
-        btnR.classList.remove("disabled");
-      }
-    }
-
-    function scrollToCurrent() {
-      const target = groups[0].offsetWidth * currentIndex;
-
-      track.style.scrollSnapType = "none";
-      track.scrollTo({
-        left: target,
-        behavior: "smooth"
-      });
-
-      function onScrollEnd() {
-        if (Math.abs(track.scrollLeft - target) < 1) {
-          track.removeEventListener("scroll", onScrollEnd);
-          updateArrows();
-        }
-      }
-      track.addEventListener("scroll", onScrollEnd);
-    }
-
-    // Optional: re-enable snapping on manual user drag if needed
-    track.addEventListener("mousedown", () => {
-      track.style.scrollSnapType = "x mandatory";
-    });
-
-    btnL.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        scrollToCurrent();
-      }
-    });
-
-    btnR.addEventListener("click", () => {
-      if (currentIndex < groups.length - 1) {
-        currentIndex++;
-        scrollToCurrent();
-      }
-    });
-
-    updateArrows();
-  });
-
-  // ======= THUMBNAIL CLICK & MEDIA SWITCH =======
-  document.querySelectorAll(".media-thumbnails .thumb").forEach(thumb => {
+  // Thumbnail switching
+  document.querySelectorAll(".thumb").forEach(thumb => {
     thumb.addEventListener("click", () => {
-      const url = thumb.dataset.media;
+      const src = thumb.dataset.src;
       const type = thumb.dataset.type;
       const modal = thumb.closest(".project-modal");
-      const viewer = modal.querySelector(".media-viewer");
-      if (!viewer) return;
+      const viewer = modal.querySelector(".main-viewer");
+      
+      viewer.classList.add("loading");
+      
+      setTimeout(() => {
+        const existingLoader = viewer.querySelector(".loader");
+        viewer.innerHTML = "";
+        
+        let mediaEl;
+        if (type === "video") {
+          mediaEl = document.createElement("video");
+          mediaEl.src = src;
+          mediaEl.controls = true;
+          mediaEl.play();
+        } else {
+          mediaEl = document.createElement("img");
+          mediaEl.src = src;
+          mediaEl.classList.add("clickable-media");
+        }
+        
+        viewer.appendChild(mediaEl);
+        if (existingLoader) viewer.appendChild(mediaEl.parentElement.querySelector(".loader") ? "" : existingLoader); 
+        // Better re-append:
+        viewer.appendChild(existingLoader);
 
-      viewer.innerHTML = ""; // clear existing media
-
-      if (type === "video") {
-        const video = document.createElement("video");
-        video.src = url;
-        video.controls = true;
-        video.autoplay = false;
-        video.playsInline = true;
-        video.style.maxWidth = "100%";
-        video.style.maxHeight = "100%";
-        viewer.appendChild(video);
-        video.load();
-      } else {
-        const img = document.createElement("img");
-        img.src = url;
-        img.alt = "Project Media";
-        img.classList.add("click-fullscreen");
-        img.style.maxWidth = "100%";
-        img.style.maxHeight = "100%";
-        viewer.appendChild(img);
-      }
+        viewer.classList.remove("loading");
+      }, 300);
     });
   });
+}
 
-  // ======= THUMBNAIL SCROLL BUTTONS =======
-  document.querySelectorAll(".media-thumbnails-container").forEach(container => {
-    const thumbs = container.querySelector(".media-thumbnails");
-    const left = container.querySelector(".arrow.left");
-    const right = container.querySelector(".arrow.right");
-
-    function scrollBy(amount) {
-      thumbs.scrollBy({
-        left: amount,
-        behavior: "smooth"
-      });
+/**
+ * FULLSCREEN OVERLAY
+ */
+function initFullscreen() {
+  const overlay = document.getElementById("fullscreen-overlay");
+  const fullImg = document.getElementById("fullscreen-img");
+  
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("clickable-media") && e.target.tagName === "IMG") {
+      fullImg.src = e.target.src;
+      overlay.classList.add("active");
     }
+  });
+  
+  overlay.addEventListener("click", () => {
+    overlay.classList.remove("active");
+  });
+}
 
-    if (left) {
-      left.addEventListener("click", (e) => {
-        e.stopPropagation();
-        scrollBy(-thumbs.clientWidth / 2);
+/**
+ * EMAIL COPY
+ */
+function initEmailCopy() {
+  const copyBtn = document.getElementById("copy-email");
+  const emailLink = document.getElementById("email-text");
+
+  if (copyBtn && emailLink) {
+    copyBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const emailText = emailLink.textContent;
+      navigator.clipboard.writeText(emailText).then(() => {
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = "COPIED!";
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+        }, 2000);
       });
-    }
+    });
+  }
+}
 
-    if (right) {
-      right.addEventListener("click", (e) => {
-        e.stopPropagation();
-        scrollBy(thumbs.clientWidth / 2);
+/**
+ * EXPERIENCE DRAWER
+ */
+function initExperienceDrawer() {
+  const trigger = document.getElementById("exp-trigger");
+  const drawer = document.getElementById("exp-drawer");
+  const closeBtn = document.getElementById("exp-close");
+
+  if (trigger && drawer) {
+    trigger.addEventListener("click", () => {
+      drawer.classList.add("is-open");
+    });
+    
+    closeBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      drawer.classList.remove("is-open");
+    });
+  }
+}
+
+/**
+ * PROJECT GRID
+ */
+function initProjectGrid() {
+  const cards = document.querySelectorAll(".proj-card");
+  cards.forEach(card => {
+    const video = card.querySelector("video");
+    if (video) {
+      card.addEventListener("mouseenter", () => video.play().catch(() => {}));
+      card.addEventListener("mouseleave", () => {
+        video.pause();
+        video.currentTime = 0;
       });
     }
   });
-});
+}
+
+/**
+ * UTILITY: FOCUS TRAPPING
+ */
+function trapFocus(modal) {
+  const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+  if (!focusableElements.length) return;
+  
+  const firstFocusableElement = focusableElements[0];
+  const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+  modal.addEventListener('keydown', function(e) {
+    if (e.key === 'Tab' || e.keyCode === 9) {
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusableElement) {
+          lastFocusableElement.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastFocusableElement) {
+          firstFocusableElement.focus();
+          e.preventDefault();
+        }
+      }
+    }
+    if (e.key === 'Escape') {
+      const close = modal.querySelector(".modal-close");
+      if(close) close.click();
+    }
+  });
+  
+  firstFocusableElement.focus();
+}

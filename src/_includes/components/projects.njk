@@ -1,107 +1,95 @@
-{% set cfg = projects %}
 <div class="projects-section">
-  <h2>Projects</h2>
+  <h2>PROJECTS</h2>
 
-  <div class="projects-carousel">
-    <button class="arrow arrow-left">&lt;</button>
-    <div class="projects-track">
-      {% for group in cfg.items | batch(6, '&nbsp;') %}
-        <div class="projects-group"
-          style="
-            --proj-card-w: {{ cfg.cardWidth }};
-            --proj-card-h: {{ cfg.cardHeight }};
-            --proj-cols: {{ cfg.columns }};
-          "
-        >
-          {% for proj in group %}
-            {% if proj != '&nbsp;' %}
-              <div class="proj-card" data-id="{{ proj.id }}">
-                <div class="proj-poster">
-                  <h3>{{ proj.title }}</h3>
-                  <span class="proj-year">{{ proj.start_date }} - {{ proj.end_date }}</span>
-                </div>
-              </div>
-
-              <div class="project-modal" id="modal-{{ proj.id }}">
-                <button class="modal-nav modal-prev" data-id="{{ proj.id }}">‹</button>
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="modal-left">
-                      <div class="media-viewer">
-                        {% set mainMedia = proj.media[0] %}
-                        {% if mainMedia.type == "video" %}
-                          <video src="{{ mainMedia.src }}" controls></video>
-                        {% else %}
-                          <img src="{{ mainMedia.src }}" alt="Main Media" />
-                        {% endif %}
-                      </div>
-
-                      <div class="media-thumbnails-container">
-                        {% if proj.media | length > 3 %}
-                          <button class="arrow left">&lt;</button>
-                        {% endif %}
-
-                        <div class="media-thumbnails">
-                          {% for media in proj.media %}
-                            <div class="thumb" data-media="{{ media.src }}" data-type="{{ media.type }}">
-                              {% if media.type == "video" %}
-                                <video src="{{ media.src }}"></video>
-                              {% else %}
-                                <img src="{{ media.src }}" alt="Thumbnail" />
-                              {% endif %}
-                            </div>
-                          {% endfor %}
-                        </div>
-
-                        {% if proj.media | length > 3 %}
-                          <button class="arrow right">&gt;</button>
-                        {% endif %}
-                      </div>
-                    </div>
-
-                    <div class="modal-right">
-                      <button class="modal-close" data-id="{{ proj.id }}">X</button>
-
-                      <div class="proj-tech">
-                        <h4>Name</h4>
-                        <p>{{ proj.title | capitalize }}</p>
-                      </div>
-
-                      <div class="proj-tech">
-                        <h4>Technologies Used</h4>
-                        <ul>
-                          {% for skill in proj.skills | default([]) %}
-                            <li>{{ skill }}</li>
-                          {% endfor %}
-                        </ul>
-                      </div>
-
-                      <div class="proj-date">
-                        <h4>Duration</h4>
-                        <p>{{ proj.start_date }} - {{ proj.end_date }}</p>
-                      </div>
-
-                      <div class="proj-links">
-                        <h4>Links</h4>
-                        {% for key, url in proj.links %}
-                          <p><a href="{{ url }}" target="_blank">{{ key | capitalize }}</a></p>
-                        {% endfor %}
-                      </div>
-
-                      <div class="proj-description">
-                        <h4>Description</h4>
-                        <pre>{{ proj.description }}</pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-nav modal-next" data-id="{{ proj.id }}">›</button>
-              </div>
+  <div class="projects-grid">
+    {% for proj in projects.items %}
+      {% set tapeIdx = [0,1,2,3,4,5,6,7] | random %}
+      <div class="proj-card-wrapper" style="--rand-rot: {{ [ -3, -2, -1, 1, 2, 3 ] | random }}deg">
+        <div class="proj-tape tape-style-{{ tapeIdx }}"></div>
+        <div class="proj-card polaroid" data-id="{{ proj.id }}">
+          <div class="proj-media">
+            {% set mainMedia = proj.media[0] %}
+            {% if mainMedia.type == "video" %}
+              <video src="{{ mainMedia.src }}" muted loop playsinline></video>
+            {% else %}
+              {% image "./src" + mainMedia.src, proj.title + " poster" %}
             {% endif %}
-          {% endfor %}
+          </div>
+          <div class="proj-info">
+            <h3>{{ proj.title }}</h3>
+            {% if proj.start_date %}<span class="proj-date">{{ proj.start_date }}</span>{% endif %}
+          </div>
         </div>
-      {% endfor %}
-    </div>
-    <button class="arrow arrow-right">&gt;</button>
+      </div>
+
+      <!-- Modal -->
+      <div class="project-modal" id="modal-{{ proj.id }}" role="dialog" aria-modal="true" aria-labelledby="modal-title-{{ proj.id }}">
+        <div class="modal-content thick-stroke">
+          <div class="modal-header-sticky">
+            <button class="modal-close" data-id="{{ proj.id }}" aria-label="Close modal">X</button>
+          </div>
+          
+          <div class="modal-body">
+            <div class="modal-media-viewer">
+              <div class="main-viewer" id="viewer-{{ proj.id }}">
+                {% if mainMedia.type == "video" %}
+                  <video src="{{ mainMedia.src }}" controls></video>
+                {% else %}
+                  <img src="{{ mainMedia.src }}" alt="Project Preview" class="clickable-media" />
+                {% endif %}
+                <div class="loader">👻 LOADING...</div>
+              </div>
+              
+              {% if proj.media | length > 1 %}
+              <div class="thumbnails">
+                {% for m in proj.media %}
+                  <button class="thumb thick-stroke" data-src="{{ m.src }}" data-type="{{ m.type }}" aria-label="View media {{ loop.index }}">
+                    {% if m.type == "video" %}
+                      <video src="{{ m.src }}"></video>
+                    {% else %}
+                      <img src="{{ m.src }}" alt="Thumbnail" />
+                    {% endif %}
+                  </button>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+
+            <div class="modal-details">
+              <h3 id="modal-title-{{ proj.id }}">{{ proj.title }}</h3>
+              
+              {% if proj.start_date %}
+              <p class="modal-duration"><strong>DURATION:</strong> {{ proj.start_date }} {% if proj.end_date %}- {{ proj.end_date }}{% endif %}</p>
+              {% endif %}
+              
+              {% if proj.skills %}
+              <div class="modal-tech">
+                <strong>TECH USED:</strong>
+                <ul>
+                  {% for skill in proj.skills %}
+                    <li>{{ skill }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% endif %}
+
+              {% if proj.links %}
+              <div class="modal-links">
+                {% for label, url in proj.links %}
+                  <a href="{{ url }}" target="_blank" class="btn-sticker">{{ label }}</a>
+                {% endfor %}
+              </div>
+              {% endif %}
+
+              {% if proj.description %}
+              <div class="modal-desc">
+                <pre>{{ proj.description }}</pre>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </div>

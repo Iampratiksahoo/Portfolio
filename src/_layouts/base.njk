@@ -7,19 +7,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Gaegu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://api.fontshare.com/v2/css?f[]=panchang@200,500,700,800,300,400,600&display=swap" rel="stylesheet">
+    <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
     <script src="/assets/js/main.js" defer></script>
-    <title>{% if title %}{{ title }} · {% endif %}Pratik Sahoo</title>
+    <title>{{ metadata.title }}</title>
+    <meta name="description" content="{{ metadata.description }}" />
+    <meta name="author" content="{{ metadata.author }}" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ metadata.url }}" />
+    <meta property="og:title" content="{{ metadata.title }}" />
+    <meta property="og:description" content="{{ metadata.description }}" />
+    <meta property="og:image" content="{{ metadata.url }}{{ metadata.socialImage }}" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="{{ metadata.url }}" />
+    <meta name="twitter:title" content="{{ metadata.title }}" />
+    <meta name="twitter:description" content="{{ metadata.description }}" />
+    <meta name="twitter:image" content="{{ metadata.url }}{{ metadata.socialImage }}" />
+    <meta name="twitter:site" content="{{ metadata.twitterHandle }}" />
+
     <link
       rel="shortcut icon"
-      type="image/jpg"
-      href="/assets/images/favicon.png"
+      type="image/svg+xml"
+      href="/assets/images/favicon.svg"
     />
   </head>
   <body>
@@ -28,6 +47,9 @@
       {{ content | safe }}
     </main>
     {% include "footer.njk" %}
+    <div id="fullscreen-overlay" class="fullscreen-overlay">
+      <img id="fullscreen-img" src="" alt="Fullscreen view" />
+    </div>
     <script>
       window.projectIds = [
         {% for proj in projects.items %}

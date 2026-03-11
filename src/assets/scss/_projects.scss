@@ -1,96 +1,133 @@
+@use 'sass:list';
 @use 'variables' as *;
-@use 'sass:color';
 
-// Section wrapper
 .projects-section {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 1rem;
-  height: 100%;
+  width: 100%;
 }
 
-// Heading
-.projects-section > h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 4rem;
+  padding: 4rem 0;
 }
 
-// Carousel container
-.projects-carousel {
+.proj-card-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
+  transform: rotate(var(--rand-rot, 1deg));
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding-top: 2rem;
+  
+  .proj-tape {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 38px;
+    z-index: 5;
+    opacity: 1; 
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0,0.1);
 
-  .arrow {
-    background: none;
-    border: 2px solid $accent;
-    border-radius: 10px;
-    padding: 0.25rem 0.75rem;
-    font-size: 2rem;
-    color: $accent;
-    cursor: pointer;
-    z-index: 10;
-
-    &.arrow-left { margin-right: 0.5rem; }
-    &.arrow-right { margin-left: 0.5rem; }
-    &.hidden { display: none; }
-    &.disabled {
-      opacity: 0.3;
-      cursor: default;
-      pointer-events: none; // optional if you want to prevent clicking completely
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,0.1) 5px, rgba(255,255,255,0.1) 10px);
     }
   }
 
-  .projects-track {
-    overflow: hidden;
-    display: flex;
-    flex: 1;
+  // Define 8 unique "torn" styles
+  .tape-style-0 {
+    background: list.nth($tape-colors, 1);
+    transform: translateX(-50%) rotate(-3deg);
+    clip-path: polygon(2% 0%, 98% 3%, 100% 30%, 97% 85%, 100% 100%, 75% 92%, 50% 100%, 25% 92%, 0% 100%, 3% 30%);
   }
-
-  .projects-group {
-    flex: none;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(var(--proj-card-w), 1fr));
-    grid-auto-rows: var(--proj-card-h);
-    gap: 2rem;
-    justify-items: center;
-    justify-content: center;
-    padding-top: 4px;
+  .tape-style-1 {
+    background: list.nth($tape-colors, 2);
+    transform: translateX(-50%) rotate(4deg);
+    clip-path: polygon(0% 10%, 95% 0%, 100% 40%, 98% 100%, 80% 90%, 50% 100%, 20% 90%, 0% 100%);
+  }
+  .tape-style-2 {
+    background: list.nth($tape-colors, 3);
+    transform: translateX(-50%) rotate(-5deg);
+    clip-path: polygon(5% 5%, 90% 0%, 100% 20%, 95% 80%, 100% 95%, 60% 100%, 30% 95%, 0% 100%, 5% 50%);
+  }
+  .tape-style-3 {
+    background: list.nth($tape-colors, 4);
+    transform: translateX(-50%) rotate(2deg);
+    clip-path: polygon(0% 0%, 100% 5%, 98% 40%, 100% 90%, 70% 100%, 30% 90%, 0% 100%);
+  }
+  .tape-style-4 {
+    background: list.nth($tape-colors, 5);
+    transform: translateX(-50%) rotate(-2deg);
+    clip-path: polygon(3% 10%, 97% 0%, 100% 50%, 95% 100%, 80% 92%, 60% 100%, 40% 92%, 20% 100%, 0% 90%);
+  }
+  .tape-style-5 {
+    background: list.nth($tape-colors, 6);
+    transform: translateX(-50%) rotate(5deg);
+    clip-path: polygon(0% 5%, 100% 0%, 98% 80%, 100% 100%, 70% 95%, 40% 100%, 0% 90%, 2% 40%);
+  }
+  .tape-style-6 {
+    background: list.nth($tape-colors, 7);
+    transform: translateX(-50%) rotate(-4deg);
+    clip-path: polygon(2% 2%, 98% 0%, 100% 40%, 95% 95%, 85% 100%, 50% 90%, 15% 100%, 0% 85%);
+  }
+  .tape-style-7 {
+    background: list.nth($tape-colors, 8);
+    transform: translateX(-50%) rotate(3deg);
+    clip-path: polygon(5% 0%, 95% 5%, 100% 30%, 97% 100%, 75% 95%, 25% 100%, 0% 80%, 3% 40%);
+  }
+  
+  &:hover {
+    transform: rotate(0deg) scale(1.05);
+    z-index: 10;
+    
+    .proj-card {
+      box-shadow: 12px 12px 0 $black;
+    }
   }
 }
 
-// Individual card
 .proj-card {
-  width: var(--proj-card-w);
-  height: var(--proj-card-h);
-  background: rgba($accent, 0.05);
-  border: 2px solid $accent;
-  border-radius: 8px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba($accent, 0.4);
+  
+  .proj-media {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    background: #000;
+    
+    video, img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
   }
-
-  .proj-poster {
+  
+  .proj-info {
+    text-align: center;
+    padding-bottom: 1rem;
+    
     h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: $accent;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
     }
-    .proj-year {
-      display: block;
-      margin-top: 0.5rem;
+    
+    .proj-date {
       font-size: 0.9rem;
-      color: color.adjust($text, $lightness: -40%);
+      opacity: 0.6;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .proj-card-wrapper {
+    transform: rotate(0deg) !important;
   }
 }

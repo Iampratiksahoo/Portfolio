@@ -17,12 +17,15 @@
   "scripts": {
     "clean": "rm -rf _site",
     "build:css": "sass --load-path=src/assets/scss src/assets/scss/main.scss _site/css/main.css --no-source-map --style=compressed",
+    "build:js": "esbuild src/assets/js/main.js --bundle --minify --outfile=_site/assets/js/main.js",
     "build:eleventy": "eleventy",
-    "build": "npm run build:css && npm run build:eleventy",
-    "start": "npm run build:css && eleventy --serve"
+    "build": "npm run build:css && npm run build:js && npm run build:eleventy",
+    "start": "npm run build:css && npm run build:js && eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.4",
+    "esbuild": "^0.27.3",
     "sass": "^1.89.2"
   },
   "dependencies": {

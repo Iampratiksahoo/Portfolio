@@ -1,13 +1,43 @@
-{% set cfg = contact %}
 <div class="contact-section">
-  <h2>Contact Me</h2>
-
-  <div class="contact-details">
-    <p><b>Phone:</b> {{cfg.phone}}</p>
-    <p><b>Home Address:</b> {{cfg.home_address}}</p>
-    <p><b>Current Address:</b> {{cfg.current_address}}</p>
-    <p><b>Email:</b> <a href="mailto:{{cfg.email}}">{{cfg.email}}</a></p>
-    <p><b>LinkedIn:</b> <a href="{{cfg.linkedin}}" target="_blank">{{cfg.linkedin}}</a></p>
-    <p><b>GitHub:</b> <a href="{{cfg.github}}" target="_blank">{{cfg.github}}</a></p>
+  <div class="postcard-wrapper thick-stroke">
+    <div class="postcard-left">
+      <h2>LET'S TALK!</h2>
+      <p class="handwritten">Hey Pratik! I've got a cool project for you. Let's build something epic together!</p>
+      
+      <div class="stamp-box">
+        <div class="stamp thick-stroke">
+          <i class="ri-gamepad-line"></i>
+        </div>
+      </div>
+    </div>
+    
+    <div class="postcard-divider"></div>
+    
+    <div class="postcard-right">
+      <div class="address-line">
+        <label>TO:</label>
+        <span>{{ metadata.author | upper }}</span>
+      </div>
+      <div class="address-line">
+        <label>AT:</label>
+        <div class="email-wrapper">
+          <a href="mailto:{{ contact.email }}" id="email-text">{{ contact.email }}</a>
+          <button class="copy-btn thick-stroke" id="copy-email" aria-label="Copy email">COPY</button>
+        </div>
+      </div>
+      <div class="address-line">
+        <label>LOC:</label>
+        <span>{{ contact.current_address }}</span>
+      </div>
+      
+      <div class="social-links">
+        <a href="{{ contact.github }}" target="_blank" class="social-btn thick-stroke" title="GitHub">
+          <i class="ri-github-line"></i>
+        </a>
+        <a href="{{ contact.linkedin }}" target="_blank" class="social-btn thick-stroke" title="LinkedIn">
+          <i class="ri-linkedin-line"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </div>

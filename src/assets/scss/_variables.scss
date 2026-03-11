@@ -1,16 +1,45 @@
 // src/assets/scss/_variables.scss
 
-// Colors
-$bg:       #1a1a1a !default;
-$accent:   #39ff14 !default;
-$text:     #eeeeee !default;
+// Basic Colors
+$white:    #ffffff !default;
+$black:    #1a1a1a !default;
+$yellow:   #ffea00 !default; 
+$dirty-yellow: #d4bc00 !default;
+$brown:    #795548 !default;
+$tan:      #d2b48c !default;
+$olive:    #808000 !default;
+$red:      #ff4d4d !default; 
+$accent:   #00f2ff !default; 
+$grey:     #666666 !default;
+
+// Theme Colors (Forced Light Mode - Warm Paper)
+$bg:       #fdfbf7 !default;
+$text:     #1a1a1a !default;
+$paper:    #ffffff !default;
+$border:   #1a1a1a !default;
+
+// Tape Colors (Shades of Browns/Tans only - Masking/Packing Tape look)
+$tape-colors: (
+  #e3d5b8, // Light masking tape
+  #d2b48c, // Tan tape
+  #c4a484, // Light brown tape
+  #b8860b, // Dark goldenrod/Brown
+  #8b4513, // Saddle brown
+  #a0522d, // Sienna
+  #6f4e37, // Coffee brown
+  #dcb35c  // Golden brown
+);
 
 // Typography
-$font-body:    'Source Code Pro', monospace !default;
-$font-heading: 'Oswald', sans-serif !default;
-$bg-light: #f9f9f9; // light background for contact section
-    
+$font-body:    'Fredoka', sans-serif !default;
+$font-heading: 'Panchang', sans-serif !default;
+
+// Strokes
+$stroke-width: 3px !default;
+$border-radius: 12px !default;
+$shadow-offset: 6px !default;
+
 // Intro section sizing
-$intro-img-size:   500px !default;  // base avatar diameter
-$intro-text-basis: 400px !default;  // min width for text column
-$intro-gap:        3rem  !default;  // gap between text & image
+$intro-img-size:   400px !default;
+$intro-text-basis: 500px !default;
+$intro-gap:        4rem  !default;
