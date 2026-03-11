@@ -7,19 +7,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Gaegu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://api.fontshare.com/v2/css?f[]=panchang@200,500,700,800,300,400,600&display=swap" rel="stylesheet">
+    <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
     <script src="/assets/js/main.js" defer></script>
-    <title>Pratik Sahoo</title>
+    <title>Pratik Sahoo | Game Developer</title>
+    <meta name="description" content="Game Developer portfolio of Pratik Sahoo. Architect of code and chaos. Building worlds one engine tick at a time." />
+    <meta name="author" content="Pratik Sahoo" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://iampratiksahoo.github.io" />
+    <meta property="og:title" content="Pratik Sahoo | Game Developer" />
+    <meta property="og:description" content="Game Developer portfolio of Pratik Sahoo. Architect of code and chaos. Building worlds one engine tick at a time." />
+    <meta property="og:image" content="https://iampratiksahoo.github.io/assets/images/avatar.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://iampratiksahoo.github.io" />
+    <meta name="twitter:title" content="Pratik Sahoo | Game Developer" />
+    <meta name="twitter:description" content="Game Developer portfolio of Pratik Sahoo. Architect of code and chaos. Building worlds one engine tick at a time." />
+    <meta name="twitter:image" content="https://iampratiksahoo.github.io/assets/images/avatar.png" />
+    <meta name="twitter:site" content="@iampratiksahoo" />
+
     <link
       rel="shortcut icon"
-      type="image/jpg"
-      href="/assets/images/favicon.png"
+      type="image/svg+xml"
+      href="/assets/images/favicon.svg"
     />
   </head>
   <body>
@@ -33,12 +52,11 @@
 <section id="intro" class="container intro">
   <div class="intro-wrapper">
   <div class="intro-text">
-    <h1>Hello!</h1>
-    <p>I am <font size="7"><b>Pratik Sahoo</b></font>
-    <br>Architect of code and chaos. Building worlds one engine tick at a time.</p>
-    <a href="https://drive.google.com/uc?export=download&amp;id=1XJbmkIOz39TE8-M_dGzcMVwVx8uqg5KR" class="btn-resume"><b>Resume</b></a>
+    <span class="greeting">HELLO!</span>
+    <h1>I AM Pratik Sahoo <i class="ri-ghost-line sticker-icon"></i></h1>
+    <p class="tagline">Architect of code and chaos. Building worlds one engine tick at a time.</p>
   </div>
-  <div class="intro-image">
+  <div class="intro-image polaroid">
     <img src="/assets/images/avatar.png" alt="Pratik Sahoo avatar" />
   </div>
 </div>
@@ -46,156 +64,169 @@
 </section>
 
 <section id="experience" class="container">
-  
-<div class="experience-section">
-  <h2>Professional Experience</h2>
+  <div class="experience-section">
+  <div class="experience-trigger thick-stroke" id="exp-trigger">
+    <i class="ri-folder-user-line"></i>
+    <span>PLAYER STATS / EXPERIENCE</span>
+  </div>
 
-  <div 
-    class="experience-cards"
-    style="--exp-card-width: 300px; --exp-card-height: 200px;"
-  >
+  <div class="experience-drawer thick-stroke" id="exp-drawer">
+    <div class="drawer-header">
+      <h3>EXPERIENCE</h3>
+      <button id="exp-close">X</button>
+    </div>
     
-      <div class="exp-card">
-        <h3>Longbow Games Pvt. Ltd.</h3>
-        <p class="exp-role">Software Engineer</p>
-        <span class="exp-duration">October 2023 – Present</span>
-      </div>
-    
-      <div class="exp-card">
-        <h3>Hashbyte Studio Pvt. Ltd.</h3>
-        <p class="exp-role">Junior Game Developer</p>
-        <span class="exp-duration">March 2023 – October 2023</span>
-      </div>
-    
-      <div class="exp-card">
-        <h3>Infosys</h3>
-        <p class="exp-role">Operation Executive</p>
-        <span class="exp-duration">August 2021 – February 2023</span>
-      </div>
-    
+    <div class="experience-list">
+      
+        <div class="experience-item">
+          <div class="exp-role">
+            <h4>Software Engineer</h4>
+            <span class="exp-company">Longbow Games Pvt. Ltd.</span>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">October 2023 - Present</span>
+          </div>
+        </div>
+      
+        <div class="experience-item">
+          <div class="exp-role">
+            <h4>Junior Game Developer</h4>
+            <span class="exp-company">Hashbyte Studio Pvt. Ltd.</span>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">March 2023 - October 2023</span>
+          </div>
+        </div>
+      
+        <div class="experience-item">
+          <div class="exp-role">
+            <h4>Operation Executive</h4>
+            <span class="exp-company">Infosys</span>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">August 2021 - February 2023</span>
+          </div>
+        </div>
+      
+    </div>
   </div>
 </div>
 
 </section>
 
 <section id="projects" class="container">
-  
-<div class="projects-section">
-  <h2>Projects</h2>
+  <div class="projects-section">
+  <h2>PROJECTS</h2>
 
-  <div class="projects-carousel">
-    <button class="arrow arrow-left">&lt;</button>
-    <div class="projects-track">
+  <div class="projects-grid">
+    
       
-        <div class="projects-group"
-          style="
-            --proj-card-w: 300px;
-            --proj-card-h: 300px;
-            --proj-cols: 3;
-          "
-        >
-          
+      <div class="proj-card-wrapper" style="--rand-rot: 1deg">
+        <div class="proj-tape tape-style-6"></div>
+        <div class="proj-card polaroid" data-id="longbow.yogaquest">
+          <div class="proj-media">
             
-              <div class="proj-card" data-id="longbow.yogaquest">
-                <div class="proj-poster">
-                  <h3>Yoga Quest</h3>
-                  <span class="proj-year">September 2024 - Present</span>
-                </div>
+            
+              <picture><source type="image/avif" srcset="/assets/images/optimized/yq2-300w.avif 300w, /assets/images/optimized/yq2-600w.avif 600w, /assets/images/optimized/yq2-900w.avif 900w" sizes="100vw"><source type="image/webp" srcset="/assets/images/optimized/yq2-300w.webp 300w, /assets/images/optimized/yq2-600w.webp 600w, /assets/images/optimized/yq2-900w.webp 900w" sizes="100vw"><img src="/assets/images/optimized/yq2-300w.jpeg" alt="Yoga Quest poster" loading="lazy" decoding="async" width="900" height="1200" srcset="/assets/images/optimized/yq2-300w.jpeg 300w, /assets/images/optimized/yq2-600w.jpeg 600w, /assets/images/optimized/yq2-900w.jpeg 900w" sizes="100vw"></picture>
+            
+          </div>
+          <div class="proj-info">
+            <h3>Yoga Quest</h3>
+            <span class="proj-date">September 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="project-modal" id="modal-longbow.yogaquest" role="dialog" aria-modal="true" aria-labelledby="modal-title-longbow.yogaquest">
+        <div class="modal-content thick-stroke">
+          <div class="modal-header-sticky">
+            <button class="modal-close" data-id="longbow.yogaquest" aria-label="Close modal">X</button>
+          </div>
+          
+          <div class="modal-body">
+            <div class="modal-media-viewer">
+              <div class="main-viewer" id="viewer-longbow.yogaquest">
+                
+                  <img src="/assets/images/games/YogaQuest/yq2.png" alt="Project Preview" class="clickable-media" />
+                
+                <div class="loader">👻 LOADING...</div>
               </div>
+              
+              
+              <div class="thumbnails">
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/YogaQuest/yq2.png" data-type="image" aria-label="View media 1">
+                    
+                      <img src="/assets/images/games/YogaQuest/yq2.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/YogaQuest/yq1.png" data-type="image" aria-label="View media 2">
+                    
+                      <img src="/assets/images/games/YogaQuest/yq1.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/YogaQuest/yq3.mp4" data-type="video" aria-label="View media 3">
+                    
+                      <video src="/assets/images/games/YogaQuest/yq3.mp4"></video>
+                    
+                  </button>
+                
+              </div>
+              
+            </div>
 
-              <div class="project-modal" id="modal-longbow.yogaquest">
-                <button class="modal-nav modal-prev" data-id="longbow.yogaquest">‹</button>
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="modal-left">
-                      <div class="media-viewer">
-                        
-                        
-                          <img src="/assets/images/games/YogaQuest/yq2.png" alt="Main Media" />
-                        
-                      </div>
+            <div class="modal-details">
+              <h3 id="modal-title-longbow.yogaquest">Yoga Quest</h3>
+              
+              
+              <p class="modal-duration"><strong>DURATION:</strong> September 2024 - Present</p>
+              
+              
+              
+              <div class="modal-tech">
+                <strong>TECH USED:</strong>
+                <ul>
+                  
+                    <li>Unity Engine</li>
+                  
+                    <li>C#</li>
+                  
+                    <li>Node.js</li>
+                  
+                    <li>Express.js</li>
+                  
+                    <li>Playfab</li>
+                  
+                    <li>Firebase</li>
+                  
+                    <li>Unity Analytics</li>
+                  
+                    <li>Game Analytics</li>
+                  
+                    <li>Jenkins</li>
+                  
+                    <li>Amazon EC2</li>
+                  
+                    <li>Unity IAP</li>
+                  
+                </ul>
+              </div>
+              
 
-                      <div class="media-thumbnails-container">
-                        
+              
+              <div class="modal-links">
+                
+                  <a href="https://play.google.com/store/apps/details?id=com.lb.m3.yoga&amp;hl=en" target="_blank" class="btn-sticker">Google Play</a>
+                
+              </div>
+              
 
-                        <div class="media-thumbnails">
-                          
-                            <div class="thumb" data-media="/assets/images/games/YogaQuest/yq2.png" data-type="image">
-                              
-                                <img src="/assets/images/games/YogaQuest/yq2.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/YogaQuest/yq1.png" data-type="image">
-                              
-                                <img src="/assets/images/games/YogaQuest/yq1.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/YogaQuest/yq3.mp4" data-type="video">
-                              
-                                <video src="/assets/images/games/YogaQuest/yq3.mp4"></video>
-                              
-                            </div>
-                          
-                        </div>
-
-                        
-                      </div>
-                    </div>
-
-                    <div class="modal-right">
-                      <button class="modal-close" data-id="longbow.yogaquest">X</button>
-
-                      <div class="proj-tech">
-                        <h4>Name</h4>
-                        <p>Yoga quest</p>
-                      </div>
-
-                      <div class="proj-tech">
-                        <h4>Technologies Used</h4>
-                        <ul>
-                          
-                            <li>Unity Engine</li>
-                          
-                            <li>C#</li>
-                          
-                            <li>Node.js</li>
-                          
-                            <li>Express.js</li>
-                          
-                            <li>Playfab</li>
-                          
-                            <li>Firebase</li>
-                          
-                            <li>Unity Analytics</li>
-                          
-                            <li>Game Analytics</li>
-                          
-                            <li>Jenkins</li>
-                          
-                            <li>Amazon EC2</li>
-                          
-                            <li>Unity IAP</li>
-                          
-                        </ul>
-                      </div>
-
-                      <div class="proj-date">
-                        <h4>Duration</h4>
-                        <p>September 2024 - Present</p>
-                      </div>
-
-                      <div class="proj-links">
-                        <h4>Links</h4>
-                        
-                          <p><a href="https://play.google.com/store/apps/details?id=com.lb.m3.yoga&amp;hl=en" target="_blank">Google play</a></p>
-                        
-                      </div>
-
-                      <div class="proj-description">
-                        <h4>Description</h4>
-                        <pre>‣ Designed and implemented complex AI behaviors, decision-making systems, and navigation solutions for gameplay.
+              
+              <div class="modal-desc">
+                <pre>‣ Designed and implemented complex AI behaviors, decision-making systems, and navigation solutions for gameplay.
 
 ‣ Engineered robust gameplay mechanics, character controllers and animation systems to ensure smooth player experiences.
 
@@ -213,107 +244,112 @@
 
 ‣ Contributed to shipped titles and internal tools that enhanced productivity and improved gameplay quality.
 </pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-nav modal-next" data-id="longbow.yogaquest">›</button>
               </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+      <div class="proj-card-wrapper" style="--rand-rot: 2deg">
+        <div class="proj-tape tape-style-3"></div>
+        <div class="proj-card polaroid" data-id="longbow.battlebay">
+          <div class="proj-media">
             
+            
+              <picture><source type="image/avif" srcset="/assets/images/optimized/bb1-300w.avif 300w, /assets/images/optimized/bb1-600w.avif 600w, /assets/images/optimized/bb1-900w.avif 900w" sizes="100vw"><source type="image/webp" srcset="/assets/images/optimized/bb1-300w.webp 300w, /assets/images/optimized/bb1-600w.webp 600w, /assets/images/optimized/bb1-900w.webp 900w" sizes="100vw"><img src="/assets/images/optimized/bb1-300w.jpeg" alt="Battle Bay poster" loading="lazy" decoding="async" width="900" height="506" srcset="/assets/images/optimized/bb1-300w.jpeg 300w, /assets/images/optimized/bb1-600w.jpeg 600w, /assets/images/optimized/bb1-900w.jpeg 900w" sizes="100vw"></picture>
+            
+          </div>
+          <div class="proj-info">
+            <h3>Battle Bay</h3>
+            <span class="proj-date">March 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="project-modal" id="modal-longbow.battlebay" role="dialog" aria-modal="true" aria-labelledby="modal-title-longbow.battlebay">
+        <div class="modal-content thick-stroke">
+          <div class="modal-header-sticky">
+            <button class="modal-close" data-id="longbow.battlebay" aria-label="Close modal">X</button>
+          </div>
           
-            
-              <div class="proj-card" data-id="longbow.battlebay">
-                <div class="proj-poster">
-                  <h3>Battle Bay</h3>
-                  <span class="proj-year">March 2024 - Present</span>
-                </div>
+          <div class="modal-body">
+            <div class="modal-media-viewer">
+              <div class="main-viewer" id="viewer-longbow.battlebay">
+                
+                  <img src="/assets/images/games/BattleBay/bb1.png" alt="Project Preview" class="clickable-media" />
+                
+                <div class="loader">👻 LOADING...</div>
               </div>
+              
+              
+              <div class="thumbnails">
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/BattleBay/bb1.png" data-type="image" aria-label="View media 1">
+                    
+                      <img src="/assets/images/games/BattleBay/bb1.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/BattleBay/bb2.png" data-type="image" aria-label="View media 2">
+                    
+                      <img src="/assets/images/games/BattleBay/bb2.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+              </div>
+              
+            </div>
 
-              <div class="project-modal" id="modal-longbow.battlebay">
-                <button class="modal-nav modal-prev" data-id="longbow.battlebay">‹</button>
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="modal-left">
-                      <div class="media-viewer">
-                        
-                        
-                          <img src="/assets/images/games/BattleBay/bb1.png" alt="Main Media" />
-                        
-                      </div>
+            <div class="modal-details">
+              <h3 id="modal-title-longbow.battlebay">Battle Bay</h3>
+              
+              
+              <p class="modal-duration"><strong>DURATION:</strong> March 2024 - Present</p>
+              
+              
+              
+              <div class="modal-tech">
+                <strong>TECH USED:</strong>
+                <ul>
+                  
+                    <li>Unity Engine</li>
+                  
+                    <li>C#</li>
+                  
+                    <li>Web sockets</li>
+                  
+                    <li>C++</li>
+                  
+                    <li>PHP</li>
+                  
+                    <li>Ubuntu</li>
+                  
+                    <li>Docker</li>
+                  
+                    <li>Jenkins</li>
+                  
+                    <li>Amazon EC2</li>
+                  
+                </ul>
+              </div>
+              
 
-                      <div class="media-thumbnails-container">
-                        
+              
+              <div class="modal-links">
+                
+                  <a href="https://play.google.com/store/apps/details?id=com.rovio.battlebay&amp;hl=en" target="_blank" class="btn-sticker">Google Play</a>
+                
+                  <a href="https://apps.apple.com/nz/app/battle-bay/id1046450453" target="_blank" class="btn-sticker">Apple Store</a>
+                
+              </div>
+              
 
-                        <div class="media-thumbnails">
-                          
-                            <div class="thumb" data-media="/assets/images/games/BattleBay/bb1.png" data-type="image">
-                              
-                                <img src="/assets/images/games/BattleBay/bb1.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/BattleBay/bb2.png" data-type="image">
-                              
-                                <img src="/assets/images/games/BattleBay/bb2.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                        </div>
-
-                        
-                      </div>
-                    </div>
-
-                    <div class="modal-right">
-                      <button class="modal-close" data-id="longbow.battlebay">X</button>
-
-                      <div class="proj-tech">
-                        <h4>Name</h4>
-                        <p>Battle bay</p>
-                      </div>
-
-                      <div class="proj-tech">
-                        <h4>Technologies Used</h4>
-                        <ul>
-                          
-                            <li>Unity Engine</li>
-                          
-                            <li>C#</li>
-                          
-                            <li>Web sockets</li>
-                          
-                            <li>C++</li>
-                          
-                            <li>PHP</li>
-                          
-                            <li>Ubuntu</li>
-                          
-                            <li>Docker</li>
-                          
-                            <li>Jenkins</li>
-                          
-                            <li>Amazon EC2</li>
-                          
-                        </ul>
-                      </div>
-
-                      <div class="proj-date">
-                        <h4>Duration</h4>
-                        <p>March 2024 - Present</p>
-                      </div>
-
-                      <div class="proj-links">
-                        <h4>Links</h4>
-                        
-                          <p><a href="https://play.google.com/store/apps/details?id=com.rovio.battlebay&amp;hl=en" target="_blank">Google play</a></p>
-                        
-                          <p><a href="https://apps.apple.com/nz/app/battle-bay/id1046450453" target="_blank">Apple store</a></p>
-                        
-                      </div>
-
-                      <div class="proj-description">
-                        <h4>Description</h4>
-                        <pre>‣ Collaborated with Rovio Entertainment as Lead Engineer for both client and server-side game development.
+              
+              <div class="modal-desc">
+                <pre>‣ Collaborated with Rovio Entertainment as Lead Engineer for both client and server-side game development.
 
 ‣ Led a team of four, ensuring timely and high-quality deliverables.
 
@@ -329,113 +365,114 @@
 
 ‣ Ensured high-quality updates to deliver seamless user experiences.
 </pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-nav modal-next" data-id="longbow.battlebay">›</button>
               </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+      <div class="proj-card-wrapper" style="--rand-rot: 3deg">
+        <div class="proj-tape tape-style-0"></div>
+        <div class="proj-card polaroid" data-id="longbow.minerescue">
+          <div class="proj-media">
             
+            
+              <picture><source type="image/avif" srcset="/assets/images/optimized/mr1-300w.avif 300w, /assets/images/optimized/mr1-600w.avif 600w, /assets/images/optimized/mr1-900w.avif 900w" sizes="100vw"><source type="image/webp" srcset="/assets/images/optimized/mr1-300w.webp 300w, /assets/images/optimized/mr1-600w.webp 600w, /assets/images/optimized/mr1-900w.webp 900w" sizes="100vw"><img src="/assets/images/optimized/mr1-300w.jpeg" alt="Mine Rescue poster" loading="lazy" decoding="async" width="900" height="1600" srcset="/assets/images/optimized/mr1-300w.jpeg 300w, /assets/images/optimized/mr1-600w.jpeg 600w, /assets/images/optimized/mr1-900w.jpeg 900w" sizes="100vw"></picture>
+            
+          </div>
+          <div class="proj-info">
+            <h3>Mine Rescue</h3>
+            <span class="proj-date">October 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="project-modal" id="modal-longbow.minerescue" role="dialog" aria-modal="true" aria-labelledby="modal-title-longbow.minerescue">
+        <div class="modal-content thick-stroke">
+          <div class="modal-header-sticky">
+            <button class="modal-close" data-id="longbow.minerescue" aria-label="Close modal">X</button>
+          </div>
           
-            
-              <div class="proj-card" data-id="longbow.minerescue">
-                <div class="proj-poster">
-                  <h3>Mine Rescue</h3>
-                  <span class="proj-year">October 2023 - October 2023</span>
-                </div>
+          <div class="modal-body">
+            <div class="modal-media-viewer">
+              <div class="main-viewer" id="viewer-longbow.minerescue">
+                
+                  <img src="/assets/images/games/MineRescue/mr1.png" alt="Project Preview" class="clickable-media" />
+                
+                <div class="loader">👻 LOADING...</div>
               </div>
+              
+              
+              <div class="thumbnails">
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/MineRescue/mr1.png" data-type="image" aria-label="View media 1">
+                    
+                      <img src="/assets/images/games/MineRescue/mr1.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/MineRescue/mr2.png" data-type="image" aria-label="View media 2">
+                    
+                      <img src="/assets/images/games/MineRescue/mr2.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/MineRescue/mr3.png" data-type="image" aria-label="View media 3">
+                    
+                      <img src="/assets/images/games/MineRescue/mr3.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/MineRescue/mr4.png" data-type="image" aria-label="View media 4">
+                    
+                      <img src="/assets/images/games/MineRescue/mr4.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+              </div>
+              
+            </div>
 
-              <div class="project-modal" id="modal-longbow.minerescue">
-                <button class="modal-nav modal-prev" data-id="longbow.minerescue">‹</button>
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="modal-left">
-                      <div class="media-viewer">
-                        
-                        
-                          <img src="/assets/images/games/MineRescue/mr1.png" alt="Main Media" />
-                        
-                      </div>
+            <div class="modal-details">
+              <h3 id="modal-title-longbow.minerescue">Mine Rescue</h3>
+              
+              
+              <p class="modal-duration"><strong>DURATION:</strong> October 2023 - October 2023</p>
+              
+              
+              
+              <div class="modal-tech">
+                <strong>TECH USED:</strong>
+                <ul>
+                  
+                    <li>Unity Engine</li>
+                  
+                    <li>C#</li>
+                  
+                    <li>Shader Graphs</li>
+                  
+                    <li>PHP</li>
+                  
+                </ul>
+              </div>
+              
 
-                      <div class="media-thumbnails-container">
-                        
-                          <button class="arrow left">&lt;</button>
-                        
+              
+              <div class="modal-links">
+                
+                  <a href="https://play.google.com/store/apps/details?id=com.carry1st.minerescue&amp;hl=en" target="_blank" class="btn-sticker">Google Play</a>
+                
+                  <a href="https://apps.apple.com/us/app/mine-rescue-miner-tycoon-game/id1557234141" target="_blank" class="btn-sticker">Apple Store</a>
+                
+              </div>
+              
 
-                        <div class="media-thumbnails">
-                          
-                            <div class="thumb" data-media="/assets/images/games/MineRescue/mr1.png" data-type="image">
-                              
-                                <img src="/assets/images/games/MineRescue/mr1.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/MineRescue/mr2.png" data-type="image">
-                              
-                                <img src="/assets/images/games/MineRescue/mr2.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/MineRescue/mr3.png" data-type="image">
-                              
-                                <img src="/assets/images/games/MineRescue/mr3.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/MineRescue/mr4.png" data-type="image">
-                              
-                                <img src="/assets/images/games/MineRescue/mr4.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                        </div>
-
-                        
-                          <button class="arrow right">&gt;</button>
-                        
-                      </div>
-                    </div>
-
-                    <div class="modal-right">
-                      <button class="modal-close" data-id="longbow.minerescue">X</button>
-
-                      <div class="proj-tech">
-                        <h4>Name</h4>
-                        <p>Mine rescue</p>
-                      </div>
-
-                      <div class="proj-tech">
-                        <h4>Technologies Used</h4>
-                        <ul>
-                          
-                            <li>Unity Engine</li>
-                          
-                            <li>C#</li>
-                          
-                            <li>Shader Graphs</li>
-                          
-                            <li>PHP</li>
-                          
-                        </ul>
-                      </div>
-
-                      <div class="proj-date">
-                        <h4>Duration</h4>
-                        <p>October 2023 - October 2023</p>
-                      </div>
-
-                      <div class="proj-links">
-                        <h4>Links</h4>
-                        
-                          <p><a href="https://play.google.com/store/apps/details?id=com.carry1st.minerescue&amp;hl=en" target="_blank">Google play</a></p>
-                        
-                          <p><a href="https://apps.apple.com/us/app/mine-rescue-miner-tycoon-game/id1557234141" target="_blank">Apple store</a></p>
-                        
-                      </div>
-
-                      <div class="proj-description">
-                        <h4>Description</h4>
-                        <pre>‣ Collaborated with Carry1st as a client, focusing on client-side development.
+              
+              <div class="modal-desc">
+                <pre>‣ Collaborated with Carry1st as a client, focusing on client-side development.
 
 ‣ Designed and implemented a new game mode titled &quot;Miner&#39;s Escape&quot;.
 
@@ -443,97 +480,102 @@
 
 ‣ Delivered clean and maintainable code aligning with project standards.
 </pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-nav modal-next" data-id="longbow.minerescue">›</button>
               </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+      <div class="proj-card-wrapper" style="--rand-rot: -3deg">
+        <div class="proj-tape tape-style-2"></div>
+        <div class="proj-card polaroid" data-id="hashbyte.boombusters">
+          <div class="proj-media">
             
+            
+              <video src="/assets/images/games/BoomBusters/video.mp4" muted loop playsinline></video>
+            
+          </div>
+          <div class="proj-info">
+            <h3>Boom Busters</h3>
+            <span class="proj-date">August 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="project-modal" id="modal-hashbyte.boombusters" role="dialog" aria-modal="true" aria-labelledby="modal-title-hashbyte.boombusters">
+        <div class="modal-content thick-stroke">
+          <div class="modal-header-sticky">
+            <button class="modal-close" data-id="hashbyte.boombusters" aria-label="Close modal">X</button>
+          </div>
           
-            
-              <div class="proj-card" data-id="hashbyte.boombusters">
-                <div class="proj-poster">
-                  <h3>Boom Busters</h3>
-                  <span class="proj-year">August 2023 - August 2023</span>
-                </div>
+          <div class="modal-body">
+            <div class="modal-media-viewer">
+              <div class="main-viewer" id="viewer-hashbyte.boombusters">
+                
+                  <video src="/assets/images/games/BoomBusters/video.mp4" controls></video>
+                
+                <div class="loader">👻 LOADING...</div>
               </div>
+              
+              
+              <div class="thumbnails">
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/BoomBusters/video.mp4" data-type="video" aria-label="View media 1">
+                    
+                      <video src="/assets/images/games/BoomBusters/video.mp4"></video>
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/BoomBusters/cover.png" data-type="image" aria-label="View media 2">
+                    
+                      <img src="/assets/images/games/BoomBusters/cover.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+              </div>
+              
+            </div>
 
-              <div class="project-modal" id="modal-hashbyte.boombusters">
-                <button class="modal-nav modal-prev" data-id="hashbyte.boombusters">‹</button>
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="modal-left">
-                      <div class="media-viewer">
-                        
-                        
-                          <video src="/assets/images/games/BoomBusters/video.mp4" controls></video>
-                        
-                      </div>
+            <div class="modal-details">
+              <h3 id="modal-title-hashbyte.boombusters">Boom Busters</h3>
+              
+              
+              <p class="modal-duration"><strong>DURATION:</strong> August 2023 - August 2023</p>
+              
+              
+              
+              <div class="modal-tech">
+                <strong>TECH USED:</strong>
+                <ul>
+                  
+                    <li>Unity Engine</li>
+                  
+                    <li>C#</li>
+                  
+                    <li>Playfab</li>
+                  
+                    <li>Photon</li>
+                  
+                </ul>
+              </div>
+              
 
-                      <div class="media-thumbnails-container">
-                        
+              
+              <div class="modal-links">
+                
+                  <a href="https://play.google.com/store/apps/details?id=com.hashbytestudio.minesweeper&amp;hl=en_IN" target="_blank" class="btn-sticker">Google Play</a>
+                
+                  <a href="https://apps.apple.com/pl/app/boom-busters/id6449463196" target="_blank" class="btn-sticker">Apple Store</a>
+                
+              </div>
+              
 
-                        <div class="media-thumbnails">
-                          
-                            <div class="thumb" data-media="/assets/images/games/BoomBusters/video.mp4" data-type="video">
-                              
-                                <video src="/assets/images/games/BoomBusters/video.mp4"></video>
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/BoomBusters/cover.png" data-type="image">
-                              
-                                <img src="/assets/images/games/BoomBusters/cover.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                        </div>
-
-                        
-                      </div>
-                    </div>
-
-                    <div class="modal-right">
-                      <button class="modal-close" data-id="hashbyte.boombusters">X</button>
-
-                      <div class="proj-tech">
-                        <h4>Name</h4>
-                        <p>Boom busters</p>
-                      </div>
-
-                      <div class="proj-tech">
-                        <h4>Technologies Used</h4>
-                        <ul>
-                          
-                            <li>Unity Engine</li>
-                          
-                            <li>C#</li>
-                          
-                            <li>Playfab</li>
-                          
-                            <li>Photon</li>
-                          
-                        </ul>
-                      </div>
-
-                      <div class="proj-date">
-                        <h4>Duration</h4>
-                        <p>August 2023 - August 2023</p>
-                      </div>
-
-                      <div class="proj-links">
-                        <h4>Links</h4>
-                        
-                          <p><a href="https://play.google.com/store/apps/details?id=com.hashbytestudio.minesweeper&amp;hl=en_IN" target="_blank">Google play</a></p>
-                        
-                          <p><a href="https://apps.apple.com/pl/app/boom-busters/id6449463196" target="_blank">Apple store</a></p>
-                        
-                      </div>
-
-                      <div class="proj-description">
-                        <h4>Description</h4>
-                        <pre>‣ Designed and implemented both server-side and client-side components for Boom Busters.
+              
+              <div class="modal-desc">
+                <pre>‣ Designed and implemented both server-side and client-side components for Boom Busters.
 
 ‣ Integrated Photon to develop and manage multiplayer gameplay systems.
 
@@ -541,113 +583,114 @@
 
 ‣ Delivered scalable and maintainable features supporting seamless multiplayer experiences.
 </pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-nav modal-next" data-id="hashbyte.boombusters">›</button>
               </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+      <div class="proj-card-wrapper" style="--rand-rot: -3deg">
+        <div class="proj-tape tape-style-3"></div>
+        <div class="proj-card polaroid" data-id="personal.bloodylawman">
+          <div class="proj-media">
             
+            
+              <picture><source type="image/avif" srcset="/assets/images/optimized/bl0-300w.avif 300w, /assets/images/optimized/bl0-578w.avif 578w" sizes="100vw"><source type="image/webp" srcset="/assets/images/optimized/bl0-300w.webp 300w, /assets/images/optimized/bl0-578w.webp 578w" sizes="100vw"><img src="/assets/images/optimized/bl0-300w.jpeg" alt="Bloody Lawman poster" loading="lazy" decoding="async" width="578" height="432" srcset="/assets/images/optimized/bl0-300w.jpeg 300w, /assets/images/optimized/bl0-578w.jpeg 578w" sizes="100vw"></picture>
+            
+          </div>
+          <div class="proj-info">
+            <h3>Bloody Lawman</h3>
+            <span class="proj-date">July 19, 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="project-modal" id="modal-personal.bloodylawman" role="dialog" aria-modal="true" aria-labelledby="modal-title-personal.bloodylawman">
+        <div class="modal-content thick-stroke">
+          <div class="modal-header-sticky">
+            <button class="modal-close" data-id="personal.bloodylawman" aria-label="Close modal">X</button>
+          </div>
           
-            
-              <div class="proj-card" data-id="personal.bloodylawman">
-                <div class="proj-poster">
-                  <h3>Bloody Lawman</h3>
-                  <span class="proj-year">July 19, 2024 - July 22, 2024</span>
-                </div>
+          <div class="modal-body">
+            <div class="modal-media-viewer">
+              <div class="main-viewer" id="viewer-personal.bloodylawman">
+                
+                  <img src="/assets/images/games/BloodyLawman/bl0.png" alt="Project Preview" class="clickable-media" />
+                
+                <div class="loader">👻 LOADING...</div>
               </div>
+              
+              
+              <div class="thumbnails">
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/BloodyLawman/bl0.png" data-type="image" aria-label="View media 1">
+                    
+                      <img src="/assets/images/games/BloodyLawman/bl0.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/BloodyLawman/bl1.png" data-type="image" aria-label="View media 2">
+                    
+                      <img src="/assets/images/games/BloodyLawman/bl1.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/BloodyLawman/bl2.png" data-type="image" aria-label="View media 3">
+                    
+                      <img src="/assets/images/games/BloodyLawman/bl2.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/BloodyLawman/bl3.png" data-type="image" aria-label="View media 4">
+                    
+                      <img src="/assets/images/games/BloodyLawman/bl3.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/BloodyLawman/bl4.png" data-type="image" aria-label="View media 5">
+                    
+                      <img src="/assets/images/games/BloodyLawman/bl4.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+              </div>
+              
+            </div>
 
-              <div class="project-modal" id="modal-personal.bloodylawman">
-                <button class="modal-nav modal-prev" data-id="personal.bloodylawman">‹</button>
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="modal-left">
-                      <div class="media-viewer">
-                        
-                        
-                          <img src="/assets/images/games/BloodyLawman/bl0.png" alt="Main Media" />
-                        
-                      </div>
+            <div class="modal-details">
+              <h3 id="modal-title-personal.bloodylawman">Bloody Lawman</h3>
+              
+              
+              <p class="modal-duration"><strong>DURATION:</strong> July 19, 2024 - July 22, 2024</p>
+              
+              
+              
+              <div class="modal-tech">
+                <strong>TECH USED:</strong>
+                <ul>
+                  
+                    <li>Unity Engine</li>
+                  
+                    <li>C#</li>
+                  
+                </ul>
+              </div>
+              
 
-                      <div class="media-thumbnails-container">
-                        
-                          <button class="arrow left">&lt;</button>
-                        
+              
+              <div class="modal-links">
+                
+                  <a href="https://iampratiksahoo.itch.io/bloody-lawman" target="_blank" class="btn-sticker">Itch.io</a>
+                
+              </div>
+              
 
-                        <div class="media-thumbnails">
-                          
-                            <div class="thumb" data-media="/assets/images/games/BloodyLawman/bl0.png" data-type="image">
-                              
-                                <img src="/assets/images/games/BloodyLawman/bl0.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/BloodyLawman/bl1.png" data-type="image">
-                              
-                                <img src="/assets/images/games/BloodyLawman/bl1.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/BloodyLawman/bl2.png" data-type="image">
-                              
-                                <img src="/assets/images/games/BloodyLawman/bl2.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/BloodyLawman/bl3.png" data-type="image">
-                              
-                                <img src="/assets/images/games/BloodyLawman/bl3.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/BloodyLawman/bl4.png" data-type="image">
-                              
-                                <img src="/assets/images/games/BloodyLawman/bl4.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                        </div>
-
-                        
-                          <button class="arrow right">&gt;</button>
-                        
-                      </div>
-                    </div>
-
-                    <div class="modal-right">
-                      <button class="modal-close" data-id="personal.bloodylawman">X</button>
-
-                      <div class="proj-tech">
-                        <h4>Name</h4>
-                        <p>Bloody lawman</p>
-                      </div>
-
-                      <div class="proj-tech">
-                        <h4>Technologies Used</h4>
-                        <ul>
-                          
-                            <li>Unity Engine</li>
-                          
-                            <li>C#</li>
-                          
-                        </ul>
-                      </div>
-
-                      <div class="proj-date">
-                        <h4>Duration</h4>
-                        <p>July 19, 2024 - July 22, 2024</p>
-                      </div>
-
-                      <div class="proj-links">
-                        <h4>Links</h4>
-                        
-                          <p><a href="https://iampratiksahoo.itch.io/bloody-lawman" target="_blank">Itch.io</a></p>
-                        
-                      </div>
-
-                      <div class="proj-description">
-                        <h4>Description</h4>
-                        <pre>‣ Developed a game jam project over a weekend with two friends.
+              
+              <div class="modal-desc">
+                <pre>‣ Developed a game jam project over a weekend with two friends.
 
 ‣ Designed gameplay where players infect humans to spread infection across the city.
 
@@ -655,111 +698,112 @@
 
 ‣ Gained significant learning experience in rapid prototyping and collaborative design.
 </pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-nav modal-next" data-id="personal.bloodylawman">›</button>
               </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+      <div class="proj-card-wrapper" style="--rand-rot: 2deg">
+        <div class="proj-tape tape-style-4"></div>
+        <div class="proj-card polaroid" data-id="personal.spyroll">
+          <div class="proj-media">
             
+            
+              <video src="/assets/images/games/SpyRoll/sr4.mp4" muted loop playsinline></video>
+            
+          </div>
+          <div class="proj-info">
+            <h3>Spy Roll</h3>
+            <span class="proj-date">June 19, 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="project-modal" id="modal-personal.spyroll" role="dialog" aria-modal="true" aria-labelledby="modal-title-personal.spyroll">
+        <div class="modal-content thick-stroke">
+          <div class="modal-header-sticky">
+            <button class="modal-close" data-id="personal.spyroll" aria-label="Close modal">X</button>
+          </div>
           
-            
-              <div class="proj-card" data-id="personal.spyroll">
-                <div class="proj-poster">
-                  <h3>Spy Roll</h3>
-                  <span class="proj-year">June 19, 2023 - August 18, 2023</span>
-                </div>
+          <div class="modal-body">
+            <div class="modal-media-viewer">
+              <div class="main-viewer" id="viewer-personal.spyroll">
+                
+                  <video src="/assets/images/games/SpyRoll/sr4.mp4" controls></video>
+                
+                <div class="loader">👻 LOADING...</div>
               </div>
+              
+              
+              <div class="thumbnails">
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/SpyRoll/sr4.mp4" data-type="video" aria-label="View media 1">
+                    
+                      <video src="/assets/images/games/SpyRoll/sr4.mp4"></video>
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/SpyRoll/sr1.png" data-type="image" aria-label="View media 2">
+                    
+                      <img src="/assets/images/games/SpyRoll/sr1.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/SpyRoll/sr2.png" data-type="image" aria-label="View media 3">
+                    
+                      <img src="/assets/images/games/SpyRoll/sr2.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/SpyRoll/sr3.png" data-type="image" aria-label="View media 4">
+                    
+                      <img src="/assets/images/games/SpyRoll/sr3.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+              </div>
+              
+            </div>
 
-              <div class="project-modal" id="modal-personal.spyroll">
-                <button class="modal-nav modal-prev" data-id="personal.spyroll">‹</button>
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="modal-left">
-                      <div class="media-viewer">
-                        
-                        
-                          <video src="/assets/images/games/SpyRoll/sr4.mp4" controls></video>
-                        
-                      </div>
+            <div class="modal-details">
+              <h3 id="modal-title-personal.spyroll">Spy Roll</h3>
+              
+              
+              <p class="modal-duration"><strong>DURATION:</strong> June 19, 2023 - August 18, 2023</p>
+              
+              
+              
+              <div class="modal-tech">
+                <strong>TECH USED:</strong>
+                <ul>
+                  
+                    <li>Unity Engine</li>
+                  
+                    <li>C#</li>
+                  
+                    <li>Playfab</li>
+                  
+                    <li>Photon</li>
+                  
+                </ul>
+              </div>
+              
 
-                      <div class="media-thumbnails-container">
-                        
-                          <button class="arrow left">&lt;</button>
-                        
+              
+              <div class="modal-links">
+                
+                  <a href="https://gitlab.com/underdogs6962425/SpyRoll" target="_blank" class="btn-sticker">Gitlab</a>
+                
+              </div>
+              
 
-                        <div class="media-thumbnails">
-                          
-                            <div class="thumb" data-media="/assets/images/games/SpyRoll/sr4.mp4" data-type="video">
-                              
-                                <video src="/assets/images/games/SpyRoll/sr4.mp4"></video>
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/SpyRoll/sr1.png" data-type="image">
-                              
-                                <img src="/assets/images/games/SpyRoll/sr1.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/SpyRoll/sr2.png" data-type="image">
-                              
-                                <img src="/assets/images/games/SpyRoll/sr2.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/SpyRoll/sr3.png" data-type="image">
-                              
-                                <img src="/assets/images/games/SpyRoll/sr3.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                        </div>
-
-                        
-                          <button class="arrow right">&gt;</button>
-                        
-                      </div>
-                    </div>
-
-                    <div class="modal-right">
-                      <button class="modal-close" data-id="personal.spyroll">X</button>
-
-                      <div class="proj-tech">
-                        <h4>Name</h4>
-                        <p>Spy roll</p>
-                      </div>
-
-                      <div class="proj-tech">
-                        <h4>Technologies Used</h4>
-                        <ul>
-                          
-                            <li>Unity Engine</li>
-                          
-                            <li>C#</li>
-                          
-                            <li>Playfab</li>
-                          
-                            <li>Photon</li>
-                          
-                        </ul>
-                      </div>
-
-                      <div class="proj-date">
-                        <h4>Duration</h4>
-                        <p>June 19, 2023 - August 18, 2023</p>
-                      </div>
-
-                      <div class="proj-links">
-                        <h4>Links</h4>
-                        
-                          <p><a href="https://gitlab.com/underdogs6962425/SpyRoll" target="_blank">Gitlab</a></p>
-                        
-                      </div>
-
-                      <div class="proj-description">
-                        <h4>Description</h4>
-                        <pre>‣ Developed a turn-based stealth puzzle game inspired by Hitman GO as a final year project.
+              
+              <div class="modal-desc">
+                <pre>‣ Developed a turn-based stealth puzzle game inspired by Hitman GO as a final year project.
 
 ‣ Collaborated with a batchmate to design and implement core gameplay mechanics.
 
@@ -767,109 +811,104 @@
 
 ‣ Enhanced understanding of level design, stealth mechanics, and player feedback loops.
 </pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-nav modal-next" data-id="personal.spyroll">›</button>
               </div>
-            
-          
+              
+            </div>
+          </div>
         </div>
+      </div>
+    
       
-        <div class="projects-group"
-          style="
-            --proj-card-w: 300px;
-            --proj-card-h: 300px;
-            --proj-cols: 3;
-          "
-        >
-          
+      <div class="proj-card-wrapper" style="--rand-rot: 1deg">
+        <div class="proj-tape tape-style-0"></div>
+        <div class="proj-card polaroid" data-id="filmon.savingastral">
+          <div class="proj-media">
             
-              <div class="proj-card" data-id="filmon.savingastral">
-                <div class="proj-poster">
-                  <h3>Saving Astral</h3>
-                  <span class="proj-year">June, 2022 - July, 2023</span>
-                </div>
+            
+              <video src="/assets/images/games/SavingAstral/sa3.mp4" muted loop playsinline></video>
+            
+          </div>
+          <div class="proj-info">
+            <h3>Saving Astral</h3>
+            <span class="proj-date">June, 2022</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="project-modal" id="modal-filmon.savingastral" role="dialog" aria-modal="true" aria-labelledby="modal-title-filmon.savingastral">
+        <div class="modal-content thick-stroke">
+          <div class="modal-header-sticky">
+            <button class="modal-close" data-id="filmon.savingastral" aria-label="Close modal">X</button>
+          </div>
+          
+          <div class="modal-body">
+            <div class="modal-media-viewer">
+              <div class="main-viewer" id="viewer-filmon.savingastral">
+                
+                  <video src="/assets/images/games/SavingAstral/sa3.mp4" controls></video>
+                
+                <div class="loader">👻 LOADING...</div>
               </div>
+              
+              
+              <div class="thumbnails">
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/SavingAstral/sa3.mp4" data-type="video" aria-label="View media 1">
+                    
+                      <video src="/assets/images/games/SavingAstral/sa3.mp4"></video>
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/SavingAstral/sa1.png" data-type="image" aria-label="View media 2">
+                    
+                      <img src="/assets/images/games/SavingAstral/sa1.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/SavingAstral/sa2.png" data-type="image" aria-label="View media 3">
+                    
+                      <img src="/assets/images/games/SavingAstral/sa2.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+              </div>
+              
+            </div>
 
-              <div class="project-modal" id="modal-filmon.savingastral">
-                <button class="modal-nav modal-prev" data-id="filmon.savingastral">‹</button>
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="modal-left">
-                      <div class="media-viewer">
-                        
-                        
-                          <video src="/assets/images/games/SavingAstral/sa3.mp4" controls></video>
-                        
-                      </div>
+            <div class="modal-details">
+              <h3 id="modal-title-filmon.savingastral">Saving Astral</h3>
+              
+              
+              <p class="modal-duration"><strong>DURATION:</strong> June, 2022 - July, 2023</p>
+              
+              
+              
+              <div class="modal-tech">
+                <strong>TECH USED:</strong>
+                <ul>
+                  
+                    <li>Unity</li>
+                  
+                    <li>C#</li>
+                  
+                    <li>Wwise</li>
+                  
+                </ul>
+              </div>
+              
 
-                      <div class="media-thumbnails-container">
-                        
+              
+              <div class="modal-links">
+                
+                  <a href="https://iampratiksahoo.itch.io/saving-astral" target="_blank" class="btn-sticker">Itch.io</a>
+                
+              </div>
+              
 
-                        <div class="media-thumbnails">
-                          
-                            <div class="thumb" data-media="/assets/images/games/SavingAstral/sa3.mp4" data-type="video">
-                              
-                                <video src="/assets/images/games/SavingAstral/sa3.mp4"></video>
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/SavingAstral/sa1.png" data-type="image">
-                              
-                                <img src="/assets/images/games/SavingAstral/sa1.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/SavingAstral/sa2.png" data-type="image">
-                              
-                                <img src="/assets/images/games/SavingAstral/sa2.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                        </div>
-
-                        
-                      </div>
-                    </div>
-
-                    <div class="modal-right">
-                      <button class="modal-close" data-id="filmon.savingastral">X</button>
-
-                      <div class="proj-tech">
-                        <h4>Name</h4>
-                        <p>Saving astral</p>
-                      </div>
-
-                      <div class="proj-tech">
-                        <h4>Technologies Used</h4>
-                        <ul>
-                          
-                            <li>Unity</li>
-                          
-                            <li>C#</li>
-                          
-                            <li>Wwise</li>
-                          
-                        </ul>
-                      </div>
-
-                      <div class="proj-date">
-                        <h4>Duration</h4>
-                        <p>June, 2022 - July, 2023</p>
-                      </div>
-
-                      <div class="proj-links">
-                        <h4>Links</h4>
-                        
-                          <p><a href="https://iampratiksahoo.itch.io/saving-astral" target="_blank">Itch.io</a></p>
-                        
-                      </div>
-
-                      <div class="proj-description">
-                        <h4>Description</h4>
-                        <pre>‣ Worked as a freelancer and lead developer on the project for a few months.
+              
+              <div class="modal-desc">
+                <pre>‣ Worked as a freelancer and lead developer on the project for a few months.
 
 ‣ Engineered complex systems including Localization and Procedural Asteroid Generation.
 
@@ -879,141 +918,138 @@
 
 ‣ Project was discontinued before release due to owner’s decision.
 </pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-nav modal-next" data-id="filmon.savingastral">›</button>
               </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+      <div class="proj-card-wrapper" style="--rand-rot: 1deg">
+        <div class="proj-tape tape-style-7"></div>
+        <div class="proj-card polaroid" data-id="personal.urealpractice">
+          <div class="proj-media">
             
+            
+              <picture><source type="image/avif" srcset="/assets/images/optimized/tt1-300w.avif 300w, /assets/images/optimized/tt1-600w.avif 600w" sizes="100vw"><source type="image/webp" srcset="/assets/images/optimized/tt1-300w.webp 300w, /assets/images/optimized/tt1-600w.webp 600w" sizes="100vw"><img src="/assets/images/optimized/tt1-300w.jpeg" alt="Unreal Engine Practice poster" loading="lazy" decoding="async" width="600" height="507" srcset="/assets/images/optimized/tt1-300w.jpeg 300w, /assets/images/optimized/tt1-600w.jpeg 600w" sizes="100vw"></picture>
+            
+          </div>
+          <div class="proj-info">
+            <h3>Unreal Engine Practice</h3>
+            <span class="proj-date">March, 2022</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="project-modal" id="modal-personal.urealpractice" role="dialog" aria-modal="true" aria-labelledby="modal-title-personal.urealpractice">
+        <div class="modal-content thick-stroke">
+          <div class="modal-header-sticky">
+            <button class="modal-close" data-id="personal.urealpractice" aria-label="Close modal">X</button>
+          </div>
           
-            
-              <div class="proj-card" data-id="personal.urealpractice">
-                <div class="proj-poster">
-                  <h3>Unreal Engine Practice</h3>
-                  <span class="proj-year">March, 2022 - July, 2022</span>
-                </div>
+          <div class="modal-body">
+            <div class="modal-media-viewer">
+              <div class="main-viewer" id="viewer-personal.urealpractice">
+                
+                  <img src="/assets/images/games/UnrealPractice/ToonTanks/tt1.png" alt="Project Preview" class="clickable-media" />
+                
+                <div class="loader">👻 LOADING...</div>
               </div>
+              
+              
+              <div class="thumbnails">
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/UnrealPractice/ToonTanks/tt1.png" data-type="image" aria-label="View media 1">
+                    
+                      <img src="/assets/images/games/UnrealPractice/ToonTanks/tt1.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/UnrealPractice/CryptRaider/cr1.png" data-type="image" aria-label="View media 2">
+                    
+                      <img src="/assets/images/games/UnrealPractice/CryptRaider/cr1.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/UnrealPractice/CryptRaider/cr3.png" data-type="image" aria-label="View media 3">
+                    
+                      <img src="/assets/images/games/UnrealPractice/CryptRaider/cr3.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/UnrealPractice/CryptRaider/cr4.png" data-type="image" aria-label="View media 4">
+                    
+                      <img src="/assets/images/games/UnrealPractice/CryptRaider/cr4.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/UnrealPractice/CryptRaider/cr5.png" data-type="image" aria-label="View media 5">
+                    
+                      <img src="/assets/images/games/UnrealPractice/CryptRaider/cr5.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/UnrealPractice/ToonTanks/tt2.png" data-type="image" aria-label="View media 6">
+                    
+                      <img src="/assets/images/games/UnrealPractice/ToonTanks/tt2.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/UnrealPractice/ToonTanks/tt3.png" data-type="image" aria-label="View media 7">
+                    
+                      <img src="/assets/images/games/UnrealPractice/ToonTanks/tt3.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/UnrealPractice/ToonTanks/tt4.png" data-type="image" aria-label="View media 8">
+                    
+                      <img src="/assets/images/games/UnrealPractice/ToonTanks/tt4.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/UnrealPractice/ToonTanks/tt5.png" data-type="image" aria-label="View media 9">
+                    
+                      <img src="/assets/images/games/UnrealPractice/ToonTanks/tt5.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+                  <button class="thumb thick-stroke" data-src="/assets/images/games/UnrealPractice/ToonTanks/tt6.png" data-type="image" aria-label="View media 10">
+                    
+                      <img src="/assets/images/games/UnrealPractice/ToonTanks/tt6.png" alt="Thumbnail" />
+                    
+                  </button>
+                
+              </div>
+              
+            </div>
 
-              <div class="project-modal" id="modal-personal.urealpractice">
-                <button class="modal-nav modal-prev" data-id="personal.urealpractice">‹</button>
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="modal-left">
-                      <div class="media-viewer">
-                        
-                        
-                          <img src="/assets/images/games/UnrealPractice/ToonTanks/tt1.png" alt="Main Media" />
-                        
-                      </div>
+            <div class="modal-details">
+              <h3 id="modal-title-personal.urealpractice">Unreal Engine Practice</h3>
+              
+              
+              <p class="modal-duration"><strong>DURATION:</strong> March, 2022 - July, 2022</p>
+              
+              
+              
+              <div class="modal-tech">
+                <strong>TECH USED:</strong>
+                <ul>
+                  
+                    <li>Unreal Engine</li>
+                  
+                    <li>C++</li>
+                  
+                </ul>
+              </div>
+              
 
-                      <div class="media-thumbnails-container">
-                        
-                          <button class="arrow left">&lt;</button>
-                        
+              
 
-                        <div class="media-thumbnails">
-                          
-                            <div class="thumb" data-media="/assets/images/games/UnrealPractice/ToonTanks/tt1.png" data-type="image">
-                              
-                                <img src="/assets/images/games/UnrealPractice/ToonTanks/tt1.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/UnrealPractice/CryptRaider/cr1.png" data-type="image">
-                              
-                                <img src="/assets/images/games/UnrealPractice/CryptRaider/cr1.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/UnrealPractice/CryptRaider/cr3.png" data-type="image">
-                              
-                                <img src="/assets/images/games/UnrealPractice/CryptRaider/cr3.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/UnrealPractice/CryptRaider/cr4.png" data-type="image">
-                              
-                                <img src="/assets/images/games/UnrealPractice/CryptRaider/cr4.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/UnrealPractice/CryptRaider/cr5.png" data-type="image">
-                              
-                                <img src="/assets/images/games/UnrealPractice/CryptRaider/cr5.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/UnrealPractice/ToonTanks/tt2.png" data-type="image">
-                              
-                                <img src="/assets/images/games/UnrealPractice/ToonTanks/tt2.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/UnrealPractice/ToonTanks/tt3.png" data-type="image">
-                              
-                                <img src="/assets/images/games/UnrealPractice/ToonTanks/tt3.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/UnrealPractice/ToonTanks/tt4.png" data-type="image">
-                              
-                                <img src="/assets/images/games/UnrealPractice/ToonTanks/tt4.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/UnrealPractice/ToonTanks/tt5.png" data-type="image">
-                              
-                                <img src="/assets/images/games/UnrealPractice/ToonTanks/tt5.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                            <div class="thumb" data-media="/assets/images/games/UnrealPractice/ToonTanks/tt6.png" data-type="image">
-                              
-                                <img src="/assets/images/games/UnrealPractice/ToonTanks/tt6.png" alt="Thumbnail" />
-                              
-                            </div>
-                          
-                        </div>
-
-                        
-                          <button class="arrow right">&gt;</button>
-                        
-                      </div>
-                    </div>
-
-                    <div class="modal-right">
-                      <button class="modal-close" data-id="personal.urealpractice">X</button>
-
-                      <div class="proj-tech">
-                        <h4>Name</h4>
-                        <p>Unreal engine practice</p>
-                      </div>
-
-                      <div class="proj-tech">
-                        <h4>Technologies Used</h4>
-                        <ul>
-                          
-                            <li>Unreal Engine</li>
-                          
-                            <li>C++</li>
-                          
-                        </ul>
-                      </div>
-
-                      <div class="proj-date">
-                        <h4>Duration</h4>
-                        <p>March, 2022 - July, 2022</p>
-                      </div>
-
-                      <div class="proj-links">
-                        <h4>Links</h4>
-                        
-                      </div>
-
-                      <div class="proj-description">
-                        <h4>Description</h4>
-                        <pre>‣ Explored Unreal Engine to expand technical versatility.
+              
+              <div class="modal-desc">
+                <pre>‣ Explored Unreal Engine to expand technical versatility.
 
 ‣ Developed multiple small projects while completing a Udemy course.
 
@@ -1021,43 +1057,60 @@
 
 ‣ Enhanced skills in Unreal Engine, C++ and overall game development workflows.
 </pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-nav modal-next" data-id="personal.urealpractice">›</button>
               </div>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
+              
+            </div>
+          </div>
         </div>
-      
-    </div>
-    <button class="arrow arrow-right">&gt;</button>
+      </div>
+    
   </div>
 </div>
 
 </section>
 
 <section id="contact" class="container">
-  
-<div class="contact-section">
-  <h2>Contact Me</h2>
-
-  <div class="contact-details">
-    <p><b>Phone:</b> +91-9853252949</p>
-    <p><b>Home Address:</b> Bhubaneswar, Odisha</p>
-    <p><b>Current Address:</b> Mysuru, Karnataka</p>
-    <p><b>Email:</b> <a href="mailto:iampratiksahoo@gmail.com">iampratiksahoo@gmail.com</a></p>
-    <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/i-am-pratik-sahoo/" target="_blank">https://www.linkedin.com/in/i-am-pratik-sahoo/</a></p>
-    <p><b>GitHub:</b> <a href="https://github.com/Iampratiksahoo" target="_blank">https://github.com/Iampratiksahoo</a></p>
+  <div class="contact-section">
+  <div class="postcard-wrapper thick-stroke">
+    <div class="postcard-left">
+      <h2>LET'S TALK!</h2>
+      <p class="handwritten">Hey Pratik! I've got a cool project for you. Let's build something epic together!</p>
+      
+      <div class="stamp-box">
+        <div class="stamp thick-stroke">
+          <i class="ri-gamepad-line"></i>
+        </div>
+      </div>
+    </div>
+    
+    <div class="postcard-divider"></div>
+    
+    <div class="postcard-right">
+      <div class="address-line">
+        <label>TO:</label>
+        <span>PRATIK SAHOO</span>
+      </div>
+      <div class="address-line">
+        <label>AT:</label>
+        <div class="email-wrapper">
+          <a href="mailto:iampratiksahoo@gmail.com" id="email-text">iampratiksahoo@gmail.com</a>
+          <button class="copy-btn thick-stroke" id="copy-email" aria-label="Copy email">COPY</button>
+        </div>
+      </div>
+      <div class="address-line">
+        <label>LOC:</label>
+        <span>Mysuru, Karnataka</span>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://github.com/Iampratiksahoo" target="_blank" class="social-btn thick-stroke" title="GitHub">
+          <i class="ri-github-line"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/i-am-pratik-sahoo/" target="_blank" class="social-btn thick-stroke" title="LinkedIn">
+          <i class="ri-linkedin-line"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1068,7 +1121,7 @@
   <div class="footer-parent">
     <div class="footer-separator"></div>
     <div class="footer-text">
-      Copyright <b>©</b> 2025 by <b>Pratik Sahoo</b> |
+      Copyright <b>©</b> 2026 by <b>Pratik Sahoo</b> |
       All images, icons and resources featured on this website belong to
       their respective rightful owners. 
     </div>
@@ -1078,6 +1131,9 @@
   </div>
 </footer>
 
+    <div id="fullscreen-overlay" class="fullscreen-overlay">
+      <img id="fullscreen-img" src="" alt="Fullscreen view" />
+    </div>
     <script>
       window.projectIds = [
         
