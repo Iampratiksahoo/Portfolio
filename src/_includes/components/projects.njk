@@ -8,11 +8,15 @@
         <div class="proj-tape tape-style-{{ tapeIdx }}"></div>
         <div class="proj-card polaroid" data-id="{{ proj.id }}">
           <div class="proj-media">
-            {% set mainMedia = proj.media[0] %}
-            {% if mainMedia.type == "video" %}
-              <video src="{{ mainMedia.src }}" muted loop playsinline></video>
+            {% if proj.media and proj.media | length > 0 %}
+              {% set mainMedia = proj.media[0] %}
+              {% if mainMedia.type == "video" %}
+                <video src="{{ mainMedia.src }}" muted loop playsinline></video>
+              {% else %}
+                {% image "./src" + mainMedia.src, proj.title + " poster" %}
+              {% endif %}
             {% else %}
-              {% image "./src" + mainMedia.src, proj.title + " poster" %}
+              <div class="no-media thick-stroke">NO MEDIA</div>
             {% endif %}
           </div>
           <div class="proj-info">
@@ -31,27 +35,32 @@
           
           <div class="modal-body">
             <div class="modal-media-viewer">
-              <div class="main-viewer" id="viewer-{{ proj.id }}">
-                {% if mainMedia.type == "video" %}
-                  <video src="{{ mainMedia.src }}" controls></video>
-                {% else %}
-                  <img src="{{ mainMedia.src }}" alt="Project Preview" class="clickable-media" />
+              {% if proj.media and proj.media | length > 0 %}
+                {% set mainMedia = proj.media[0] %}
+                <div class="main-viewer" id="viewer-{{ proj.id }}">
+                  {% if mainMedia.type == "video" %}
+                    <video src="{{ mainMedia.src }}" controls></video>
+                  {% else %}
+                    <img src="{{ mainMedia.src }}" alt="Project Preview" class="clickable-media" />
+                  {% endif %}
+                  <div class="loader">👻 LOADING...</div>
+                </div>
+                
+                {% if proj.media | length > 1 %}
+                <div class="thumbnails">
+                  {% for m in proj.media %}
+                    <button class="thumb thick-stroke" data-src="{{ m.src }}" data-type="{{ m.type }}" aria-label="View media {{ loop.index }}">
+                      {% if m.type == "video" %}
+                        <video src="{{ m.src }}"></video>
+                      {% else %}
+                        <img src="{{ m.src }}" alt="Thumbnail" />
+                      {% endif %}
+                    </button>
+                  {% endfor %}
+                </div>
                 {% endif %}
-                <div class="loader">👻 LOADING...</div>
-              </div>
-              
-              {% if proj.media | length > 1 %}
-              <div class="thumbnails">
-                {% for m in proj.media %}
-                  <button class="thumb thick-stroke" data-src="{{ m.src }}" data-type="{{ m.type }}" aria-label="View media {{ loop.index }}">
-                    {% if m.type == "video" %}
-                      <video src="{{ m.src }}"></video>
-                    {% else %}
-                      <img src="{{ m.src }}" alt="Thumbnail" />
-                    {% endif %}
-                  </button>
-                {% endfor %}
-              </div>
+              {% else %}
+                <div class="no-media-main thick-stroke">NO MEDIA AVAILABLE FOR THIS PROJECT</div>
               {% endif %}
             </div>
 

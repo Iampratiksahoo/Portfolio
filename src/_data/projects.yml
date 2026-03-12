@@ -233,11 +233,11 @@ items:
     links:
     media:
       - type: image
-        src: /assets/images/games/ComponentPilot/cp1.png
+        src: /assets/images/tools/ComponentPilot/cp1.png
       - type: video
-        src: /assets/images/games/ComponentPilot/cp2.mp4
+        src: /assets/images/tools/ComponentPilot/cp2.mp4
       - type: video
-        src: /assets/images/games/ComponentPilot/cp3.mp4
+        src: /assets/images/tools/ComponentPilot/cp3.mp4
 
   - id: personal.cryptraider
     title: Crypt Raider
