@@ -1,11 +1,18 @@
 cardWidth: "300px"
 cardHeight: "300px"
 columns: 3
+classificationOrder:
+  - "PC"
+  - "Console"
+  - "Mobile"
+  - "Tools"
 items:
   - id: appymonkeys.lokko
     title: Lokko
     start_date: November 2025
     end_date: Present
+    classification: "Console"
+    platforms: ["Windows", "Playstation", "iOS"]
     description: |
       ‣ Building gameplay and backend features, basically making sure the game actually works.
 
@@ -26,42 +33,17 @@ items:
       - Perforce
     links:
     media:
-
-  - id: longbow.yogaquest
-    title: Yoga Quest
-    start_date: September 2024
-    end_date: October 2025
-    description: |
-      ‣ Worked on gameplay mechanics and core features smooth enough that nobody complained.
-
-      ‣ Made designer-friendly tools so they could iterate fast and stop bugging engineering.
-
-      ‣ Led code reviews and mentoring — yes, even the painful ones.
-
-    skills:
-      - Unity Engine
-      - C#
-      - Playfab
-      - Firebase
-      - Unity Analytics
-      - Game Analytics
-      - Jenkins
-      - AWS
-      - Unity IAP
-    links:
-      Google Play: 'https://play.google.com/store/apps/details?id=com.lb.m3.yoga&hl=en'
-    media:
       - type: image
-        src: /assets/images/games/YogaQuest/yq2.png
-      - type: image
-        src: /assets/images/games/YogaQuest/yq1.png
+        src: /assets/images/games/Lokko/lk1.png
       - type: video
-        src: /assets/images/games/YogaQuest/yq3.mp4
+        src: /assets/images/games/Lokko/lk2.mp4
 
   - id: longbow.battlebay
     title: Battle Bay
     start_date: March 2024
     end_date: October 2025
+    classification: "Mobile"
+    platforms: ["Android", "iOS"]
     description: |
       ‣ Worked as a Lead Engineer for Rovio's Battle Bay. 
 
@@ -96,6 +78,8 @@ items:
     title: Mine Rescue
     start_date: October 2023
     end_date: October 2023
+    classification: "Mobile"
+    platforms: ["Android", "iOS"]
     description: |
       ‣ Client-side work for Carry1st, in and out like a professional.
 
@@ -118,11 +102,46 @@ items:
         src: /assets/images/games/MineRescue/mr3.png
       - type: image
         src: /assets/images/games/MineRescue/mr4.png
+        
+  - id: longbow.yogaquest
+    title: Yoga Quest
+    start_date: September 2024
+    end_date: October 2025
+    classification: "Mobile"
+    platforms: ["Android", "iOS"]
+    description: |
+      ‣ Worked on gameplay mechanics and core features smooth enough that nobody complained.
+
+      ‣ Made designer-friendly tools so they could iterate fast and stop bugging engineering.
+
+      ‣ Led code reviews and mentoring — yes, even the painful ones.
+
+    skills:
+      - Unity Engine
+      - C#
+      - Playfab
+      - Firebase
+      - Unity Analytics
+      - Game Analytics
+      - Jenkins
+      - AWS
+      - Unity IAP
+    links:
+      Google Play: 'https://play.google.com/store/apps/details?id=com.lb.m3.yoga&hl=en'
+    media:
+      - type: image
+        src: /assets/images/games/YogaQuest/yq2.png
+      - type: image
+        src: /assets/images/games/YogaQuest/yq1.png
+      - type: video
+        src: /assets/images/games/YogaQuest/yq3.mp4
 
   - id: hashbyte.boombusters
     title: Boom Busters
     start_date: August 2023
     end_date: August 2023
+    classification: "Mobile"
+    platforms: ["Android", "iOS"]
     description: |
       ‣ Built client and server for Boom Busters, full stack, full chaos. One of my first projects 
 
@@ -138,15 +157,17 @@ items:
       Google Play: https://play.google.com/store/apps/details?id=com.hashbytestudio.minesweeper&hl=en_IN
       Apple Store: https://apps.apple.com/pl/app/boom-busters/id6449463196
     media:
-      - type: video
-        src: /assets/images/games/BoomBusters/video.mp4
       - type: image
         src: /assets/images/games/BoomBusters/cover.png
+      - type: video
+        src: /assets/images/games/BoomBusters/video.mp4
 
   - id: personal.bloodylawman
     title: Bloody Lawman
     start_date: 'July 19, 2024'
     end_date: 'July 22, 2024'
+    classification: "PC"
+    platforms: ["Windows", "Web"]
     description: |
       ‣ Built a game in a weekend with two friends. We survived each other.
 
@@ -172,6 +193,8 @@ items:
     title: Spy Roll
     start_date: 'June 19, 2023'
     end_date: 'August 18, 2023'
+    classification: "Mobile"
+    platforms: ["Android"]
     description: |
       ‣ Built a turn-based stealth puzzle game for my final year project. Hitman GO was the vibe.
 
@@ -186,19 +209,17 @@ items:
     links:
       Gitlab: 'https://gitlab.com/underdogs6962425/SpyRoll'
     media:
-      - type: video
-        src: /assets/images/games/SpyRoll/sr4.mp4
       - type: image
         src: /assets/images/games/SpyRoll/sr1.png
-      - type: image
-        src: /assets/images/games/SpyRoll/sr2.png
-      - type: image
-        src: /assets/images/games/SpyRoll/sr3.png
+      - type: video
+        src: /assets/images/games/SpyRoll/sr4.mp4
 
   - id: filmon.savingastral
     title: Saving Astral
     start_date: 'June, 2022'
     end_date: 'July, 2023'
+    classification: "PC"
+    platforms: ["Windows"]
     description: |
       ‣ Freelanced as dev, built localization and procedural asteroid generation from scratch.
 
@@ -212,10 +233,10 @@ items:
     links:
       Itch.io: 'https://iampratiksahoo.itch.io/saving-astral'
     media:
-      - type: video
-        src: /assets/images/games/SavingAstral/sa3.mp4
       - type: image
         src: /assets/images/games/SavingAstral/sa1.png
+      - type: video
+        src: /assets/images/games/SavingAstral/sa3.mp4
       - type: image
         src: /assets/images/games/SavingAstral/sa2.png
 
@@ -223,6 +244,8 @@ items:
     title: Component Pilot
     start_date: '2021'
     end_date: ''
+    classification: "Tools"
+    platforms: ["Unity Editor"]
     description: |
       ‣ Built a Unity Editor tool to copy multiple components between GameObjects, because doing it manually is a crime.
 
@@ -243,6 +266,8 @@ items:
     title: Crypt Raider
     start_date: '2022'
     end_date: ''
+    classification: "PC"
+    platforms: ["Windows"]
     description: |
       ‣ Unreal practice project, built for fun and to figure out what all the UEC++ fuss is about.
 
@@ -261,6 +286,8 @@ items:
     title: Toon Tanks
     start_date: '2022'
     end_date: ''
+    classification: "PC"
+    platforms: ["Windows"]
     description: |
       ‣ Another Unreal learning project, saw it in a tutorial, thought it looked fun, was right.
 
@@ -279,6 +306,8 @@ items:
     title: Simple Shooter
     start_date: '2022'
     end_date: ''
+    classification: "PC"
+    platforms: ["Windows"]
     description: |
       ‣ Udemy course project focused on animations, because making things move properly is harder than it looks.
 
@@ -297,6 +326,8 @@ items:
     title: CONFIDENTIAL
     start_date: '2026'
     end_date: ''
+    classification: "PC"
+    platforms: ["Windows", "PS5"]
     description: |
       ‣ A personal project I can't talk about. Yes, it's actually interesting. No, that's not just something people say.
 

@@ -183,12 +183,16 @@
         background: $yellow;
         color: $black;
         padding: 0.25rem 1rem;
-        border: $stroke-width solid $text;
+        border: $stroke-width solid currentColor;
         font-size: 0.9rem;
         font-weight: bold;
       }
-    }
-  }
+      }
+
+      .platform-list li {
+      background: $accent;
+      }
+      }
   
   .modal-links {
     display: flex;

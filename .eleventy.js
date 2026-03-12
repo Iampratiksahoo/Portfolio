@@ -37,23 +37,22 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/CNAME");
 
-  // Add endsWith filter
-  eleventyConfig.addFilter("endsWith", function(str, suffix) {
-    return str.endsWith(suffix);
+  // Group items by a key
+  eleventyConfig.addFilter("groupBy", function(array, key) {
+    const result = {};
+    array.forEach(item => {
+      const val = item[key] || "Other";
+      if (!result[val]) {
+        result[val] = [];
+      }
+      result[val].push(item);
+    });
+    return result;
   });
 
   // Add global data for current year
   eleventyConfig.addGlobalData("currentYear", () => {
     return new Date().getFullYear();
-  });
-
-  // Batch an array into subarrays of length N
-  eleventyConfig.addFilter("chunks", function(array, size) {
-    let result = [];
-    for (let i = 0; i < array.length; i += size) {
-      result.push(array.slice(i, i + size));
-    }
-    return result;
   });
 
   return {
