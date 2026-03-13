@@ -27,6 +27,8 @@
     display: inline-block;
     margin-bottom: -3px;
     font-size: 1.5rem;
+    // ADDED WIGGLE
+    animation: simpleWiggle 4s infinite ease-in-out;
   }
 }
 
@@ -34,19 +36,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 8rem 4rem; // Vertical gap 8rem, Horizontal 4rem
+  gap: 8rem 4rem; 
   width: 100%;
 }
 
 .proj-card-wrapper {
   position: relative;
-  flex: 0 1 calc(33.333% - 3rem); // 3 per row
+  flex: 0 1 calc(33.333% - 3rem); 
   min-width: 300px;
   transform: rotate(var(--rand-rot, 1deg));
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding-top: 2rem;
   margin-bottom: 2rem;
   
+  // CONSTANT GENTLE WIGGLE
+  animation: polaroidFloat 6s infinite ease-in-out;
+  animation-delay: var(--rand-rot);
+
   @media (max-width: 1100px) {
     flex: 0 1 calc(50% - 2rem);
   }
@@ -54,6 +60,7 @@
   @media (max-width: 700px) {
     flex: 0 1 100%;
     transform: rotate(0deg) !important;
+    animation: none;
   }
 
   .proj-tape {
@@ -92,6 +99,7 @@
   &:hover {
     transform: rotate(0deg) scale(1.05);
     z-index: 50; 
+    animation-play-state: paused;
     
     .proj-card {
       box-shadow: 12px 12px 0 $black;
@@ -146,4 +154,15 @@
       opacity: 0.6;
     }
   }
+}
+
+@keyframes polaroidFloat {
+  0%, 100% { transform: translateY(0) rotate(var(--rand-rot)); }
+  50% { transform: translateY(-10px) rotate(calc(var(--rand-rot) + 1deg)); }
+}
+
+@keyframes simpleWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
 }

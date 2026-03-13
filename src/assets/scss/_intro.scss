@@ -50,11 +50,21 @@
 
 .intro-image.polaroid {
   width: $intro-img-size;
+  position: relative;
   transform: rotate(3deg);
   
+  // VERY SLIGHT FLOATING
+  animation: slightFloat 5s infinite ease-in-out;
+
   &:hover {
+    animation-play-state: paused;
     transform: rotate(0deg) scale(1.02);
   }
+}
+
+@keyframes slightFloat {
+  0%, 100% { transform: translateY(0) rotate(3deg); }
+  50% { transform: translateY(-8px) rotate(4deg); }
 }
 
 @media (max-width: 768px) {
@@ -65,13 +75,12 @@
   
   .intro-image.polaroid {
     width: min(100%, 300px);
+    margin: 0 auto;
   }
   
   .intro-text {
     min-width: 100%;
-    
-    .tagline {
-      margin: 0 auto;
-    }
+    .tagline { margin: 0 auto; }
+    h1 { justify-content: center; }
   }
 }
