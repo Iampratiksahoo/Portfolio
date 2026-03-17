@@ -4,7 +4,38 @@ document.addEventListener("DOMContentLoaded", () => {
   initProjectGrid();
   initEmailCopy();
   initFullscreen();
+  initFeaturedTicker();
 });
+
+/**
+ * FEATURED TICKER
+ */
+function initFeaturedTicker() {
+  const videos = document.querySelectorAll("[data-featured-video]");
+  
+  videos.forEach(video => {
+    video.addEventListener("loadedmetadata", () => {
+      // Pick a random start time
+      const duration = video.duration;
+      if (duration > 0) {
+        const startTime = Math.random() * (duration * 0.8); // Start within first 80%
+        video.currentTime = startTime;
+        video.play().catch(() => {
+          // Fallback if autoplay is blocked
+          console.log("Autoplay blocked for featured video");
+        });
+      }
+    });
+    
+    // Periodically jump to a new random spot for that "glitchy/featured" feel
+    setInterval(() => {
+        if (!video.paused && video.duration > 0) {
+            const startTime = Math.random() * (video.duration * 0.8);
+            video.currentTime = startTime;
+        }
+    }, 15000 + Math.random() * 10000); // Every 15-25 seconds
+  });
+}
 
 /**
  * MODAL SYSTEM

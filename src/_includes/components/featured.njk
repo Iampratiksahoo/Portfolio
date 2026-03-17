@@ -1,0 +1,40 @@
+<div class="container featured-heading-container">
+  <h2 class="featured-section-title"><span>FEATURED</span></h2>
+</div>
+<div class="featured-reel-container">
+  <div class="reel-sprockets top"></div>
+  <div class="featured-ticker-wrapper">
+    <div class="featured-ticker">
+      {% for item in featured.items %}
+        <div class="featured-item film-frame">
+          <div class="featured-media">
+            {% if item.type == "video" %}
+              <video src="{{ item.src }}" muted loop playsinline class="featured-video" data-featured-video></video>
+            {% else %}
+              <img src="{{ item.src }}" alt="{{ item.title }}" />
+            {% endif %}
+            <div class="featured-item-title">
+              <span>{{ item.title | e }}</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      {# Duplicate for continuous loop #}
+      {% for item in featured.items %}
+        <div class="featured-item film-frame">
+          <div class="featured-media">
+            {% if item.type == "video" %}
+              <video src="{{ item.src }}" muted loop playsinline class="featured-video" data-featured-video></video>
+            {% else %}
+              <img src="{{ item.src }}" alt="{{ item.title }}" />
+            {% endif %}
+            <div class="featured-item-title">
+              <span>{{ item.title | e }}</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="reel-sprockets bottom"></div>
+</div>

@@ -13,6 +13,9 @@
             <div class="proj-card-wrapper" style="--rand-rot: {{ [ -3, -2, -1, 1, 2, 3 ] | random }}deg">
               <div class="proj-tape tape-style-{{ tapeIdx }}"></div>
               <div class="proj-card polaroid" data-id="{{ proj.id }}">
+                {% if proj.confidential %}
+                <div class="confidential-stamp">CONFIDENTIAL</div>
+                {% endif %}
                 <div class="proj-media">
                   {% if proj.media and proj.media | length > 0 %}
                     {% set mainMedia = proj.media[0] %}

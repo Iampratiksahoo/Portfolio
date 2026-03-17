@@ -112,6 +112,32 @@
   background: $white;
   display: block;
   width: 100%;
+  position: relative;
+
+  .confidential-stamp {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    border: 5px solid $red;
+    color: $red;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255, 77, 77, 0.1) 2px, rgba(255, 77, 77, 0.4) 4px);
+    }
+  }
   
   .proj-media {
     margin-bottom: 1.5rem;
